@@ -2,4 +2,4 @@
 French computer scientist<br/>
 Fluent in english<br/>
 Mainly develop in Java...<br/>
-...But also in web (PHP, HTML/CSS, JS) !
+...But also in web (PHP, HTML/CSS, JS) and python !
