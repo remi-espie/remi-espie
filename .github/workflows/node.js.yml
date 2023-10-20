@@ -4,28 +4,27 @@
 name: Test and build
 
 on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+    push:
+        branches: ['main']
+    pull_request:
+        branches: ['main']
 
 jobs:
-  build:
+    build:
+        runs-on: ubuntu-latest
 
-    runs-on: ubuntu-latest
-    
-    steps:
-    - uses: actions/checkout@v3
-    - name: Use Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: 18.x
-        cache: 'yarn'
-    - name: Install packages
-      run: yarn
-    - name: Run ESLint check
-      run: yarn eslint
-    - name: Run Prettier check
-      run: yarn prettier . --check
-    - name: Build project
-      run: yarn build
+        steps:
+            - uses: actions/checkout@v3
+            - name: Use Node.js
+              uses: actions/setup-node@v3
+              with:
+                  node-version: 18.x
+                  cache: 'yarn'
+            - name: Install packages
+              run: yarn
+            - name: Run ESLint check
+              run: yarn eslint
+            - name: Run Prettier check
+              run: yarn prettier . --check
+            - name: Build project
+              run: yarn build
