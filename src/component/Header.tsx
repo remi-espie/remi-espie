@@ -8,14 +8,20 @@ import {
     useTheme,
 } from '@suid/material'
 import MyLink from './MyLink.tsx'
-import { Show } from 'solid-js'
+import { createMemo, Show } from 'solid-js'
 import DarkModeOutlinedIcon from '@suid/icons-material/DarkModeOutlined'
 import LightModeOutlinedIcon from '@suid/icons-material/LightModeOutlined'
 import { saveDarkMode, useLayoutContext } from '../LayoutContext.ts'
+import * as i18n from '@solid-primitives/i18n'
+import { dictionaries } from '../i18n/types.ts'
 
 function Header() {
     const context = useLayoutContext()
     const theme = useTheme()
+
+    const dict = createMemo(() => i18n.flatten(dictionaries[context.language]))
+
+    const t = i18n.translator(dict)
 
     return (
         <AppBar position="fixed" enableColorOnDark>
@@ -37,7 +43,7 @@ function Header() {
                         }}
                     />
 
-                    <Typography variant="h6">Le portfolio de Rémi !</Typography>
+                    <Typography variant="h6">{t('title')}</Typography>
                 </Box>
                 <Box
                     sx={{
@@ -49,17 +55,17 @@ function Header() {
                 >
                     <MyLink
                         to="#about"
-                        text="A propos de moi"
+                        text={t('about')}
                         color={theme.palette.primary.contrastText}
                     />
                     <MyLink
                         to="#experiences"
-                        text="Mes expériences"
+                        text={t('experiences')}
                         color={theme.palette.primary.contrastText}
                     />
                     <MyLink
                         to="#projects"
-                        text="Mes projets"
+                        text={t('projects')}
                         color={theme.palette.primary.contrastText}
                     />
 
@@ -91,7 +97,7 @@ function Header() {
                     </IconButton>
                     <IconButton
                         color="inherit"
-                        title="Toggle light/dark mode"
+                        title={t('darkMode')}
                         onClick={() => {
                             context.darkMode = !context.darkMode
                             saveDarkMode(context.darkMode)

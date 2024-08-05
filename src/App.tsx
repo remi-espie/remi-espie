@@ -7,10 +7,15 @@ import {
     ThemeProvider,
 } from '@suid/material'
 import Header from './component/Header.tsx'
-import { createMemo } from 'solid-js'
+import { createEffect, createMemo } from 'solid-js'
 import { baseTheme, themeDark, themeLight } from './theme.ts'
-import LayoutContext, { createLayoutMutable } from './LayoutContext.ts'
+import LayoutContext, {
+    createLayoutMutable,
+    saveLanguage,
+} from './LayoutContext.ts'
 import './global.css'
+import * as i18n from '@solid-primitives/i18n'
+import { dictionaries } from './i18n/types.ts'
 
 function App() {
     const context = createLayoutMutable()
@@ -27,6 +32,14 @@ function App() {
         ...baseTheme,
     })
 
+    const dict = createMemo(() => i18n.flatten(dictionaries[context.language]))
+
+    const t = i18n.translator(dict)
+
+    createEffect(() => {
+        document.title = t('title')
+    })
+
     return (
         <LayoutContext.Provider value={context}>
             <ThemeProvider theme={theme}>
@@ -37,8 +50,16 @@ function App() {
                         height: '64px',
                     }}
                 />
-                <Button variant="contained" onClick={() => {}} sx={{ m: 1 }}>
-                    {theme.palette.mode}
+                <Button
+                    variant="contained"
+                    onClick={() => {
+                        context.language =
+                            context.language === 'en' ? 'fr' : 'en'
+                        saveLanguage(context.language)
+                    }}
+                    sx={{ m: 1 }}
+                >
+                    {t('title')}
                 </Button>
             </ThemeProvider>
         </LayoutContext.Provider>
