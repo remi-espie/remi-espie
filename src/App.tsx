@@ -10,6 +10,7 @@ import Header from './component/Header.tsx'
 import { createMemo } from 'solid-js'
 import { baseTheme, themeDark, themeLight } from './theme.ts'
 import LayoutContext, { createLayoutMutable } from './LayoutContext.ts'
+import './global.css'
 
 function App() {
     const context = createLayoutMutable()
