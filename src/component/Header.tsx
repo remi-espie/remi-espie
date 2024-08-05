@@ -27,13 +27,15 @@ function Header() {
                         alignItems: 'center',
                     }}
                 >
-                    <SvgIcon
-                        sx={{
-                            marginRight: 2,
+                    <img
+                        src="/icon.png"
+                        alt="Logo"
+                        style={{
+                            width: '48px',
+                            height: '48px',
+                            'margin-right': '24px',
                         }}
-                    >
-                        <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
-                    </SvgIcon>
+                    />
 
                     <Typography variant="h6">Le portfolio de Rémi !</Typography>
                 </Box>
