@@ -9,25 +9,26 @@
         "preview": "vite preview"
     },
     "dependencies": {
-        "@solid-primitives/i18n": "^2.0.0",
-        "@suid/icons-material": "^0.6.11",
-        "@suid/material": "^0.15.1",
-        "solid-js": "^1.7.8",
+        "@solid-primitives/i18n": "^2.1.1",
+        "@suid/icons-material": "^0.7.0",
+        "@suid/material": "^0.16.0",
+        "solid-js": "^1.8.19",
         "solid-named-router": "^0.4.5",
         "tsc": "^2.0.4"
     },
     "devDependencies": {
-        "@suid/vite-plugin": "^0.1.5",
-        "@typescript-eslint/eslint-plugin": "^6.8.0",
-        "@typescript-eslint/parser": "^6.8.0",
-        "eslint": "^8.51.0",
-        "eslint-config-prettier": "^9.0.0",
-        "eslint-plugin-jsx-a11y": "^6.7.1",
-        "eslint-plugin-solid": "^0.13.0",
-        "prettier": "3.0.3",
-        "typescript": "^5.0.2",
-        "vite": "^4.4.5",
+        "@suid/types": "^0.6.0",
+        "@suid/vite-plugin": "^0.2.0",
+        "@typescript-eslint/eslint-plugin": "^8.0.0",
+        "@typescript-eslint/parser": "^8.0.0",
+        "eslint": "^8.56.0",
+        "eslint-config-prettier": "^9.1.0",
+        "eslint-plugin-jsx-a11y": "^6.9.0",
+        "eslint-plugin-solid": "^0.14.1",
+        "prettier": "^3.3.3",
+        "typescript": "^5.5.4",
+        "vite": "^5.3.5",
         "vite-plugin-eslint": "^1.8.1",
-        "vite-plugin-solid": "^2.7.0"
+        "vite-plugin-solid": "^2.10.2"
     }
 }
