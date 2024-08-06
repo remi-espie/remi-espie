@@ -4,4 +4,7 @@ export const en_dict = {
     experiences: 'My experiences',
     projects: 'My projects',
     darkMode: 'Toggle light/dark mode',
+    language: 'Language',
+    lang_en: 'English',
+    lang_fr: 'French',
 }

@@ -1,3 +1,5 @@
 * {
-    transition: background-color 0.33s, color 0.33s;
+    transition:
+        background-color 0.33s,
+        color 0.33s;
 }

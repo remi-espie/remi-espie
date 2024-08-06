@@ -1,6 +1,5 @@
 import {
     Box,
-    Button,
     createPalette,
     createTheme,
     CssBaseline,
@@ -9,10 +8,7 @@ import {
 import Header from './component/Header.tsx'
 import { createEffect, createMemo } from 'solid-js'
 import { baseTheme, themeDark, themeLight } from './theme.ts'
-import LayoutContext, {
-    createLayoutMutable,
-    saveLanguage,
-} from './LayoutContext.ts'
+import LayoutContext, { createLayoutMutable } from './LayoutContext.ts'
 import './global.css'
 import * as i18n from '@solid-primitives/i18n'
 import { dictionaries } from './i18n/types.ts'
@@ -32,8 +28,12 @@ function App() {
         ...baseTheme,
     })
 
-    const dict = createMemo(() => i18n.flatten(dictionaries[context.language]))
+    const dict = createMemo(() => {
+        return i18n.flatten(dictionaries[context.language])
+    })
 
+    // Working thanks to context
+    // eslint-disable-next-line solid/reactivity
     const t = i18n.translator(dict)
 
     createEffect(() => {
@@ -50,17 +50,6 @@ function App() {
                         height: '64px',
                     }}
                 />
-                <Button
-                    variant="contained"
-                    onClick={() => {
-                        context.language =
-                            context.language === 'en' ? 'fr' : 'en'
-                        saveLanguage(context.language)
-                    }}
-                    sx={{ m: 1 }}
-                >
-                    {t('title')}
-                </Button>
             </ThemeProvider>
         </LayoutContext.Provider>
     )
