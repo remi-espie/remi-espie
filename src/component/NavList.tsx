@@ -38,7 +38,11 @@ function NavList(props: { color: string }) {
     return (
         <>
             <MyLink to="#about" text={t('about')} color={props.color} />
-            <MyLink to="#experiences" text={t('experiences')} color={props.color} />
+            <MyLink
+                to="#experiences"
+                text={t('experiences')}
+                color={props.color}
+            />
             <MyLink to="#projects" text={t('projects')} color={props.color} />
             <IconButton
                 color="inherit"

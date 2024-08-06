@@ -4,7 +4,8 @@ import {
     IconButton,
     Toolbar,
     Typography,
-    useMediaQuery, useTheme,
+    useMediaQuery,
+    useTheme,
 } from '@suid/material'
 import { createMemo, createSignal } from 'solid-js'
 import { useLayoutContext } from '../LayoutContext.ts'
@@ -74,7 +75,9 @@ function Header() {
                                 justifyContent: 'flex-end',
                             }}
                         >
-                            <NavList color={theme.palette.primary.contrastText} />
+                            <NavList
+                                color={theme.palette.primary.contrastText}
+                            />
                         </Box>
                     )}
                 </Toolbar>
