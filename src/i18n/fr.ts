@@ -8,4 +8,8 @@ export const fr_dict = {
     lang_en: 'Anglais',
     lang_fr: 'Français',
     footer: 'Fait avec ❤️ par Rémi Espié | © Rémi Espié - 2024',
+    entrypoint_hello: 'Bonjour, je suis Rémi 👋',
+    entrypoint_description:
+        'Développeur Fullstack et apprenti ingénieur DevOps',
+    entrypoint_button: 'Commençons !',
 }

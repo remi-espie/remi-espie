@@ -1,5 +1,4 @@
 import {
-    Box,
     createPalette,
     createTheme,
     CssBaseline,
@@ -14,6 +13,7 @@ import * as i18n from '@solid-primitives/i18n'
 import { dictionaries } from './i18n/types.ts'
 import Footer from './Layout/Footer.tsx'
 import Loremipsum from './component/loremipsum.tsx'
+import Entrypoint from './component/Entrypoint.tsx'
 
 function App() {
     const context = createLayoutMutable()
@@ -47,11 +47,7 @@ function App() {
             <ThemeProvider theme={theme}>
                 <CssBaseline />
                 <Header />
-                <Box
-                    sx={{
-                        height: '72px',
-                    }}
-                />
+                <Entrypoint />
                 <Loremipsum />
                 <Footer />
             </ThemeProvider>
