@@ -7,12 +7,8 @@ function MyDrawer(props: {
     open: Accessor<boolean>
     setOpen: (newOpen: boolean) => void
 }) {
-    const toggleDrawer = (newOpen: boolean) => () => {
-        props.setOpen(newOpen)
-    }
-
     return (
-        <Drawer open={props.open()} onClose={toggleDrawer(false)}>
+        <Drawer open={props.open()} onClose={() => props.setOpen(false)}>
             <Box
                 sx={{
                     display: 'flex',
@@ -32,7 +28,7 @@ function MyDrawer(props: {
                 <IconButton
                     color="inherit"
                     aria-label="close drawer"
-                    onClick={toggleDrawer(false)}
+                    onClick={() => props.setOpen(false)}
                     sx={{ width: 'min-content', alignSelf: 'center' }}
                 >
                     <MenuOpenOutlined />
