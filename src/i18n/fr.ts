@@ -7,4 +7,5 @@ export const fr_dict = {
     language: 'Langue',
     lang_en: 'Anglais',
     lang_fr: 'Français',
+    footer: 'Fait avec ❤️ par Rémi Espié | © Rémi Espié - 2024',
 }

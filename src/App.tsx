@@ -5,13 +5,15 @@ import {
     CssBaseline,
     ThemeProvider,
 } from '@suid/material'
-import Header from './component/Header.tsx'
+import Header from './Layout/Header.tsx'
 import { createEffect, createMemo } from 'solid-js'
 import { baseTheme, themeDark, themeLight } from './theme.ts'
 import LayoutContext, { createLayoutMutable } from './LayoutContext.ts'
 import './global.css'
 import * as i18n from '@solid-primitives/i18n'
 import { dictionaries } from './i18n/types.ts'
+import Footer from './Layout/Footer.tsx'
+import Loremipsum from './component/loremipsum.tsx'
 
 function App() {
     const context = createLayoutMutable()
@@ -47,9 +49,11 @@ function App() {
                 <Header />
                 <Box
                     sx={{
-                        height: '64px',
+                        height: '72px',
                     }}
                 />
+                <Loremipsum />
+                <Footer />
             </ThemeProvider>
         </LayoutContext.Provider>
     )
