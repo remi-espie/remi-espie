@@ -18,7 +18,7 @@ function Entrypoint() {
     const t = i18n.translator(dict)
 
     return (
-        <Grid container spacing={2} sx={{ height: '100vh' }}>
+        <Grid container sx={{ height: '100vh' }}>
             <Grid item xs={8}>
                 <Box
                     sx={{

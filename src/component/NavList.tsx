@@ -19,9 +19,9 @@ import TranslateOutlined from '@suid/icons-material/TranslateOutlined'
 import * as i18n from '@solid-primitives/i18n'
 import { dictionaries } from '../i18n/types.ts'
 
-function NavList() {
-    const context = useLayoutContext()
+function NavList(props: { color: string }) {
     const theme = useTheme()
+    const context = useLayoutContext()
 
     const dict = createMemo(() => {
         return i18n.flatten(dictionaries[context.language])
@@ -37,9 +37,9 @@ function NavList() {
 
     return (
         <>
-            <MyLink to="#about" text={t('about')} color="inherit" />
-            <MyLink to="#experiences" text={t('experiences')} color="inherit" />
-            <MyLink to="#projects" text={t('projects')} color="inherit" />
+            <MyLink to="#about" text={t('about')} color={props.color} />
+            <MyLink to="#experiences" text={t('experiences')} color={props.color} />
+            <MyLink to="#projects" text={t('projects')} color={props.color} />
             <IconButton
                 color="inherit"
                 component="a"

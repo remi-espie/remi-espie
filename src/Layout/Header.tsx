@@ -4,7 +4,7 @@ import {
     IconButton,
     Toolbar,
     Typography,
-    useMediaQuery,
+    useMediaQuery, useTheme,
 } from '@suid/material'
 import { createMemo, createSignal } from 'solid-js'
 import { useLayoutContext } from '../LayoutContext.ts'
@@ -15,6 +15,8 @@ import MyDrawer from './Drawer.tsx'
 import MenuOutlined from '@suid/icons-material/MenuOutlined'
 
 function Header() {
+    const theme = useTheme()
+
     const context = useLayoutContext()
 
     const dict = createMemo(() => {
@@ -72,7 +74,7 @@ function Header() {
                                 justifyContent: 'flex-end',
                             }}
                         >
-                            <NavList />
+                            <NavList color={theme.palette.primary.contrastText} />
                         </Box>
                     )}
                 </Toolbar>

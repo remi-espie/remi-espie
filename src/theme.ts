@@ -15,13 +15,13 @@ export const themeLight = {
         light: cyan[400],
         main: cyan[500],
         dark: cyan[700],
-        contrastText: '#fff',
+        contrastText: '#f0f0f0',
     },
     secondary: {
         light: teal[300],
         main: teal[500],
         dark: teal[700],
-        contrastText: '#fff',
+        contrastText: '#1d1d1d',
     },
     background: {
         default: '#f0f0f0',
@@ -31,17 +31,17 @@ export const themeLight = {
 export const themeDark = {
     primary: {
         light: cyan[900],
-        main: cyan[800],
-        dark: cyan[600],
-        contrastText: '#000',
+        main: cyan[700],
+        dark: cyan[500],
+        contrastText: '#1d1d1d',
     },
     secondary: {
         light: teal[900],
         main: teal[800],
         dark: teal[600],
-        contrastText: '#000',
+        contrastText: '#f0f0f0',
     },
     background: {
-        default: '#1c1c1c',
+        default: '#1d1d1d',
     },
 }

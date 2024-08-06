@@ -1,4 +1,4 @@
-import { Box, Drawer, IconButton } from '@suid/material'
+import { Box, Drawer, IconButton, useTheme } from '@suid/material'
 import NavList from '../component/NavList.tsx'
 import { Accessor } from 'solid-js'
 import MenuOpenOutlined from '@suid/icons-material/MenuOpenOutlined'
@@ -7,6 +7,7 @@ function MyDrawer(props: {
     open: Accessor<boolean>
     setOpen: (newOpen: boolean) => void
 }) {
+    const theme = useTheme()
     return (
         <Drawer open={props.open()} onClose={() => props.setOpen(false)}>
             <Box
@@ -34,7 +35,7 @@ function MyDrawer(props: {
                     <MenuOpenOutlined />
                 </IconButton>
             </Box>
-            <NavList />
+            <NavList color={theme.palette.secondary.contrastText} />
         </Drawer>
     )
 }
