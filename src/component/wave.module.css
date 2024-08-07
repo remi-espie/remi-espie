@@ -1,0 +1,16 @@
+.wave {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.wave svg {
+    position: relative;
+    display: block;
+    width: calc(150%);
+    height: 70px;
+    transition: color 0.33s;
+}
