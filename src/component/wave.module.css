@@ -1,6 +1,14 @@
+.top {
+    top: 0;
+}
+
+.bottom {
+    bottom: 0;
+    transform: rotate(180deg);
+}
+
 .wave {
     position: relative;
-    top: 0;
     left: 0;
     width: 100%;
     overflow: hidden;

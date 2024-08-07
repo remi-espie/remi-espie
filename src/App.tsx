@@ -12,8 +12,10 @@ import './global.css'
 import * as i18n from '@solid-primitives/i18n'
 import { dictionaries } from './i18n/types.ts'
 import Footer from './Layout/Footer.tsx'
-import Loremipsum from './component/loremipsum.tsx'
 import Entrypoint from './component/Entrypoint.tsx'
+import About from './Layout/About.tsx'
+import Experiences from './Layout/Experiences.tsx'
+import Projects from './Layout/Projects.tsx'
 
 function App() {
     const context = createLayoutMutable()
@@ -48,7 +50,9 @@ function App() {
                 <CssBaseline />
                 <Header />
                 <Entrypoint />
-                <Loremipsum />
+                <About />
+                <Experiences />
+                <Projects />
                 <Footer />
             </ThemeProvider>
         </LayoutContext.Provider>

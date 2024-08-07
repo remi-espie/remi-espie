@@ -18,7 +18,12 @@ function footer() {
     return (
         <AppBar
             position="relative"
-            sx={{ top: 'auto', bottom: 0 }}
+            sx={{
+                top: 'auto',
+                bottom: 0,
+                boxShadow: 'none',
+                backgroundImage: 'none',
+            }}
             enableColorOnDark
         >
             <Typography variant="caption" sx={{ m: 1 }}>
