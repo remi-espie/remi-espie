@@ -53,6 +53,13 @@ jobs:
     publish:
         needs: build
 
+        permissions:
+            packages: write
+
+        env:
+            REGISTRY: ghcr.io
+            IMAGE_NAME: ${{ github.repository }}
+
         runs-on: ubuntu-latest
         steps:
             - name: Checkout
@@ -61,13 +68,22 @@ jobs:
             - uses: docker/login-action@v2
               name: Log in to the container registry
               with:
-                  registry: ghcr.io
+                  registry: ${{ env.REGISTRY }}
                   username: ${{ github.actor }}
                   password: ${{ secrets.GITHUB_TOKEN }}
+
+            - uses: docker/metadata-action@v4
+              name: Extract metadata (tags, labels) for Docker
+              id: meta
+              with:
+                  images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+                  tags: |
+                      latest
 
             - uses: docker/build-push-action@v4
               name: Build and push the Docker image
               with:
                   context: .
                   push: true
-                  tags: ${{ github.repository }}/portfolio:latest
+                  tags: ${{ steps.meta.outputs.tags }}
+                  labels: ${{ steps.meta.outputs.labels }}
