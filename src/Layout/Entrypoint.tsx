@@ -2,15 +2,30 @@ import { Box, Button, Grid, Typography } from '@suid/material'
 import Person from '@suid/icons-material/Person'
 import SubdirectoryArrowRight from '@suid/icons-material/SubdirectoryArrowRight'
 import { useLayoutContext } from '../LayoutContext.ts'
-import { createMemo } from 'solid-js'
+import { createEffect, createMemo, createSignal } from 'solid-js'
 import * as i18n from '@solid-primitives/i18n'
 import { dictionaries } from '../i18n/types.ts'
+import TypeStyle from '../component/typewriter.module.css'
+import Typer from '../component/Typer.tsx'
 
 function Entrypoint() {
     const context = useLayoutContext()
 
+    const [helloText, setHelloText] = createSignal(true)
+    const [descText, setDescText] = createSignal(false)
+    const [cursor, setCursor] = createSignal(false)
+
     const dict = createMemo(() => {
+        setHelloText(false)
+        setDescText(false)
+        setCursor(false)
         return i18n.flatten(dictionaries[context.language])
+    })
+
+    createEffect(() => {
+        if (!helloText()) {
+            setHelloText(true)
+        }
     })
 
     // Working thanks to context
@@ -30,11 +45,36 @@ function Entrypoint() {
                     }}
                 >
                     <Typography variant="h4">
-                        {t('entrypoint_hello')}
+                        {helloText() && (
+                            <Typer
+                                fulltext={t('entrypoint_hello')}
+                                delay={1000}
+                                timeout={150}
+                                onFinish={() => setDescText(true)}
+                            />
+                        )}
                     </Typography>
-                    <Typography variant="h5" sx={{ mt: 2, mb: 4 }}>
-                        {t('entrypoint_description')}
-                    </Typography>
+                    {descText() && (
+                        <Box sx={{ display: 'flex', flexDirection: 'row' }}>
+                            <Typography variant="h5" sx={{ mt: 2, mb: 4 }}>
+                                <Typer
+                                    fulltext={t('entrypoint_description')}
+                                    timeout={100}
+                                    delay={1000}
+                                    onFinish={() => setCursor(true)}
+                                />
+                            </Typography>
+                            {cursor() && (
+                                <Typography
+                                    variant="h5"
+                                    sx={{ mt: 2, mb: 4 }}
+                                    class={TypeStyle.cursor}
+                                >
+                                    _
+                                </Typography>
+                            )}
+                        </Box>
+                    )}
                     <Button
                         href="#about"
                         variant="contained"
