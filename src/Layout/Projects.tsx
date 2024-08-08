@@ -1,6 +1,6 @@
 import BGStyle from '../component/backgroundimage.module.css'
 import { Box, SvgIcon, useTheme } from '@suid/material'
-import WaveStyle from '../component/wave.module.css'
+import ShapeStyle from '../component/shape.module.css'
 import Loremipsum from '../component/loremipsum.tsx'
 
 function Projects() {
@@ -15,7 +15,7 @@ function Projects() {
             id={'projects'}
         >
             <Box
-                class={`${WaveStyle.wave} ${WaveStyle.top}`}
+                class={`${ShapeStyle.shape} ${ShapeStyle.wave} ${ShapeStyle.top}`}
                 color={theme.palette.background.default}
             >
                 <SvgIcon viewBox="0 0 1200 120" preserveAspectRatio="none">
@@ -33,7 +33,7 @@ function Projects() {
             <Loremipsum color={theme.palette.common.white} />
             <Loremipsum color={theme.palette.common.white} />
             <Box
-                class={`${WaveStyle.wave} ${WaveStyle.bottom}`}
+                class={`${ShapeStyle.shape} ${ShapeStyle.wave} ${ShapeStyle.bottom}`}
                 color={theme.palette.primary.main}
             >
                 <SvgIcon viewBox="0 0 1200 120" preserveAspectRatio="none">

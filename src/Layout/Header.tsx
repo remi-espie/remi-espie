@@ -65,7 +65,12 @@ function Header() {
                             </g>
                         </SvgIcon>
                         <Box sx={{ display: 'flex', flexDirection: 'column' }}>
-                            <Typography variant="h6">{t('title')}</Typography>
+                            <Typography
+                                variant="h6"
+                                sx={{ mt: 1, lineHeight: '1em' }}
+                            >
+                                {t('title')}
+                            </Typography>
                             <Typography variant="body1">
                                 {t('author')}
                             </Typography>
