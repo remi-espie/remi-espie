@@ -1,5 +1,5 @@
 export const en_dict = {
-    title: 'Presentation Portfolio',
+    title: 'Introduction Portfolio',
     author: 'Rémi Espié',
     about: 'About me',
     experiences: 'My experiences',

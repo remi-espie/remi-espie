@@ -41,7 +41,7 @@ function App() {
     const t = i18n.translator(dict)
 
     createEffect(() => {
-        document.title = t('title')
+        document.title = t('title') + ' | ' + t('author')
     })
 
     return (
