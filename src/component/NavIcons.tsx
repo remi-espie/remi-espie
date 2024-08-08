@@ -1,4 +1,3 @@
-import MyLink from './MyLink.tsx'
 import {
     IconButton,
     Menu,
@@ -19,8 +18,9 @@ import TranslateOutlined from '@suid/icons-material/TranslateOutlined'
 import * as i18n from '@solid-primitives/i18n'
 import { dictionaries } from '../i18n/types.ts'
 
-function NavList(props: { color: string }) {
+function NavIcons() {
     const theme = useTheme()
+
     const context = useLayoutContext()
 
     const dict = createMemo(() => {
@@ -34,16 +34,8 @@ function NavList(props: { color: string }) {
     const [anchorEl, setAnchorEl] = createSignal<null | HTMLElement>(null)
     const open = () => Boolean(anchorEl())
     const handleClose = () => setAnchorEl(null)
-
     return (
         <>
-            <MyLink to="#about" text={t('about')} color={props.color} />
-            <MyLink
-                to="#experiences"
-                text={t('experiences')}
-                color={props.color}
-            />
-            <MyLink to="#projects" text={t('projects')} color={props.color} />
             <IconButton
                 color="inherit"
                 component="a"
@@ -197,4 +189,4 @@ function NavList(props: { color: string }) {
     )
 }
 
-export default NavList
+export default NavIcons

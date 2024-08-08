@@ -1,5 +1,6 @@
 export const fr_dict = {
-    title: 'Le portfolio de Rémi !',
+    title: 'Portfolio de présentation',
+    author: 'Rémi Espié',
     about: 'A propos de moi',
     experiences: 'Mes expériences',
     projects: 'Mes projets',

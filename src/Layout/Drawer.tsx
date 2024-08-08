@@ -1,7 +1,7 @@
 import { Box, Drawer, IconButton, SvgIcon, useTheme } from '@suid/material'
-import NavList from '../component/NavList.tsx'
 import { Accessor } from 'solid-js'
 import MenuOpenOutlined from '@suid/icons-material/MenuOpenOutlined'
+import DrawerNav from '../component/DrawerNav.tsx'
 
 function MyDrawer(props: {
     open: Accessor<boolean>
@@ -34,7 +34,7 @@ function MyDrawer(props: {
                     <MenuOpenOutlined />
                 </IconButton>
             </Box>
-            <NavList color={theme.palette.secondary.contrastText} />
+            <DrawerNav color={theme.palette.secondary.contrastText} />
         </Drawer>
     )
 }

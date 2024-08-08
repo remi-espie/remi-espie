@@ -29,7 +29,7 @@ function Entrypoint() {
                         justifyContent: 'center',
                     }}
                 >
-                    <Typography variant="h3">
+                    <Typography variant="h4">
                         {t('entrypoint_hello')}
                     </Typography>
                     <Typography variant="h5" sx={{ mt: 2, mb: 4 }}>
