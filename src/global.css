@@ -5,4 +5,18 @@
 :root {
     transition: color 0.33s;
     scroll-behavior: smooth;
+    overflow-x: hidden;
+    font-size: 1.1rem;
+}
+
+@media (max-width: 600px) {
+    :root {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 400px) {
+    :root {
+        font-size: 0.8rem;
+    }
 }

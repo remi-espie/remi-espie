@@ -9,7 +9,7 @@ function Projects() {
         <Box
             sx={{
                 backgroundImage:
-                    'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://img.freepik.com/free-photo/closeup-computer-parts_144627-1073.jpg?t=st=1723034207~exp=1723037807~hmac=4f5365eefa890be24bfdc56cc8008b3acce0ffc4be6670571bf1a9a4e6feeca7&w=1380)',
+                    'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://img.freepik.com/free-photo/closeup-computer-parts_144627-1086.jpg?t=st=1723033800~exp=1723037400~hmac=a0d3ab6006ab1ab2007aec4d2012fbfb5f306dc5a968dbe90ce58d2d5adc2e5d&w=1060)',
             }}
             class={BGStyle.bgimage}
             id={'projects'}

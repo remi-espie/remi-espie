@@ -45,36 +45,39 @@ function Entrypoint() {
                     }}
                 >
                     <Typography variant="h4">
-                        {helloText() && (
+                        {helloText() ? (
                             <Typer
                                 fulltext={t('entrypoint_hello')}
                                 delay={1000}
                                 timeout={150}
                                 onFinish={() => setDescText(true)}
                             />
+                        ) : (
+                            ' '
                         )}
                     </Typography>
-                    {descText() && (
-                        <Box sx={{ display: 'flex', flexDirection: 'row' }}>
-                            <Typography variant="h5" sx={{ mt: 2, mb: 4 }}>
+                    <Typography variant="h5" sx={{ mt: 2, mb: 4 }}>
+                        {descText() ? (
+                            <Box sx={{ display: 'flex', flexDirection: 'row' }}>
                                 <Typer
                                     fulltext={t('entrypoint_description')}
                                     timeout={100}
                                     delay={1000}
                                     onFinish={() => setCursor(true)}
                                 />
-                            </Typography>
-                            {cursor() && (
-                                <Typography
-                                    variant="h5"
-                                    sx={{ mt: 2, mb: 4 }}
-                                    class={TypeStyle.cursor}
-                                >
-                                    _
-                                </Typography>
-                            )}
-                        </Box>
-                    )}
+                                {cursor() && (
+                                    <Typography
+                                        class={TypeStyle.cursor}
+                                        variant="h5"
+                                    >
+                                        _
+                                    </Typography>
+                                )}
+                            </Box>
+                        ) : (
+                            ' '
+                        )}
+                    </Typography>
                     <Button
                         href="#about"
                         variant="contained"

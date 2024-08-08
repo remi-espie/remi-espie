@@ -9,8 +9,36 @@ export const en_dict = {
     lang_en: 'English',
     lang_fr: 'French',
     footer: 'Made with ❤️ by Rémi Espié | © Rémi Espié - 2024',
-    entrypoint_hello: 'Hello, I am Rémi 👋',
+    entrypoint_hello: "Hello, I'm Rémi 👋",
     entrypoint_description:
         'Fullstack Developer and apprentice DevOps engineer ',
     entrypoint_button: "Let's get started!",
+    birthText: ['Born on February 1st, 2000, France', '24 years old'],
+    residencyText: [
+        'Lives in Montpellier, 34000, France',
+        'Available for geographical mobility',
+        'to study, live or work',
+    ],
+    studyText: ['Student at Polytech Montpellier in DevOps'],
+    workingText: ['In apprenticeship at GE Vernova: Grid Solutions'],
+    diplomaText: [
+        "Graduated from a 'DUETI' diploma at UQAC",
+        'in computer science with a major in video game design',
+        'And graduated from a TUD in computer science',
+        'Scientific and engineering training',
+        'Scientific Baccalaureate Engineering Science',
+    ],
+    langText: [
+        'Fluent in common and technical English',
+        'TOEIC 975/990',
+        'Cambridge B1 diploma obtained in 2016',
+    ],
+    carText: [
+        'Driving license B',
+        'International driving license',
+        'Vehicle owner',
+    ],
+    contactMe: 'Contact me',
+    phone: 'Phone',
+    mail: 'Mail',
 }

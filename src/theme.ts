@@ -3,7 +3,6 @@ import { cyan, teal } from '@suid/material/colors'
 export const baseTheme = {
     typography: {
         fontFamily: ['Courier', 'Segoe UI', 'sans-serif'].join(','),
-        fontSize: 16,
         h6: {
             fontWeight: 'bold',
         },

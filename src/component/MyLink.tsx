@@ -8,6 +8,7 @@ function MyLink(props: {
     text: string
     color?: string
     sx?: SxProps<Theme>
+    target?: string
 }) {
     return (
         <Link
@@ -16,6 +17,7 @@ function MyLink(props: {
             variant="body1"
             underline="none"
             color={props.color}
+            target={props.target}
             style={{
                 '--underline-color': props.color || 'primary',
             }}
