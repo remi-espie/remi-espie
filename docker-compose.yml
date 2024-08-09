@@ -7,7 +7,10 @@ services:
         ports:
             - '8080:80'
 # replace files in data folder with your own
-#    volumes:
-#        - ./data/me.png:/var/www/html/me.png
-#        - ./data/CV-REMI_ESPIE.pdf:/var/www/html/CV-REMI_ESPIE.pdf
-#        - ./data/CV-REMI_ESPIE-English.pdf:/var/www/html/CV-REMI_ESPIE-English.pdf
+#        volumes:
+#        - ./data/me.png:/var/www/html/portfolio/me.png
+#        - ./data/CV-REMI_ESPIE.pdf:/var/www/html/portfolio/CV-REMI_ESPIE.pdf
+#        - ./data/CV-REMI_ESPIE-English.pdf:/var/www/html/portfolio/CV-REMI_ESPIE-English.pdf
+#
+# If you need to replace your nginx configuration, uncomment the following line
+#        - ./data/nginx.conf:/opt/bitnami/nginx/conf/server_blocks/my_server_block.conf
