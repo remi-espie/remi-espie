@@ -1,5 +1,4 @@
 import { Box, Button, Grid, Typography } from '@suid/material'
-import Person from '@suid/icons-material/Person'
 import SubdirectoryArrowRight from '@suid/icons-material/SubdirectoryArrowRight'
 import { useLayoutContext } from '../LayoutContext.ts'
 import { createEffect, createMemo, createSignal } from 'solid-js'
@@ -7,7 +6,6 @@ import * as i18n from '@solid-primitives/i18n'
 import { dictionaries } from '../i18n/types.ts'
 import TypeStyle from '../component/typewriter.module.css'
 import Typer from '../component/Typer.tsx'
-import me from '../assets/me.png'
 
 function Entrypoint() {
     const context = useLayoutContext()
@@ -32,14 +30,6 @@ function Entrypoint() {
     // Working thanks to context
     // eslint-disable-next-line solid/reactivity
     const t = i18n.translator(dict)
-
-    const [picture, setPicture] = createSignal(false)
-
-    createEffect(() => {
-        fetch(me).then((response) => {
-            setPicture(response.headers.get('content-type') === 'image/png')
-        })
-    })
 
     return (
         <Grid
@@ -117,18 +107,14 @@ function Entrypoint() {
                         justifyContent: 'center',
                     }}
                 >
-                    {!picture() ? (
-                        <img
-                            src={me}
-                            alt="Rémi Espié"
-                            style={{
-                                width: '60%',
-                                height: 'auto',
-                            }}
-                        />
-                    ) : (
-                        <Person sx={{ width: '80%', height: '80%' }} />
-                    )}
+                    <img
+                        src={'/me.png'}
+                        alt="Rémi Espié"
+                        style={{
+                            width: '60%',
+                            height: 'auto',
+                        }}
+                    />
                 </Box>
             </Grid>
         </Grid>
