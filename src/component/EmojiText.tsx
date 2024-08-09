@@ -11,8 +11,14 @@ function EmojiText(props: { emoji: string; text: string[] }) {
                 lineHeight: '1.25',
             }}
         >
-            <Box sx={{ mr: 3 }}>{props.emoji}</Box>
-            <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+            <Box sx={{ mr: '1.5em' }}>{props.emoji}</Box>
+            <Box
+                sx={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    maxWidth: '80vw',
+                }}
+            >
                 <For each={props.text}>{(text) => <span>{text}</span>}</For>
             </Box>
         </Box>

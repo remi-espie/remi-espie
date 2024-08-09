@@ -8,7 +8,6 @@ import {
     useTheme,
 } from '@suid/material'
 import ShapeStyle from '../component/shape.module.css'
-import Loremipsum from '../component/loremipsum.tsx'
 import { useLayoutContext } from '../LayoutContext.ts'
 import { createMemo } from 'solid-js'
 import * as i18n from '@solid-primitives/i18n'
@@ -33,7 +32,7 @@ function About() {
         <Box
             sx={{
                 backgroundImage:
-                    'linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(https://img.freepik.com/free-photo/closeup-computer-parts_144627-1073.jpg?t=st=1723034207~exp=1723037807~hmac=4f5365eefa890be24bfdc56cc8008b3acce0ffc4be6670571bf1a9a4e6feeca7&w=1380)',
+                    'linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(https://img.freepik.com/free-photo/closeup-computer-parts_144627-1073.jpg?t=st=1723034207~exp=1723037807~hmac=4f5365eefa890be24bfdc56cc8008b3acce0ffc4be6670571bf1a9a4e6feeca7&w=1380)',
                 color: theme.palette.common.white,
             }}
             class={BGStyle.bgimage}
@@ -47,6 +46,20 @@ function About() {
                     <path d="M649.97 0L550.03 0 599.91 54.12 649.97 0z" />
                 </SvgIcon>
             </Box>
+
+            <Typography
+                variant="h4"
+                sx={{ width: 'max-content', margin: 'auto', mb: 4 }}
+            >
+                {t('getCV')}{' '}
+                <MyLink
+                    to={t('CVurl').toString()}
+                    text={t('CVtext').toString()}
+                    color={theme.palette.primary.light}
+                    sx={{ fontWeight: 'bold' }}
+                />
+                .
+            </Typography>
 
             <Typography
                 variant="h4"
@@ -67,6 +80,7 @@ function About() {
                 <EmojiText emoji={'🌎'} text={t('langText')} />
                 <EmojiText emoji={'🚗'} text={t('carText')} />
             </Box>
+
             <Typography
                 variant="h4"
                 sx={{ width: 'max-content', margin: 'auto', mb: 4 }}
@@ -75,7 +89,7 @@ function About() {
             </Typography>
             <Grid
                 container
-                sx={{ width: '75vw', mb: 4 }}
+                sx={{ width: '80vw', mb: 4 }}
                 margin="auto"
                 alignItems="center"
                 justifyContent="center"
@@ -85,20 +99,11 @@ function About() {
                 <Grid item xs={6}>
                     <Box
                         sx={{
-                            display: 'flex',
-                            flexDirection: 'row',
-                            alignItems: 'center',
+                            width: 'max-content',
+                            m: 'auto',
+                            mr: 0,
                         }}
                     >
-                        <IconButton
-                            color="inherit"
-                            component="a"
-                            target="_blank"
-                            href="tel:+33604196893"
-                            sx={{ mr: 1, fontSize: '1.25em' }}
-                        >
-                            <Box>☎️</Box>
-                        </IconButton>
                         <Box
                             sx={{
                                 display: 'flex',
@@ -106,72 +111,95 @@ function About() {
                                 alignItems: 'center',
                             }}
                         >
-                            {t('phone')} :{' '}
-                            <MyLink
-                                to={'tel:+33604196893'}
-                                text={'+33.6.04.19.68.93'}
-                                color={theme.palette.primary.dark}
-                                sx={{ fontWeight: 'bold' }}
-                            />
+                            <IconButton
+                                color="inherit"
+                                component="a"
+                                target="_blank"
+                                href="tel:+33604196893"
+                                sx={{ mr: '0.5em', fontSize: '1.25em' }}
+                            >
+                                ☎️
+                            </IconButton>
+                            <Box
+                                sx={{
+                                    display: 'flex',
+                                    flexDirection: 'row',
+                                    alignItems: 'center',
+                                }}
+                            >
+                                {t('phone')} :
+                                <MyLink
+                                    to={'tel:+33604196893'}
+                                    text={'+33.6.04.19.68.93'}
+                                    color={theme.palette.primary.light}
+                                    sx={{ fontWeight: 'bold' }}
+                                />
+                            </Box>
                         </Box>
-                    </Box>
-                    <Box
-                        sx={{
-                            display: 'flex',
-                            flexDirection: 'row',
-                            alignItems: 'start',
-                            mt: '8px',
-                        }}
-                    >
-                        <IconButton
-                            color="inherit"
-                            component="a"
-                            target="_blank"
-                            href="mailto:rem-e.84@orange.fr"
-                            sx={{
-                                mr: 1,
-                                fontSize: '1.25em',
-                                transform: 'translateY(-8px)',
-                            }}
-                        >
-                            <Box>📧</Box>
-                        </IconButton>
                         <Box
                             sx={{
                                 display: 'flex',
                                 flexDirection: 'row',
+                                alignItems: 'start',
+                                mt: '8px',
                             }}
                         >
-                            {t('mail')} :
+                            <IconButton
+                                color="inherit"
+                                component="a"
+                                target="_blank"
+                                href="mailto:rem-e.84@orange.fr"
+                                sx={{
+                                    mr: '0.5em',
+                                    fontSize: '1.25em',
+                                    transform: 'translateY(-8px)',
+                                }}
+                            >
+                                📧
+                            </IconButton>
                             <Box
                                 sx={{
                                     display: 'flex',
-                                    flexDirection: 'column',
+                                    flexDirection: 'row',
                                 }}
                             >
+                                {t('mail')} :
                                 <Box
                                     sx={{
-                                        display: 'inline',
+                                        display: 'flex',
+                                        flexDirection: 'column',
                                     }}
                                 >
+                                    <Box
+                                        sx={{
+                                            display: 'inline',
+                                        }}
+                                    >
+                                        <MyLink
+                                            to={'mailto:rem-e.84@orange.fr'}
+                                            text={'rem-e.84@orange.fr'}
+                                            color={theme.palette.primary.light}
+                                            sx={{
+                                                mt: 0,
+                                                mb: 0,
+                                                fontWeight: 'bold',
+                                            }}
+                                        />
+                                        /
+                                    </Box>
                                     <MyLink
-                                        to={'mailto:rem-e.84@orange.fr'}
-                                        text={'rem-e.84@orange.fr'}
-                                        color={theme.palette.primary.dark}
+                                        to={
+                                            'mailto:remi.espie@etu.umontpellier.fr'
+                                        }
+                                        text={'remi.espie@etu.umontpellier.fr'}
+                                        color={theme.palette.primary.light}
                                         sx={{
                                             mt: 0,
                                             mb: 0,
                                             fontWeight: 'bold',
                                         }}
                                     />
-                                    /
                                 </Box>
-                                <MyLink
-                                    to={'mailto:remi.espie@etu.umontpellier.fr'}
-                                    text={'remi.espie@etu.umontpellier.fr'}
-                                    color={theme.palette.primary.dark}
-                                    sx={{ mt: 0, mb: 0, fontWeight: 'bold' }}
-                                />
                             </Box>
                         </Box>
                     </Box>
@@ -202,7 +230,7 @@ function About() {
                             <MyLink
                                 to={'https://www.linkedin.com/in/rémi-espié/'}
                                 text={'https://www.linkedin.com/in/rémi-espié/'}
-                                color={theme.palette.primary.dark}
+                                color={theme.palette.primary.light}
                                 sx={{ fontWeight: 'bold' }}
                                 target={'_blank'}
                             />
@@ -233,7 +261,7 @@ function About() {
                             <MyLink
                                 to={'https://github.com/remi-espie/'}
                                 text={'https://github.com/remi-espie/'}
-                                color={theme.palette.primary.dark}
+                                color={theme.palette.primary.light}
                                 sx={{ fontWeight: 'bold' }}
                                 target={'_blank'}
                             />
@@ -242,8 +270,6 @@ function About() {
                 </Grid>
             </Grid>
 
-            <Loremipsum color={theme.palette.common.white} />
-            <Loremipsum color={theme.palette.common.white} />
             <Box
                 class={`${ShapeStyle.shape} ${ShapeStyle.wave} ${ShapeStyle.bottom}`}
                 color={theme.palette.background.default}

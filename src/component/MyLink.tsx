@@ -14,7 +14,6 @@ function MyLink(props: {
         <Link
             href={props.to}
             class={styles.underline}
-            variant="body1"
             underline="none"
             color={props.color}
             target={props.target}

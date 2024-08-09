@@ -42,4 +42,7 @@ export const en_dict = {
     contactMe: 'Contact me',
     phone: 'Phone',
     mail: 'Mail',
+    getCV: 'Get my CV as a PDF file',
+    CVurl: '/CV-ESPIE_REMI-English.pdf',
+    CVtext: 'here',
 }

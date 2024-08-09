@@ -33,9 +33,9 @@ export const themeLight = {
 
 export const themeDark = {
     primary: {
-        light: cyan[900],
+        dark: cyan[900],
         main: cyan[700],
-        dark: cyan[500],
+        light: cyan[500],
         contrastText: '#1d1d1d',
     },
     secondary: {
