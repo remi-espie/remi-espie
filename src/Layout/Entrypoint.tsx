@@ -7,6 +7,7 @@ import * as i18n from '@solid-primitives/i18n'
 import { dictionaries } from '../i18n/types.ts'
 import TypeStyle from '../component/typewriter.module.css'
 import Typer from '../component/Typer.tsx'
+import me from '../assets/me.png'
 
 function Entrypoint() {
     const context = useLayoutContext()
@@ -32,9 +33,21 @@ function Entrypoint() {
     // eslint-disable-next-line solid/reactivity
     const t = i18n.translator(dict)
 
+    const [picture, setPicture] = createSignal(false)
+
+    createEffect(() => {
+        fetch(me).then((response) => {
+            setPicture(response.headers.get('content-type') === 'image/png')
+        })
+    })
+
     return (
-        <Grid container sx={{ height: '90vh' }}>
-            <Grid item xs={8}>
+        <Grid
+            container
+            sx={{ height: '90vh' }}
+            columns={{ xs: 2, sm: 8, md: 12 }}
+        >
+            <Grid item xs={7}>
                 <Box
                     sx={{
                         p: 10,
@@ -95,7 +108,7 @@ function Entrypoint() {
                     </Button>
                 </Box>
             </Grid>
-            <Grid item xs={4}>
+            <Grid item xs={5}>
                 <Box
                     sx={{
                         display: 'flex',
@@ -104,9 +117,18 @@ function Entrypoint() {
                         justifyContent: 'center',
                     }}
                 >
-                    <Person
-                        sx={{ width: 'max-content', height: 'max-content' }}
-                    />
+                    {!picture() ? (
+                        <img
+                            src={me}
+                            alt="Rémi Espié"
+                            style={{
+                                width: '60%',
+                                height: 'auto',
+                            }}
+                        />
+                    ) : (
+                        <Person sx={{ width: '80%', height: '80%' }} />
+                    )}
                 </Box>
             </Grid>
         </Grid>

@@ -58,7 +58,12 @@ function About() {
                 <Box>
                     <Typography
                         variant="h4"
-                        sx={{ width: 'max-content', margin: 'auto', mb: 4 }}
+                        sx={{
+                            width: 'fit-content',
+                            margin: 'auto',
+                            mb: 4,
+                            textAlign: 'center',
+                        }}
                     >
                         {t('getCV')}{' '}
                         <MyLink
