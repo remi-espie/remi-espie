@@ -25,6 +25,7 @@ function DrawerNav(props: { color: string }) {
                 color={props.color}
             />
             <MyLink to="#projects" text={t('projects')} color={props.color} />
+            <MyLink to="#hobbies" text={t('hobbies')} color={props.color} />
             <NavIcons />
         </>
     )

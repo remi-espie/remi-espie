@@ -16,6 +16,7 @@ import Entrypoint from './Layout/Entrypoint.tsx'
 import About from './Layout/About.tsx'
 import Experiences from './Layout/Experiences.tsx'
 import Projects from './Layout/Projects.tsx'
+import Hobbies from './Layout/Hobbies.tsx'
 
 function App() {
     const context = createLayoutMutable()
@@ -53,6 +54,7 @@ function App() {
                 <About />
                 <Experiences />
                 <Projects />
+                <Hobbies />
                 <Footer />
             </ThemeProvider>
         </LayoutContext.Provider>

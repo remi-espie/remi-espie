@@ -4,6 +4,7 @@ export const en_dict = {
     about: 'About me',
     experiences: 'My experiences',
     projects: 'My projects',
+    hobbies: 'My hobbies',
     darkMode: 'Toggle light/dark mode',
     language: 'Language',
     lang_en: 'English',

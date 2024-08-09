@@ -51,6 +51,17 @@ function HeaderNav(props: { color: string }) {
                     letterSpacing: '-0.1px',
                 }}
             />
+            |
+            <MyLink
+                to="#hobbies"
+                text={t('hobbies')}
+                color={props.color}
+                sx={{
+                    display: 'inline-block',
+                    height: 'max-content',
+                    letterSpacing: '-0.1px',
+                }}
+            />
             <NavIcons />
         </Box>
     )
