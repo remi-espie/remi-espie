@@ -45,4 +45,25 @@ export const fr_dict = {
     getCV: 'Vous trouverez mon CV au format PDF',
     CVurl: '/CV-REMI_ESPIE.pdf',
     CVtext: 'ici',
+    professionalXP: 'Expériences professionnelles',
+    GEparagraph:
+        "J'ai travaillé à GE: Grid Solutions dans le cadre de mon alternance, pendant 3 ans, au sein de l'équipe DevOps. Mes principales tâches ont été :",
+    GElist: [
+        'Le développement de nouveaux logiciels pour les outils internes,',
+        'La virtualisation de machines temps réel,',
+        'Le support DevOps, notamment pour la migration de nos pipelines',
+    ],
+    ATSparagraph:
+        "J'ai travaillé au sein d'ATS Sport dans le cadre d'un stage pour l'obtention de mon DUT, puis d'un CDD d'un mois. J'ai été développeur au sein de l'entreprise, notamment sur de la micro électronique. Mes principaux travaux ont portés sur :",
+    ATSlist: [
+        "Le développement d'une nouvelle solution pour photographier les athlètes au passage d'une la ligne d'arrivée,",
+        "L'adaptation de ma solution à un écosystème existant,",
+        "La maintenance du site Web et l'administration du VPC de l'entreprise",
+    ],
+    personalXP: 'Expériences personnelles',
+
+    JamsParagraph:
+        "J'ai participé à plusieurs \"Game Jams\", des compétitions de développement de jeu vidéo dans un temps limité. J'ai pû travailler sur plusieurs moteurs de jeu vidéo, notamment Unity en C#. Travailler dans un temps limité avec des impératifs complexe m'a obligé à prendre des décisions rapidement et faire des choix critique pour atteindre un but rapidement.",
+    NDIparagraph:
+        "La Nuit de l'Info est un concours national de développement de site web sur la durée d'une nuit. Le site développé doit remplir un objectif principal, et peut être agrémenté d'objectifs secondaires proposé par des entreprises sponsors, avec souvent un cadeau à la clé.",
 }

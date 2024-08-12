@@ -1,0 +1,17 @@
+.zoomContainer {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.zoomContainer > img {
+    transition: transform .5s;
+    display: flex;
+    margin: auto;
+    object-fit: cover;
+}
+
+.zoomContainer > img:hover {
+    transform: scale(1.05);
+}

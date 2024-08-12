@@ -45,4 +45,22 @@ export const en_dict = {
     getCV: 'Get my CV as a PDF file',
     CVurl: '/CV-ESPIE_REMI-English.pdf',
     CVtext: 'here',
+    professionalXP: 'Professional experiences',
+    GEparagraph: `I worked at GE: Grid Solutions as part of my apprenticeship, for 3 years, within the DevOps team. My main tasks were:`,
+    GElist: [
+        'The development of new software for internal tools,',
+        'Real-time machine virtualization,',
+        'DevOps support, especially for the migration of our pipelines',
+    ],
+    ATSparagraph: `I worked at ATS Sport as part of an internship to obtain my TUD, then a one-month fixed-term contract. I was a developer within the company, particularly in microelectronics. My main work focused on:`,
+    ATSlist: [
+        'The development of a new solution to photograph athletes as they cross a finish line,',
+        'Adapting my solution to an existing ecosystem,',
+        'The maintenance and administration of the company website and VPC',
+    ],
+    personalXP: 'Personal experiences',
+    JamsParagraph:
+        'I participated in several "Game Jams", video game development competitions limited in time. I was able to work on several video game engines, notably Unity in C#. Working in a limited time with complex requirements forced me to make decisions quickly and make critical choices to achieve a goal quickly.',
+    NDIparagraph:
+        "La Nuit de l'Info is a national website development competition lasting one night. The site developed must fulfill a main objective, and can be supplemented with secondary objectives proposed by sponsoring companies, often offering a gift.",
 }
