@@ -105,6 +105,7 @@ function Entrypoint() {
                         flexDirection: 'column',
                         height: '100%',
                         justifyContent: 'center',
+                        alignItems: 'center',
                     }}
                 >
                     <img
