@@ -4,7 +4,8 @@ import { createMemo, For } from 'solid-js'
 import * as i18n from '@solid-primitives/i18n'
 import { dictionaries } from '../i18n/types.ts'
 import { Motion } from 'solid-motionone'
-import style from '../component/zoom-on-hover.module.css'
+import ZoomStyle from '../component/zoom-on-hover.module.css'
+import TimelineStyle from '../component/timeline.module.css'
 
 function Experiences() {
     const theme = useTheme()
@@ -66,7 +67,7 @@ function Experiences() {
                         </Typography>
                     </Grid>
                     <Grid item xs={6} sx={{ width: 'inherit' }}>
-                        <Box class={style.zoomContainer}>
+                        <Box class={ZoomStyle.zoomContainer}>
                             <img
                                 src={
                                     'https://lh3.googleusercontent.com/p/AF1QipNnbtUADkWph3sGd6Zx4esS3KNEjrcLsKURaGgA=s680-w680-h510'
@@ -92,7 +93,7 @@ function Experiences() {
                     columns={{ xs: 2, sm: 8, md: 12 }}
                 >
                     <Grid item xs={6} sx={{ width: 'inherit' }}>
-                        <Box class={style.zoomContainer}>
+                        <Box class={ZoomStyle.zoomContainer}>
                             <img
                                 src={
                                     'https://lh3.googleusercontent.com/p/AF1QipPOlBTShD2SeUyNX5ugqSRP7l3EY8hu1oQvj6jD=s920'
@@ -125,6 +126,43 @@ function Experiences() {
                         </Typography>
                     </Grid>
                 </Grid>
+            </Motion>
+
+            <Motion
+                initial={false}
+                animate={{ opacity: 0, y: 50 }}
+                transition={{ duration: 1 }}
+                inView={{ opacity: 1, y: 0 }}
+                inViewOptions={{ once: true }}
+            >
+                <Typography
+                    variant="h4"
+                    sx={{
+                        m: 'auto',
+                        width: 'fit-content',
+                        textAlign: 'center',
+                        mt: 4,
+                        mb: 8,
+                    }}
+                >
+                    Education
+                </Typography>
+                <Box class={TimelineStyle.timeline}>
+                    <ul>
+                        <li>
+                            <div>bac SI</div>
+                        </li>
+                        <li>
+                            <div>DUT</div>
+                        </li>
+                        <li>
+                            <div>DUETI</div>
+                        </li>
+                        <li>
+                            <div>ingé</div>
+                        </li>
+                    </ul>
+                </Box>
             </Motion>
             <Motion
                 initial={false}
@@ -167,7 +205,7 @@ function Experiences() {
                         </Typography>
                     </Grid>
                     <Grid item xs={6} sx={{ width: 'inherit' }}>
-                        <Box class={style.zoomContainer}>
+                        <Box class={ZoomStyle.zoomContainer}>
                             <img
                                 src={
                                     'https://drive.google.com/u/0/drive-viewer/AKGpihZIBy5HHovtM5NNJLmWEm87MykliHhNLbDhjUbH7g7JZFqQpD-snks1HMf6Ls8WXk_Fot3QpgsqLJPeE5Ai-5aJ3NG2kbGc_NY'
@@ -197,7 +235,7 @@ function Experiences() {
                     columns={{ xs: 2, sm: 8, md: 12 }}
                 >
                     <Grid item xs={6} sx={{ width: 'inherit' }}>
-                        <Box class={style.zoomContainer}>
+                        <Box class={ZoomStyle.zoomContainer}>
                             <img
                                 src={
                                     'https://iut-montpellier-sete.edu.umontpellier.fr/files/2023/02/La_halle_ca_taffe-1024x768.jpg'
