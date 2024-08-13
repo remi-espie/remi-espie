@@ -20,7 +20,6 @@
     z-index: 1;
 }
 
-
 .timeline ul:first-child::before {
     content: '';
     position: absolute;
@@ -88,6 +87,7 @@
     .timeline ul li:nth-child(even) div::before {
         left: -15px;
         border-width: 8px 16px 8px 0;
-        border-color: transparent var(--primary, #f45b69) transparent transparent;
+        border-color: transparent var(--primary, #f45b69) transparent
+            transparent;
     }
 }
