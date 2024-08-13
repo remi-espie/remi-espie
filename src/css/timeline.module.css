@@ -90,4 +90,8 @@
         border-color: transparent var(--primary, #f45b69) transparent
             transparent;
     }
+
+    .timeline ul:first-child::before {
+        left: 43px;
+    }
 }
