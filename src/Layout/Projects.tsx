@@ -1,6 +1,6 @@
-import BGStyle from '../component/backgroundimage.module.css'
+import BGStyle from '../css/backgroundimage.module.css'
 import { Box, SvgIcon, useTheme } from '@suid/material'
-import ShapeStyle from '../component/shape.module.css'
+import ShapeStyle from '../css/shape.module.css'
 import Loremipsum from '../component/loremipsum.tsx'
 
 function Projects() {

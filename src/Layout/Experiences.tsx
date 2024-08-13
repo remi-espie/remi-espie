@@ -4,8 +4,8 @@ import { createMemo, For } from 'solid-js'
 import * as i18n from '@solid-primitives/i18n'
 import { dictionaries } from '../i18n/types.ts'
 import { Motion } from 'solid-motionone'
-import ZoomStyle from '../component/zoom-on-hover.module.css'
-import TimelineStyle from '../component/timeline.module.css'
+import ZoomStyle from '../css/zoom-on-hover.module.css'
+import TimelineStyle from '../css/timeline.module.css'
 
 function Experiences() {
     const theme = useTheme()

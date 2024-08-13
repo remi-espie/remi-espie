@@ -4,7 +4,7 @@ import { useLayoutContext } from '../LayoutContext.ts'
 import { createEffect, createMemo, createSignal } from 'solid-js'
 import * as i18n from '@solid-primitives/i18n'
 import { dictionaries } from '../i18n/types.ts'
-import TypeStyle from '../component/typewriter.module.css'
+import TypeStyle from '../css/typewriter.module.css'
 import Typer from '../component/Typer.tsx'
 
 function Entrypoint() {

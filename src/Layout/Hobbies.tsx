@@ -1,6 +1,6 @@
 import Loremipsum from '../component/loremipsum.tsx'
 import { Box, SvgIcon, useTheme } from '@suid/material'
-import ShapeStyle from '../component/shape.module.css'
+import ShapeStyle from '../css/shape.module.css'
 
 function Hobbies() {
     const theme = useTheme()

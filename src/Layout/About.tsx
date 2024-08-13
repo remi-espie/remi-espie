@@ -1,4 +1,4 @@
-import BGStyle from '../component/backgroundimage.module.css'
+import BGStyle from '../css/backgroundimage.module.css'
 import {
     Box,
     Grid,
@@ -7,7 +7,7 @@ import {
     Typography,
     useTheme,
 } from '@suid/material'
-import ShapeStyle from '../component/shape.module.css'
+import ShapeStyle from '../css/shape.module.css'
 import { useLayoutContext } from '../LayoutContext.ts'
 import { createMemo } from 'solid-js'
 import * as i18n from '@solid-primitives/i18n'

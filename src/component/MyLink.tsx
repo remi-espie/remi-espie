@@ -1,5 +1,5 @@
 import { Link } from '@suid/material'
-import styles from './link.module.css'
+import styles from '../css/link.module.css'
 import SxProps from '@suid/system/sxProps'
 import { Theme } from '@suid/material/styles'
 

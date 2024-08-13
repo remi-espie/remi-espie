@@ -1,5 +1,5 @@
 import { createEffect, createSignal } from 'solid-js'
-import style from './typewriter.module.css'
+import style from '../css/typewriter.module.css'
 
 function Typer(props: {
     fulltext: string
