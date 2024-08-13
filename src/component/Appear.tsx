@@ -3,6 +3,7 @@ import { createSignal, JSX, onMount } from 'solid-js'
 
 function Appear(props: {
     direction?: 'left' | 'right' | 'top' | 'bottom' | 'none'
+    margin?: string
     children: JSX.Element
 }) {
     const [startCoordinate, setStartCoordinate] = createSignal({
@@ -38,7 +39,10 @@ function Appear(props: {
             animate={{ opacity: 0, ...startCoordinate() }}
             transition={{ duration: 1 }}
             inView={{ opacity: 1, x: 0, y: 0 }}
-            inViewOptions={{ once: true, margin: '-200px' }}
+            inViewOptions={{
+                once: true,
+                margin: props.margin ? props.margin : '-50px',
+            }}
         >
             {props.children}
         </Motion>

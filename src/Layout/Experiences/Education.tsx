@@ -1,4 +1,10 @@
-import { Box, SvgIcon, Typography, useTheme } from '@suid/material'
+import {
+    Box,
+    SvgIcon,
+    Typography,
+    useMediaQuery,
+    useTheme,
+} from '@suid/material'
 import TimelineStyle from '../../css/timeline.module.css'
 import { useLayoutContext } from '../../LayoutContext.ts'
 import { createMemo, For } from 'solid-js'
@@ -20,6 +26,9 @@ function Education() {
     // Working thanks to context
     // eslint-disable-next-line solid/reactivity
     const t = i18n.translator(dict)
+
+    const small_screen = useMediaQuery('(max-width:600px)')
+    const oddDirection = createMemo(() => (small_screen() ? 'right' : 'left'))
 
     return (
         <>
@@ -53,7 +62,7 @@ function Education() {
             >
                 <ul>
                     <li>
-                        <Appear direction={'right'}>
+                        <Appear direction={'right'} margin={'-200px'}>
                             <Typography variant={'h5'}>2018</Typography>
                             <Typography variant={'h6'}>
                                 {t('bacTitle')}
@@ -71,7 +80,7 @@ function Education() {
                         </Appear>
                     </li>
                     <li>
-                        <Appear direction={'left'}>
+                        <Appear direction={oddDirection()} margin={'-200px'}>
                             <Typography variant={'h5'}>2021</Typography>
                             <Typography variant={'h6'}>
                                 {t('dutTitle')}
@@ -89,7 +98,7 @@ function Education() {
                         </Appear>
                     </li>
                     <li>
-                        <Appear direction={'right'}>
+                        <Appear direction={'right'} margin={'-200px'}>
                             <Typography variant={'h5'}>2022</Typography>
                             <Typography variant={'h6'}>
                                 {t('duetiTitle')}
@@ -107,7 +116,7 @@ function Education() {
                         </Appear>
                     </li>
                     <li>
-                        <Appear direction={'left'}>
+                        <Appear direction={oddDirection()} margin={'-200px'}>
                             <Typography variant={'h5'}>2025</Typography>
                             <Typography variant={'h6'}>
                                 {t('ingeTitle')}
