@@ -3,7 +3,7 @@
 }
 
 :root {
-    transition: color 0.33s;
+    transition: color, background, border-color 0.33s;
     scroll-behavior: smooth;
     overflow-x: hidden;
     font-size: 1.1rem;

@@ -58,6 +58,21 @@ export const en_dict = {
         'Adapting my solution to an existing ecosystem,',
         'The maintenance and administration of the company website and VPC',
     ],
+    bacTitle: 'Scientific Baccalaureate',
+    bacText: [
+        'Specialty: Engineering Sciences',
+        'Option: Computer Science and Digital Science',
+        'European Section: English',
+    ],
+    dutTitle: 'Technology University Diploma',
+    dutText: ['Speciality: Computer Science'],
+    duetiTitle: 'International Technology Studies university diploma',
+    duetiText: [
+        'Speciality: Computer Science',
+        'Major: Video Game Development',
+    ],
+    ingeTitle: 'Engineering degree',
+    ingeText: ['Speciality: DevOps'],
     personalXP: 'Personal experiences',
     JamsParagraph:
         'I participated in several "Game Jams", video game development competitions limited in time. I was able to work on several video game engines, notably Unity in C#. Working in a limited time with complex requirements forced me to make decisions quickly and make critical choices to achieve a goal quickly.',

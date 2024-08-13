@@ -60,8 +60,21 @@ export const fr_dict = {
         "L'adaptation de ma solution à un écosystème existant,",
         "La maintenance du site Web et l'administration du VPC de l'entreprise",
     ],
+    bacTitle: 'Baccalauréat Scientifique',
+    bacText: [
+        "Spécialité Science de l'Ingénieur",
+        'Option Informatique et Science du Numérique',
+        'Section Européenne: Anglais',
+    ],
+    dutTitle: 'Diplôme Universitaire de Technologie',
+    dutText: ['Spécialité Informatique'],
+    duetiTitle: 'Diplôme Universitaire d’Études Technologiques Internationales',
+    duetiText: ['Informatique et développement de jeux vidéos'],
+    ingeTitle: "Diplôme d'ingénieur",
+    ingeText: [
+        'Développement informatique et exploitation opérationnelle (DO)',
+    ],
     personalXP: 'Expériences personnelles',
-
     JamsParagraph:
         "J'ai participé à plusieurs \"Game Jams\", des compétitions de développement de jeu vidéo dans un temps limité. J'ai pû travailler sur plusieurs moteurs de jeu vidéo, notamment Unity en C#. Travailler dans un temps limité avec des impératifs complexe m'a obligé à prendre des décisions rapidement et faire des choix critique pour atteindre un but rapidement.",
     NDIparagraph:
