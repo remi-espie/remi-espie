@@ -655,11 +655,6 @@
     "@types/babel__generator" "^7.6.8"
     "@types/babel__traverse" "^7.20.5"
 
-"@supertiger/route-parser@^0.0.7":
-  version "0.0.7"
-  resolved "https://registry.yarnpkg.com/@supertiger/route-parser/-/route-parser-0.0.7.tgz#c01b5c1365d229cad888dcceab83972571482254"
-  integrity sha512-dwCdcBGw8a1wbgOJKJe8okC7fCFR3JOL81AwVjOggYoBNJfz7h8V/zymzOz/9sHStIusx5IZWdIt7RfuQ7QxWA==
-
 "@types/babel__core@^7.20.4":
   version "7.20.5"
   resolved "https://registry.yarnpkg.com/@types/babel__core/-/babel__core-7.20.5.tgz#3df15f27ba85319caa07ba08d0721889bb39c017"
@@ -2547,13 +2542,6 @@ solid-motionone@^1.0.0:
     "@solid-primitives/refs" "^1.0.5"
     "@solid-primitives/transition-group" "^1.0.3"
     csstype "^3.1.0"
-
-solid-named-router@^0.4.5:
-  version "0.4.5"
-  resolved "https://registry.yarnpkg.com/solid-named-router/-/solid-named-router-0.4.5.tgz#859c1e01041653a53467aa93d917698e0475b3e3"
-  integrity sha512-IPWZimF9qbIjf+xRTyxeTp92FC4lMXkUD0gLWJ636CDCuYerkU5bNev3/hv239Qb47zDdP1EFA7UzxW1gQH0dw==
-  dependencies:
-    "@supertiger/route-parser" "^0.0.7"
 
 solid-refresh@^0.6.3:
   version "0.6.3"
