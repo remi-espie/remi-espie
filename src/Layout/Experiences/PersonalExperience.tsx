@@ -1,4 +1,3 @@
-import { Motion } from 'solid-motionone'
 import { Box, Grid, Typography, useTheme } from '@suid/material'
 import ZoomStyle from '../../css/zoom-on-hover.module.css'
 import { useLayoutContext } from '../../LayoutContext.ts'
@@ -7,6 +6,7 @@ import * as i18n from '@solid-primitives/i18n'
 import { dictionaries } from '../../i18n/types.ts'
 import CGJ from '../../assets/cgj.jpg'
 import NDI from '../../assets/ndi.jpg'
+import Appear from '../../component/Appear.tsx'
 
 function PersonalExperience() {
     const theme = useTheme()
@@ -22,13 +22,7 @@ function PersonalExperience() {
 
     return (
         <Box sx={{ textAlign: 'justify' }}>
-            <Motion
-                initial={false}
-                animate={{ opacity: 0, y: 50 }}
-                transition={{ duration: 1 }}
-                inView={{ opacity: 1, y: 0 }}
-                inViewOptions={{ once: true }}
-            >
+            <Appear>
                 <Typography
                     variant="h4"
                     sx={{
@@ -75,14 +69,8 @@ function PersonalExperience() {
                         </Box>
                     </Grid>
                 </Grid>
-            </Motion>
-            <Motion
-                initial={false}
-                animate={{ opacity: 0, y: 50 }}
-                transition={{ duration: 1 }}
-                inView={{ opacity: 1, y: 0 }}
-                inViewOptions={{ once: true }}
-            >
+            </Appear>
+            <Appear>
                 <Grid
                     container
                     rowSpacing={2}
@@ -117,7 +105,7 @@ function PersonalExperience() {
                         </Typography>
                     </Grid>
                 </Grid>
-            </Motion>
+            </Appear>
         </Box>
     )
 }

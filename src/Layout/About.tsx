@@ -14,7 +14,7 @@ import * as i18n from '@solid-primitives/i18n'
 import { dictionaries } from '../i18n/types.ts'
 import EmojiText from '../component/EmojiText.tsx'
 import MyLink from '../component/MyLink.tsx'
-import { Motion } from 'solid-motionone'
+import Appear from '../component/Appear.tsx'
 
 function About() {
     const theme = useTheme()
@@ -48,13 +48,7 @@ function About() {
                 </SvgIcon>
             </Box>
 
-            <Motion
-                initial={false}
-                animate={{ opacity: 0, y: 50 }}
-                transition={{ duration: 1 }}
-                inView={{ opacity: 1, y: 0 }}
-                inViewOptions={{ once: true }}
-            >
+            <Appear>
                 <Box>
                     <Typography
                         variant="h4"
@@ -95,15 +89,9 @@ function About() {
                         <EmojiText emoji={'🚗'} text={t('carText')} />
                     </Box>
                 </Box>
-            </Motion>
+            </Appear>
 
-            <Motion
-                initial={false}
-                animate={{ opacity: 0, y: 50 }}
-                transition={{ duration: 1 }}
-                inView={{ opacity: 1, y: 0 }}
-                inViewOptions={{ once: true }}
-            >
+            <Appear>
                 <Typography
                     variant="h4"
                     sx={{ width: 'max-content', margin: 'auto', mb: 4 }}
@@ -300,7 +288,7 @@ function About() {
                         </Box>
                     </Grid>
                 </Grid>
-            </Motion>
+            </Appear>
 
             <Box
                 class={`${ShapeStyle.shape} ${ShapeStyle.wave} ${ShapeStyle.bottom}`}

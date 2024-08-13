@@ -1,15 +1,9 @@
 import { Typography } from '@suid/material'
-import { Motion } from 'solid-motionone'
+import Appear from './Appear.tsx'
 
 function Loremipsum(props: { color: string }) {
     return (
-        <Motion
-            initial={false}
-            animate={{ opacity: 0, y: 50 }}
-            transition={{ duration: 1 }}
-            inView={{ opacity: 1, y: 0 }}
-            inViewOptions={{ once: true }}
-        >
+        <Appear>
             <Typography
                 variant="body1"
                 sx={{ textAlign: 'center' }}
@@ -52,7 +46,7 @@ function Loremipsum(props: { color: string }) {
                 erat, posuere nec commodo in, laoreet non diam. Nulla in eros
                 sapien. Nulla facilisi.
             </Typography>
-        </Motion>
+        </Appear>
     )
 }
 

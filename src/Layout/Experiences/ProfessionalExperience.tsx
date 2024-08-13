@@ -1,4 +1,3 @@
-import { Motion } from 'solid-motionone'
 import { Box, Grid, Typography, useTheme } from '@suid/material'
 import { createMemo, For } from 'solid-js'
 import ZoomStyle from '../../css/zoom-on-hover.module.css'
@@ -7,6 +6,7 @@ import * as i18n from '@solid-primitives/i18n'
 import { dictionaries } from '../../i18n/types.ts'
 import GE from '../../assets/ge.jpg'
 import ATS from '../../assets/ats.jpg'
+import Appear from '../../component/Appear.tsx'
 
 function ProfessionalExperience() {
     const theme = useTheme()
@@ -22,13 +22,7 @@ function ProfessionalExperience() {
 
     return (
         <Box sx={{ textAlign: 'justify' }}>
-            <Motion
-                initial={false}
-                animate={{ opacity: 0, y: 50 }}
-                transition={{ duration: 1 }}
-                inView={{ opacity: 1, y: 0 }}
-                inViewOptions={{ once: true }}
-            >
+            <Appear>
                 <Typography
                     variant="h4"
                     sx={{
@@ -76,14 +70,8 @@ function ProfessionalExperience() {
                         </Box>
                     </Grid>
                 </Grid>
-            </Motion>
-            <Motion
-                initial={false}
-                animate={{ opacity: 0, y: 50 }}
-                transition={{ duration: 1 }}
-                inView={{ opacity: 1, y: 0 }}
-                inViewOptions={{ once: true }}
-            >
+            </Appear>
+            <Appear>
                 <Grid
                     container
                     rowSpacing={2}
@@ -123,7 +111,7 @@ function ProfessionalExperience() {
                         </Typography>
                     </Grid>
                 </Grid>
-            </Motion>
+            </Appear>
         </Box>
     )
 }
