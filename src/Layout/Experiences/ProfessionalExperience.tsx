@@ -5,6 +5,8 @@ import ZoomStyle from '../../css/zoom-on-hover.module.css'
 import { useLayoutContext } from '../../LayoutContext.ts'
 import * as i18n from '@solid-primitives/i18n'
 import { dictionaries } from '../../i18n/types.ts'
+import GE from '../../assets/ge.jpg'
+import ATS from '../../assets/ats.jpg'
 
 function ProfessionalExperience() {
     const theme = useTheme()
@@ -68,9 +70,7 @@ function ProfessionalExperience() {
                     <Grid item xs={6} sx={{ width: 'inherit' }}>
                         <Box class={ZoomStyle.zoomContainer}>
                             <img
-                                src={
-                                    'https://lh3.googleusercontent.com/p/AF1QipNnbtUADkWph3sGd6Zx4esS3KNEjrcLsKURaGgA=s680-w680-h510'
-                                }
+                                src={GE}
                                 alt={'GE Grid Solutions Montpellier'}
                             />
                         </Box>
@@ -94,9 +94,7 @@ function ProfessionalExperience() {
                     <Grid item xs={6} sx={{ width: 'inherit' }}>
                         <Box class={ZoomStyle.zoomContainer}>
                             <img
-                                src={
-                                    'https://lh3.googleusercontent.com/p/AF1QipPOlBTShD2SeUyNX5ugqSRP7l3EY8hu1oQvj6jD=s920'
-                                }
+                                src={ATS}
                                 style={{
                                     height: '405px',
                                     width: '720px',

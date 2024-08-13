@@ -5,6 +5,8 @@ import { useLayoutContext } from '../../LayoutContext.ts'
 import { createMemo } from 'solid-js'
 import * as i18n from '@solid-primitives/i18n'
 import { dictionaries } from '../../i18n/types.ts'
+import CGJ from '../../assets/cgj.jpg'
+import NDI from '../../assets/ndi.jpg'
 
 function PersonalExperience() {
     const theme = useTheme()
@@ -63,9 +65,7 @@ function PersonalExperience() {
                     <Grid item xs={6} sx={{ width: 'inherit' }}>
                         <Box class={ZoomStyle.zoomContainer}>
                             <img
-                                src={
-                                    'https://drive.google.com/u/0/drive-viewer/AKGpihZIBy5HHovtM5NNJLmWEm87MykliHhNLbDhjUbH7g7JZFqQpD-snks1HMf6Ls8WXk_Fot3QpgsqLJPeE5Ai-5aJ3NG2kbGc_NY'
-                                }
+                                src={CGJ}
                                 style={{
                                     height: '405px',
                                     width: '720px',
@@ -93,9 +93,7 @@ function PersonalExperience() {
                     <Grid item xs={6} sx={{ width: 'inherit' }}>
                         <Box class={ZoomStyle.zoomContainer}>
                             <img
-                                src={
-                                    'https://iut-montpellier-sete.edu.umontpellier.fr/files/2023/02/La_halle_ca_taffe-1024x768.jpg'
-                                }
+                                src={NDI}
                                 style={{
                                     height: '405px',
                                     width: '720px',

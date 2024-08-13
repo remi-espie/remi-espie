@@ -7,6 +7,7 @@ import * as i18n from '@solid-primitives/i18n'
 import { dictionaries } from '../../i18n/types.ts'
 import BgImage from '../../css/backgroundimage.module.css'
 import ShapeStyle from '../../css/shape.module.css'
+import UM from '../../assets/um.jpg'
 
 function Education() {
     const theme = useTheme()
@@ -50,7 +51,9 @@ function Education() {
                     sx={{
                         color: theme.palette.common.white,
                         backgroundImage:
-                            'linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(https://www.umontpellier.fr/wp-content/uploads/2020/04/village-des-sciences.jpg)',
+                            'linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(' +
+                            UM +
+                            ')',
                     }}
                 >
                     <ul>
