@@ -60,7 +60,7 @@ function Education() {
                         ')',
                 }}
             >
-                <ul>
+                <ul style={{ 'padding-bottom': '64px' }}>
                     <li>
                         <Appear direction={'right'} margin={'-200px'}>
                             <Typography variant={'h5'}>2018</Typography>
@@ -111,7 +111,7 @@ function Education() {
                                 )}
                             </For>
                             <Typography variant={'subtitle2'}>
-                                UQAC - Chicoutimi, Québec 🇨🇦
+                                UQAC - Chicoutimi, Québec, Canada 🇨🇦
                             </Typography>
                         </Appear>
                     </li>
@@ -137,7 +137,6 @@ function Education() {
                 <Box
                     class={`${ShapeStyle.shape} ${ShapeStyle.wave} ${ShapeStyle.bottom}`}
                     color={theme.palette.background.default}
-                    sx={{ mt: 8 }}
                 >
                     <SvgIcon viewBox="0 0 1500 120" preserveAspectRatio="none">
                         <path
