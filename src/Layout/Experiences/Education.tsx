@@ -28,24 +28,25 @@ function Education() {
     const t = i18n.translator(dict)
 
     const small_screen = useMediaQuery('(max-width:600px)')
-    const oddDirection = createMemo(() => (small_screen() ? 'right' : 'left'))
+    const oddDirection = createMemo(() => (small_screen() ? 'bottom' : 'left'))
+    const evenDirection = createMemo(() =>
+        small_screen() ? 'bottom' : 'right'
+    )
 
     return (
         <>
-            <Appear>
-                <Typography
-                    variant="h4"
-                    sx={{
-                        m: 'auto',
-                        width: 'fit-content',
-                        textAlign: 'center',
-                        mt: 4,
-                        mb: 8,
-                    }}
-                >
-                    Education
-                </Typography>
-            </Appear>
+            <Typography
+                variant="h4"
+                sx={{
+                    m: 'auto',
+                    width: 'fit-content',
+                    textAlign: 'center',
+                    mt: 4,
+                    mb: 8,
+                }}
+            >
+                Education
+            </Typography>
             <Box
                 class={`${TimelineStyle.timeline} ${BgImage.bgimage}`}
                 style={{
@@ -62,7 +63,7 @@ function Education() {
             >
                 <ul style={{ 'padding-bottom': '64px' }}>
                     <li>
-                        <Appear direction={'right'} margin={'-200px'}>
+                        <Appear direction={evenDirection()} margin={'-150px'}>
                             <Typography variant={'h5'}>2018</Typography>
                             <Typography variant={'h6'}>
                                 {t('bacTitle')}
@@ -80,7 +81,7 @@ function Education() {
                         </Appear>
                     </li>
                     <li>
-                        <Appear direction={oddDirection()} margin={'-200px'}>
+                        <Appear direction={oddDirection()} margin={'-150px'}>
                             <Typography variant={'h5'}>2021</Typography>
                             <Typography variant={'h6'}>
                                 {t('dutTitle')}
@@ -98,7 +99,7 @@ function Education() {
                         </Appear>
                     </li>
                     <li>
-                        <Appear direction={'right'} margin={'-200px'}>
+                        <Appear direction={evenDirection()} margin={'-150px'}>
                             <Typography variant={'h5'}>2022</Typography>
                             <Typography variant={'h6'}>
                                 {t('duetiTitle')}
@@ -116,7 +117,7 @@ function Education() {
                         </Appear>
                     </li>
                     <li>
-                        <Appear direction={oddDirection()} margin={'-200px'}>
+                        <Appear direction={oddDirection()} margin={'-150px'}>
                             <Typography variant={'h5'}>2025</Typography>
                             <Typography variant={'h6'}>
                                 {t('ingeTitle')}

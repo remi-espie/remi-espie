@@ -77,7 +77,7 @@
     }
 
     .timeline ul li div {
-        width: calc(100vw - 91px);
+        width: calc(100vw - 115px);
     }
 
     .timeline ul li:nth-child(even) div {
