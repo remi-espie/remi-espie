@@ -1,10 +1,32 @@
 import BGStyle from '../css/backgroundimage.module.css'
-import { Box, SvgIcon, useTheme } from '@suid/material'
+import { Box, SvgIcon, Typography, useTheme } from '@suid/material'
 import ShapeStyle from '../css/shape.module.css'
 import Loremipsum from '../component/loremipsum.tsx'
+import Appear from '../component/Appear.tsx'
+import MyLink from '../component/MyLink.tsx'
+import { useLayoutContext } from '../LayoutContext.ts'
+import { createMemo } from 'solid-js'
+import * as i18n from '@solid-primitives/i18n'
+import { dictionaries } from '../i18n/types.ts'
+import ProjectsSelector from '../component/ProjectsSelector.tsx'
 
 function Projects() {
     const theme = useTheme()
+    const context = useLayoutContext()
+
+    const dict = createMemo(() => {
+        return i18n.flatten(dictionaries[context.language])
+    })
+
+    // Working thanks to context
+    // eslint-disable-next-line solid/reactivity
+    const t = i18n.translator(dict)
+
+    const techs = new Set<string>()
+    dictionaries[context.language].AcademicProjectsList.map((project) =>
+        project.technologies.map((tech) => techs.add(tech))
+    )
+
     return (
         <Box
             sx={{
@@ -13,6 +35,7 @@ function Projects() {
             }}
             class={BGStyle.bgimage}
             id={'projects'}
+            color={theme.palette.common.white}
         >
             <Box
                 class={`${ShapeStyle.shape} ${ShapeStyle.wave} ${ShapeStyle.top}`}
@@ -30,8 +53,45 @@ function Projects() {
                     <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" />
                 </SvgIcon>
             </Box>
-            <Loremipsum color={theme.palette.common.white} />
-            <Loremipsum color={theme.palette.common.white} />
+            <Appear>
+                <Typography
+                    variant="h5"
+                    sx={{
+                        textAlign: 'center',
+                        mb: 4,
+                        mt: 4,
+                        maxWidth: '60vw',
+                        m: 'auto',
+                    }}
+                >
+                    {t('GitHubProjects')}
+                    <MyLink
+                        to={'https://github.com/remi-espie'}
+                        text={'https://github.com/remi-espie'}
+                        target={'_blank'}
+                        color={theme.palette.primary.main}
+                    />
+                </Typography>
+
+                <Typography
+                    variant="h4"
+                    sx={{ textAlign: 'center', mt: 4, mb: 4 }}
+                >
+                    {t('AcademicProjects')}
+                </Typography>
+
+                <ProjectsSelector
+                    techs={techs}
+                    projectsList={t('AcademicProjectsList')}
+                />
+            </Appear>
+
+            <Appear>
+                <Typography variant="h4" sx={{ textAlign: 'center' }}>
+                    {t('PersonalProjects')}
+                </Typography>
+                <Loremipsum color="inherit" />
+            </Appear>
             <Box
                 class={`${ShapeStyle.shape} ${ShapeStyle.wave} ${ShapeStyle.bottom}`}
                 color={theme.palette.background.default}

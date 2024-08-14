@@ -78,4 +78,34 @@ export const en_dict = {
         'I participated in several "Game Jams", video game development competitions limited in time. I was able to work on several video game engines, notably Unity in C#. Working in a limited time with complex requirements forced me to make decisions quickly and make critical choices to achieve a goal quickly.',
     NDIparagraph:
         "La Nuit de l'Info is a national website development competition lasting one night. The site developed must fulfill a main objective, and can be supplemented with secondary objectives proposed by sponsoring companies, often offering a gift.",
+    GitHubProjects: 'All the projects I have done are available on my GitHub:',
+    AcademicProjects: 'Academic projects',
+    PersonalProjects: 'Personal projects',
+
+    AcademicProjectsList: [
+        {
+            title: 'Orka',
+            description:
+                'A Kubernetes-like orchestrator, simplified and efficient',
+            url: 'https://github.com/dev-sys-do/orka',
+            technologies: ['Rust', 'Kubernetes', 'Docker'],
+            image: 'https://avatars.githubusercontent.com/u/81960712?s=200&v=4',
+        },
+        {
+            title: 'CloudLet',
+            description:
+                'A Function-as-a-Service (FaaS) using different languages',
+            url: 'https://github.com/virt-do/cloudlet',
+            technologies: ['Rust', 'Micro VM', 'FaaS', 'Cloud'],
+            image: 'https://avatars.githubusercontent.com/u/81960712?s=200&v=4',
+        },
+        {
+            title: 'PaaSTech',
+            description:
+                'A Platform-as-a-Service (PaaS) to deploy and manage your applications in the cloud',
+            url: 'https://github.com/paastech-cloud',
+            technologies: ['Rust', 'Go', 'Protobuf', 'Cloud'],
+            image: 'https://avatars.githubusercontent.com/u/135254891?s=200&v=4',
+        },
+    ],
 }

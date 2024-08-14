@@ -79,4 +79,34 @@ export const fr_dict = {
         "J'ai participé à plusieurs \"Game Jams\", des compétitions de développement de jeu vidéo dans un temps limité. J'ai pû travailler sur plusieurs moteurs de jeu vidéo, notamment Unity en C#. Travailler dans un temps limité avec des impératifs complexe m'a obligé à prendre des décisions rapidement et faire des choix critique pour atteindre un but rapidement.",
     NDIparagraph:
         "La Nuit de l'Info est un concours national de développement de site web sur la durée d'une nuit. Le site développé doit remplir un objectif principal, et peut être agrémenté d'objectifs secondaires proposé par des entreprises sponsors, avec souvent un cadeau à la clé.",
+    GitHubProjects:
+        "L'ensemble des projets que j'ai réalisé sont disponibles sur mon GitHub :",
+    AcademicProjects: 'Projets académiques',
+    PersonalProjects: 'Projets personnels',
+    AcademicProjectsList: [
+        {
+            title: 'Orka',
+            description:
+                'Un orchestrateur type Kubernetes, simplifié et performant',
+            url: 'https://github.com/dev-sys-do/orka',
+            technologies: ['Rust', 'Kubernetes', 'Docker'],
+            image: 'https://avatars.githubusercontent.com/u/81960712?s=200&v=4',
+        },
+        {
+            title: 'CloudLet',
+            description:
+                'Un service de Function-as-a-Service (FaaS) presque performant',
+            url: 'https://github.com/virt-do/cloudlet',
+            technologies: ['Rust', 'Micro VM', 'FaaS', 'Cloud'],
+            image: 'https://avatars.githubusercontent.com/u/81960712?s=200&v=4',
+        },
+        {
+            title: 'PaaSTech',
+            description:
+                'Un Platform-as-a-Service (PaaS) pour déployer et manager vos applications dans le cloud',
+            url: 'https://github.com/paastech-cloud',
+            technologies: ['Rust', 'Go', 'Protobuf', 'Cloud'],
+            image: 'https://avatars.githubusercontent.com/u/135254891?s=200&v=4',
+        },
+    ],
 }
