@@ -82,7 +82,6 @@ export const fr_dict = {
     GitHubProjects:
         "L'ensemble des projets que j'ai réalisé sont disponibles sur mon GitHub :",
     AcademicProjects: 'Projets académiques',
-    PersonalProjects: 'Projets personnels',
     AcademicProjectsList: [
         {
             title: 'Orka',
@@ -147,6 +146,17 @@ export const fr_dict = {
             url: 'https://github.com/remi-espie/vu-meter',
             image: 'VU-Meter',
             technologies: ['Python'],
+        },
+    ],
+    PersonalProjects: 'Projets personnels',
+    PersonalProjectsList: [
+        {
+            title: 'CalenGo',
+            description:
+                'Une API retournant une image de calendrier pour une date donnée',
+            url: 'https://github.com/remi-espie/CalenGo',
+            technologies: ['Go', 'Docker'],
+            image: 'https://calengo.espie.dev/calendar?size=250',
         },
     ],
 }

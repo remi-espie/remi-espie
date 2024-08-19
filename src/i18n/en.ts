@@ -80,8 +80,6 @@ export const en_dict = {
         "La Nuit de l'Info is a national website development competition lasting one night. The site developed must fulfill a main objective, and can be supplemented with secondary objectives proposed by sponsoring companies, often offering a gift.",
     GitHubProjects: 'All the projects I have done are available on my GitHub:',
     AcademicProjects: 'Academic projects',
-    PersonalProjects: 'Personal projects',
-
     AcademicProjectsList: [
         {
             title: 'Orka',
@@ -146,6 +144,17 @@ export const en_dict = {
             url: 'https://github.com/remi-espie/vu-meter',
             image: 'VU-Meter',
             technologies: ['Python'],
+        },
+    ],
+    PersonalProjects: 'Personal projects',
+    PersonalProjectsList: [
+        {
+            title: 'CalenGo',
+            description:
+                'An API exporting a custom calendar image for the given day',
+            url: 'https://github.com/remi-espie/CalenGo',
+            technologies: ['Go', 'Docker'],
+            image: 'https://calengo.espie.dev/calendar?size=250',
         },
     ],
 }

@@ -1,7 +1,6 @@
 import BGStyle from '../css/backgroundimage.module.css'
 import { Box, SvgIcon, Typography, useTheme } from '@suid/material'
 import ShapeStyle from '../css/shape.module.css'
-import Loremipsum from '../component/loremipsum.tsx'
 import Appear from '../component/Appear.tsx'
 import MyLink from '../component/MyLink.tsx'
 import { useLayoutContext } from '../LayoutContext.ts'
@@ -79,7 +78,6 @@ function Projects() {
                 >
                     {t('AcademicProjects')}
                 </Typography>
-
                 <ProjectsSelector
                     techs={techs}
                     projectsList={t('AcademicProjectsList')}
@@ -87,10 +85,16 @@ function Projects() {
             </Appear>
 
             <Appear>
-                <Typography variant="h4" sx={{ textAlign: 'center' }}>
+                <Typography
+                    variant="h4"
+                    sx={{ textAlign: 'center', mt: 4, mb: 4 }}
+                >
                     {t('PersonalProjects')}
                 </Typography>
-                <Loremipsum color="inherit" />
+                <ProjectsSelector
+                    techs={techs}
+                    projectsList={t('PersonalProjectsList')}
+                />
             </Appear>
             <Box
                 class={`${ShapeStyle.shape} ${ShapeStyle.wave} ${ShapeStyle.bottom}`}
