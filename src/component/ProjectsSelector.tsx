@@ -68,6 +68,11 @@ function ProjectsSelector(props: {
                     input={<OutlinedInput label="Tech" />}
                     MenuProps={{
                         disableScrollLock: true,
+                        PaperProps: {
+                            style: {
+                                'max-height': '400px',
+                            },
+                        },
                     }}
                     sx={{
                         backgroundColor: theme.palette.background.default,
