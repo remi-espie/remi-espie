@@ -17,6 +17,7 @@ import { Technologies } from '../i18n/technologies.ts'
 import MyLink from './MyLink.tsx'
 import { SelectChangeEvent } from '@suid/material/Select'
 import MyCardMedia from './MyCardMedia.tsx'
+import { Motion } from 'solid-motionone'
 
 function ProjectsSelector(props: {
     techs: Set<string>
@@ -92,85 +93,90 @@ function ProjectsSelector(props: {
                 <For each={projects()}>
                     {(item) => (
                         <Grid item xs={4} sx={{ p: 2 }}>
-                            <Card
-                                elevation={12}
-                                sx={{
-                                    display: 'flex',
-                                    flexDirection: 'column',
-                                    transition: 'background-color 0.33s',
+                            <Motion
+                                initial={{ opacity: 0, scale: 0.6 }}
+                                animate={{ opacity: 1, scale: 1 }}
+                                transition={{ duration: 0.3 }}
+                                style={{
                                     height: '100%',
-                                    justifyContent: 'space-between',
                                 }}
                             >
-                                <Box sx={{ display: 'flex' }}>
-                                    <Box
-                                        sx={{
-                                            display: 'flex',
-                                            flexDirection: 'column',
-                                        }}
-                                    >
-                                        <CardContent sx={{ flex: '1 0 auto' }}>
-                                            <Typography
-                                                component="div"
-                                                variant="h5"
+                                <Card
+                                    elevation={12}
+                                    sx={{
+                                        display: 'flex',
+                                        flexDirection: 'column',
+                                        transition: 'background-color 0.33s',
+                                        height: '100%',
+                                        justifyContent: 'space-between',
+                                    }}
+                                >
+                                    <Box sx={{ display: 'flex' }}>
+                                        <Box
+                                            sx={{
+                                                display: 'flex',
+                                                flexDirection: 'column',
+                                            }}
+                                        >
+                                            <CardContent
+                                                sx={{
+                                                    flex: '1 0 auto',
+                                                }}
                                             >
-                                                {item.title}
-                                            </Typography>
-                                            <Typography
-                                                variant="subtitle1"
-                                                color="text.secondary"
-                                                component="div"
-                                            >
-                                                {item.description}
-                                            </Typography>
-                                        </CardContent>
+                                                <Typography
+                                                    component="div"
+                                                    variant="h5"
+                                                >
+                                                    {item.title}
+                                                </Typography>
+                                                <Typography
+                                                    variant="subtitle1"
+                                                    color="text.secondary"
+                                                    component="div"
+                                                >
+                                                    {item.description}
+                                                </Typography>
+                                            </CardContent>
+                                        </Box>
+                                        <MyCardMedia img={item.image} />
                                     </Box>
-                                    <MyCardMedia img={item.image} />
-                                    {/*<CardMedia*/}
-                                    {/*    component="img"*/}
-                                    {/*    image={item.image}*/}
-                                    {/*    alt={item.title}*/}
-                                    {/*    sx={{*/}
-                                    {/*        objectFit: 'contain',*/}
-                                    {/*    }}*/}
-                                    {/*/>*/}
-                                </Box>
-                                <Box sx={{ m: 1 }}>
-                                    <Box
-                                        sx={{
-                                            display: 'flex',
-                                            flexDirection: 'row',
-                                            flexWrap: 'wrap',
-                                            gap: 1,
-                                        }}
-                                    >
-                                        <For each={item.technologies}>
-                                            {(tech) => (
-                                                <Chip
-                                                    label={tech}
-                                                    sx={{
-                                                        backgroundColor:
-                                                            Technologies.find(
-                                                                (t) => {
-                                                                    return (
-                                                                        t.name ===
-                                                                        tech
-                                                                    )
-                                                                }
-                                                            )?.color,
-                                                    }}
-                                                />
-                                            )}
-                                        </For>
+                                    <Box sx={{ m: 1 }}>
+                                        <Box
+                                            sx={{
+                                                display: 'flex',
+                                                flexDirection: 'row',
+                                                flexWrap: 'wrap',
+                                                gap: 1,
+                                            }}
+                                        >
+                                            <For each={item.technologies}>
+                                                {(tech) => (
+                                                    <Chip
+                                                        label={tech}
+                                                        sx={{
+                                                            backgroundColor:
+                                                                Technologies.find(
+                                                                    (t) => {
+                                                                        return (
+                                                                            t.name ===
+                                                                            tech
+                                                                        )
+                                                                    }
+                                                                )?.color,
+                                                        }}
+                                                    />
+                                                )}
+                                            </For>
+                                        </Box>
+                                        <MyLink
+                                            to={item.url}
+                                            text={item.url}
+                                            target={'_blank'}
+                                            color={theme.palette.primary.main}
+                                        />
                                     </Box>
-                                    <MyLink
-                                        to={item.url}
-                                        text={item.url}
-                                        target={'_blank'}
-                                        color={theme.palette.primary.main}
-                                    />
-                                </Box>
-                            </Card>
+                                </Card>
+                            </Motion>
                         </Grid>
                     )}
                 </For>
