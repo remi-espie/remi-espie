@@ -56,7 +56,8 @@ function ProjectsSelector(props: {
             <FormControl
                 sx={{
                     m: 'auto',
-                    width: 400,
+                    width: '80vw',
+                    maxWidth: 400,
                     display: 'flex',
                 }}
             >
@@ -85,20 +86,20 @@ function ProjectsSelector(props: {
             </FormControl>
             <Grid
                 container
-                rowSpacing={2}
-                columnSpacing={4}
                 sx={{ width: '80vw', m: 'auto', mb: 32 }}
                 columns={{ xs: 2, sm: 8, md: 12 }}
             >
                 <For each={projects()}>
                     {(item) => (
-                        <Grid item xs={4}>
+                        <Grid item xs={4} sx={{ p: 2 }}>
                             <Card
                                 elevation={12}
                                 sx={{
                                     display: 'flex',
                                     flexDirection: 'column',
                                     transition: 'background-color 0.33s',
+                                    height: '100%',
+                                    justifyContent: 'space-between',
                                 }}
                             >
                                 <Box sx={{ display: 'flex' }}>
