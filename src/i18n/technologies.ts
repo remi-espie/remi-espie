@@ -68,4 +68,8 @@ export const Technologies: Technology[] = [
         name: 'React',
         color: '#61DAFB',
     },
+    {
+        name: 'SolidJS',
+        color: '#4983c3',
+    },
 ]
