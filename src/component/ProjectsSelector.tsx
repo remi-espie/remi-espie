@@ -69,6 +69,9 @@ function ProjectsSelector(props: {
                     MenuProps={{
                         disableScrollLock: true,
                     }}
+                    sx={{
+                        backgroundColor: theme.palette.background.default,
+                    }}
                 >
                     <For each={[...props.techs]}>
                         {(tech) => <MenuItem value={tech}>{tech}</MenuItem>}
