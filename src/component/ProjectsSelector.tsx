@@ -2,7 +2,6 @@ import {
     Box,
     Card,
     CardContent,
-    CardMedia,
     Chip,
     FormControl,
     Grid,
@@ -17,6 +16,7 @@ import { createEffect, createSignal, For } from 'solid-js'
 import { Technologies } from '../i18n/technologies.ts'
 import MyLink from './MyLink.tsx'
 import { SelectChangeEvent } from '@suid/material/Select'
+import MyCardMedia from './MyCardMedia.tsx'
 
 function ProjectsSelector(props: {
     techs: Set<string>
@@ -116,14 +116,15 @@ function ProjectsSelector(props: {
                                             </Typography>
                                         </CardContent>
                                     </Box>
-                                    <CardMedia
-                                        component="img"
-                                        image={item.image}
-                                        alt={item.title}
-                                        sx={{
-                                            objectFit: 'contain',
-                                        }}
-                                    />
+                                    <MyCardMedia img={item.image} />
+                                    {/*<CardMedia*/}
+                                    {/*    component="img"*/}
+                                    {/*    image={item.image}*/}
+                                    {/*    alt={item.title}*/}
+                                    {/*    sx={{*/}
+                                    {/*        objectFit: 'contain',*/}
+                                    {/*    }}*/}
+                                    {/*/>*/}
                                 </Box>
                                 <Box sx={{ m: 1 }}>
                                     <Box
