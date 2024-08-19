@@ -108,7 +108,7 @@ export const en_dict = {
             image: 'MobiDex',
         },
         {
-            title: 'Gophers Invaders',
+            title: 'Gophers Invaders',
             description:
                 'A Space Invaders-like game, but with Gophers, playable in the terminal and developed in Go',
             url: 'https://github.com/remi-espie/gophers_invader',
@@ -132,7 +132,7 @@ export const en_dict = {
             image: 'Polynotes',
         },
         {
-            title: 'Croissant Dashboard',
+            title: 'Croissant Dashboard',
             description:
                 'A "Chocoblast" monitoring dashboard, developed in Vue and NestJs',
             url: 'https://github.com/remi-espie/croissant_dashboard',
