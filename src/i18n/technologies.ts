@@ -25,7 +25,7 @@ export const Technologies: Technology[] = [
         color: '#2496ED',
     },
     {
-        name: 'Protobuf',
+        name: 'gRPC',
         color: '#0098FF',
     },
     {
@@ -43,5 +43,29 @@ export const Technologies: Technology[] = [
     {
         name: 'PaaS',
         color: '#00FF00',
+    },
+    {
+        name: 'Android',
+        color: '#3DDC84',
+    },
+    {
+        name: 'Kotlin',
+        color: '#0095D5',
+    },
+    {
+        name: 'Vue',
+        color: '#42B883',
+    },
+    {
+        name: 'NestJs',
+        color: '#E0234E',
+    },
+    {
+        name: 'Python',
+        color: '#FFD43B',
+    },
+    {
+        name: 'React',
+        color: '#61DAFB',
     },
 ]
