@@ -67,14 +67,14 @@ Made with [SolidJS](https://www.solidjs.com/) and styled with [SUID](https://sui
 
 ## How to use
 
-- Directly see it at [remi.espie.dev](https://remi.espie.dev),
-- Use the docker image available
-  at [remi-espie/portfolio](https://github.com/remi-espie/remi-espie/pkgs/container/remi-espie),
+-   Directly see it at [remi.espie.dev](https://remi.espie.dev),
+-   Use the docker image available
+    at [remi-espie/portfolio](https://github.com/remi-espie/remi-espie/pkgs/container/remi-espie),
     ```sh
     docker run -p ghcr.io/remi-espie/portfolio:latest
     ```
-- Or with my [docker-compose.yml](./docker-compose.yml),
-- Or clone this repo and run it locally with yarn:
+-   Or with my [docker-compose.yml](./docker-compose.yml),
+-   Or clone this repo and run it locally with yarn:
     ```sh
     yarn install
     yarn dev
