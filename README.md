@@ -54,5 +54,28 @@
 
 ## :octocat: And love OpenSource !
 
-| ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=remi-espie&show_icons=true&locale=en&theme=tokyonight) | ![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=remi-espie&theme=tokyonight) |
-| -------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+<div style='display: flex; gap:20px'>
+<img alt="GitHub Stats" src="https://github-readme-stats.vercel.app/api?username=remi-espie&amp;show_icons=true&amp;locale=en&amp;theme=tokyonight"/>
+<img alt="GitHub Streak" src="https://github-readme-streak-stats.herokuapp.com/?user=remi-espie&amp;theme=tokyonight"/>
+</div>
+
+---
+
+# This repository contains my portfolio
+
+Made with [SolidJS](https://www.solidjs.com/) and styled with [SUID](https://suid.io).
+
+## How to use
+
+- Directly see it at [remi.espie.dev](https://remi.espie.dev),
+- Use the docker image available
+  at [remi-espie/portfolio](https://github.com/remi-espie/remi-espie/pkgs/container/remi-espie),
+    ```sh
+    docker run -p ghcr.io/remi-espie/portfolio:latest
+    ```
+- Or with my [docker-compose.yml](./docker-compose.yml),
+- Or clone this repo and run it locally with yarn:
+    ```sh
+    yarn install
+    yarn dev
+    ```
