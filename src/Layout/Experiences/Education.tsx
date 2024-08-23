@@ -28,10 +28,10 @@ function Education() {
     const t = i18n.translator(dict)
 
     const small_screen = useMediaQuery('(max-width:600px)')
-    const oddDirection = createMemo(() => (small_screen() ? 'bottom' : 'left'))
     const evenDirection = createMemo(() =>
         small_screen() ? 'bottom' : 'right'
     )
+    const oddDirection = createMemo(() => (small_screen() ? 'bottom' : 'left'))
 
     return (
         <>
@@ -45,7 +45,7 @@ function Education() {
                     mb: 8,
                 }}
             >
-                Education
+                {t('education')}
             </Typography>
             <Box
                 class={`${TimelineStyle.timeline} ${BgImage.bgimage}`}
@@ -64,11 +64,11 @@ function Education() {
                 <ul style={{ 'padding-bottom': '64px' }}>
                     <li>
                         <Appear direction={evenDirection()} margin={'-150px'}>
-                            <Typography variant={'h5'}>2018</Typography>
+                            <Typography variant={'h5'}>2025</Typography>
                             <Typography variant={'h6'}>
-                                {t('bacTitle')}
+                                {t('ingeTitle')}
                             </Typography>
-                            <For each={t('bacText')}>
+                            <For each={t('ingeText')}>
                                 {(item) => (
                                     <Typography variant={'body1'}>
                                         {item}
@@ -76,30 +76,12 @@ function Education() {
                                 )}
                             </For>
                             <Typography variant={'subtitle2'}>
-                                Lycée Henry Fabre - Carpentras, France 🇫🇷
+                                Polytech - Montpellier, France 🇫🇷
                             </Typography>
                         </Appear>
                     </li>
                     <li>
                         <Appear direction={oddDirection()} margin={'-150px'}>
-                            <Typography variant={'h5'}>2021</Typography>
-                            <Typography variant={'h6'}>
-                                {t('dutTitle')}
-                            </Typography>
-                            <For each={t('dutText')}>
-                                {(item) => (
-                                    <Typography variant={'body1'}>
-                                        {item}
-                                    </Typography>
-                                )}
-                            </For>
-                            <Typography variant={'subtitle2'}>
-                                IUT Montpellier-Sète - Montpellier, France 🇫🇷
-                            </Typography>
-                        </Appear>
-                    </li>
-                    <li>
-                        <Appear direction={evenDirection()} margin={'-150px'}>
                             <Typography variant={'h5'}>2022</Typography>
                             <Typography variant={'h6'}>
                                 {t('duetiTitle')}
@@ -117,12 +99,12 @@ function Education() {
                         </Appear>
                     </li>
                     <li>
-                        <Appear direction={oddDirection()} margin={'-150px'}>
-                            <Typography variant={'h5'}>2025</Typography>
+                        <Appear direction={evenDirection()} margin={'-150px'}>
+                            <Typography variant={'h5'}>2021</Typography>
                             <Typography variant={'h6'}>
-                                {t('ingeTitle')}
+                                {t('dutTitle')}
                             </Typography>
-                            <For each={t('ingeText')}>
+                            <For each={t('dutText')}>
                                 {(item) => (
                                     <Typography variant={'body1'}>
                                         {item}
@@ -130,7 +112,25 @@ function Education() {
                                 )}
                             </For>
                             <Typography variant={'subtitle2'}>
-                                Polytech - Montpellier, France 🇫🇷
+                                IUT Montpellier-Sète - Montpellier, France 🇫🇷
+                            </Typography>
+                        </Appear>
+                    </li>
+                    <li>
+                        <Appear direction={oddDirection()} margin={'-150px'}>
+                            <Typography variant={'h5'}>2018</Typography>
+                            <Typography variant={'h6'}>
+                                {t('bacTitle')}
+                            </Typography>
+                            <For each={t('bacText')}>
+                                {(item) => (
+                                    <Typography variant={'body1'}>
+                                        {item}
+                                    </Typography>
+                                )}
+                            </For>
+                            <Typography variant={'subtitle2'}>
+                                Lycée Henry Fabre - Carpentras, France 🇫🇷
                             </Typography>
                         </Appear>
                     </li>

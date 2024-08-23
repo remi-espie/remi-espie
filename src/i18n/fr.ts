@@ -60,6 +60,7 @@ export const fr_dict = {
         "L'adaptation de ma solution à un écosystème existant,",
         "La maintenance du site Web et l'administration du VPC de l'entreprise",
     ],
+    education: 'Formation',
     bacTitle: 'Baccalauréat Scientifique',
     bacText: [
         "Spécialité Science de l'Ingénieur",

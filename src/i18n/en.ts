@@ -46,6 +46,7 @@ export const en_dict = {
     CVurl: '/CV-ESPIE_REMI-English.pdf',
     CVtext: 'here',
     professionalXP: 'Professional experiences',
+    education: 'Education',
     GEparagraph: `I worked at GE: Grid Solutions as part of my apprenticeship, for 3 years, within the DevOps team. My main tasks were:`,
     GElist: [
         'The development of new software for internal tools,',

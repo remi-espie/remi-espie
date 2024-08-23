@@ -42,7 +42,13 @@ function PersonalExperience() {
                     sx={{ width: '80vw', m: 'auto', mb: 32 }}
                     columns={{ xs: 2, sm: 8, md: 12 }}
                 >
-                    <Grid item xs={6}>
+                    <Grid
+                        item
+                        xs={6}
+                        sx={{
+                            alignContent: 'center',
+                        }}
+                    >
                         <Typography
                             variant={'h6'}
                             color={theme.palette.primary.main}
@@ -61,8 +67,7 @@ function PersonalExperience() {
                             <img
                                 src={CGJ}
                                 style={{
-                                    height: '405px',
-                                    width: '720px',
+                                    'max-height': '480px',
                                 }}
                                 alt={'Code Game Jam 2020 - Montpellier'}
                             />
@@ -83,14 +88,19 @@ function PersonalExperience() {
                             <img
                                 src={NDI}
                                 style={{
-                                    height: '405px',
-                                    width: '720px',
+                                    'max-height': '480px',
                                 }}
                                 alt={"Nuit de l'info 2023 - Montpellier"}
                             />
                         </Box>
                     </Grid>
-                    <Grid item xs={6}>
+                    <Grid
+                        item
+                        xs={6}
+                        sx={{
+                            alignContent: 'center',
+                        }}
+                    >
                         <Typography
                             variant={'h6'}
                             color={theme.palette.primary.main}
