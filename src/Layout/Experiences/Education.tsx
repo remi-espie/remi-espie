@@ -1,15 +1,9 @@
-import {
-    Box,
-    SvgIcon,
-    Typography,
-    useMediaQuery,
-    useTheme,
-} from '@suid/material'
+import { Box, SvgIcon, Typography, useTheme } from '@suid/material'
 import TimelineStyle from '../../css/timeline.module.css'
-import { useLayoutContext } from '../../LayoutContext.ts'
+import { useLayoutContext } from '~/LayoutContext.ts'
 import { createMemo, For } from 'solid-js'
 import * as i18n from '@solid-primitives/i18n'
-import { dictionaries } from '../../i18n/types.ts'
+import { dictionaries } from '~/i18n/types.ts'
 import BgImage from '../../css/backgroundimage.module.css'
 import ShapeStyle from '../../css/shape.module.css'
 import UM from '../../assets/um.jpg'
@@ -26,12 +20,6 @@ function Education() {
     // Working thanks to context
     // eslint-disable-next-line solid/reactivity
     const t = i18n.translator(dict)
-
-    const small_screen = useMediaQuery('(max-width:600px)')
-    const evenDirection = createMemo(() =>
-        small_screen() ? 'bottom' : 'right'
-    )
-    const oddDirection = createMemo(() => (small_screen() ? 'bottom' : 'left'))
 
     return (
         <>
@@ -63,7 +51,7 @@ function Education() {
             >
                 <ul style={{ 'padding-bottom': '64px' }}>
                     <li>
-                        <Appear direction={evenDirection()} margin={'-150px'}>
+                        <Appear margin={'-150px'}>
                             <Typography variant={'h5'}>2025</Typography>
                             <Typography variant={'h6'}>
                                 {t('ingeTitle')}
@@ -81,7 +69,7 @@ function Education() {
                         </Appear>
                     </li>
                     <li>
-                        <Appear direction={oddDirection()} margin={'-150px'}>
+                        <Appear margin={'-150px'}>
                             <Typography variant={'h5'}>2022</Typography>
                             <Typography variant={'h6'}>
                                 {t('duetiTitle')}
@@ -99,7 +87,7 @@ function Education() {
                         </Appear>
                     </li>
                     <li>
-                        <Appear direction={evenDirection()} margin={'-150px'}>
+                        <Appear margin={'-150px'}>
                             <Typography variant={'h5'}>2021</Typography>
                             <Typography variant={'h6'}>
                                 {t('dutTitle')}
@@ -117,7 +105,7 @@ function Education() {
                         </Appear>
                     </li>
                     <li>
-                        <Appear direction={oddDirection()} margin={'-150px'}>
+                        <Appear margin={'-150px'}>
                             <Typography variant={'h5'}>2018</Typography>
                             <Typography variant={'h6'}>
                                 {t('bacTitle')}

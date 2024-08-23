@@ -35,7 +35,7 @@ function Appear(props: {
 
     return (
         <Motion
-            initial={false}
+            initial={{ opacity: 1, x: 0, y: 0 }}
             animate={{ opacity: 0, ...startCoordinate() }}
             transition={{ duration: 1 }}
             inView={{ opacity: 1, x: 0, y: 0 }}

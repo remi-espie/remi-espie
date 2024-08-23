@@ -17,6 +17,7 @@ import About from './Layout/About.tsx'
 import Experiences from './Layout/Experiences.tsx'
 import Projects from './Layout/Projects.tsx'
 import Hobbies from './Layout/Hobbies.tsx'
+import { Link, Meta, MetaProvider, Title } from '@solidjs/Meta'
 
 function App() {
     const context = createLayoutMutable()
@@ -41,22 +42,73 @@ function App() {
     // eslint-disable-next-line solid/reactivity
     const t = i18n.translator(dict)
 
-    createEffect(() => {
-        document.title = t('title') + ' | ' + t('author')
-    })
-
     return (
         <LayoutContext.Provider value={context}>
-            <ThemeProvider theme={theme}>
-                <CssBaseline />
-                <Header />
-                <Entrypoint />
-                <About />
-                <Experiences />
-                <Projects />
-                <Hobbies />
-                <Footer />
-            </ThemeProvider>
+            <MetaProvider>
+                <Title>{t('title') + ' | ' + t('author')}</Title>
+                <Meta charset="utf-8" />
+                <Meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+                <Meta http-equiv="Content-Language" content="en,fr" />
+                <Meta
+                    name="viewport"
+                    content="width=device-width, initial-scale=1.0"
+                />
+
+                <Meta name="author" content="Rémi Espié" />
+                <Link rel="shortcut icon" type="image/ico" href="/icon.png" />
+                <Link rel="index" title="value" href="/" />
+
+                <Meta name="HandheldFriendly" content="true" />
+
+                <ThemeProvider theme={theme}>
+                    {context.language === 'fr' ? (
+                        <>
+                            <Meta
+                                name="application-name"
+                                content="Portfolio de présentation | Rémi Espié"
+                                lang="fr"
+                            />
+                            <Meta
+                                name="description"
+                                content="Le portfolio de Rémi Espié, un développeur français bilingue anglais et recentré sur le DevOps."
+                                lang="fr"
+                            />
+                            <Meta
+                                name="keywords"
+                                content="Rémi Espié, Rémi, Espié, Portfolio, DevOps, Développeur, Français, Anglais"
+                                lang="fr"
+                            />
+                        </>
+                    ) : (
+                        <>
+                            <Meta
+                                name="application-name"
+                                content="Introduction Portfolio | Rémi Espié"
+                                lang="en"
+                            />
+                            <Meta
+                                name="description"
+                                content="The portfolio of Rémi Espié, a French developer fluent in english and centered on DevOps."
+                                lang="en"
+                            />
+                            <Meta
+                                name="keywords"
+                                content="Rémi Espié, Rémi, Espié, Portfolio, DevOps, Developer, French, English"
+                                lang="en"
+                            />
+                        </>
+                    )}
+
+                    <CssBaseline />
+                    <Header />
+                    <Entrypoint />
+                    <About />
+                    <Experiences />
+                    <Projects />
+                    <Hobbies />
+                    <Footer />
+                </ThemeProvider>
+            </MetaProvider>
         </LayoutContext.Provider>
     )
 }

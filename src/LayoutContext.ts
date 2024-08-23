@@ -11,12 +11,14 @@ type Options = {
 }
 
 function isSysThemeDark() {
-    return window.matchMedia('(prefers-color-scheme: dark)').matches
+    return isServer
+        ? false
+        : window.matchMedia('(prefers-color-scheme: dark)').matches
 }
 
 export const defaultOptions: Options = {
     darkMode: isServer ? false : (getSavedDarkMode() ?? isSysThemeDark()),
-    language: navigator.language === 'fr' ? 'fr' : 'en',
+    language: isServer ? 'fr' : navigator.language === 'fr' ? 'fr' : 'en',
 }
 
 const LayoutContext = createContext(defaultOptions)
