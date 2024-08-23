@@ -1,0 +1,19 @@
+.small_screen {
+    display: none !important;
+}
+
+@media (max-width: 768px) {
+    .small_screen {
+        display: inherit !important;
+    }
+}
+
+.large_screen {
+    display: inherit !important;
+}
+
+@media (max-width: 768px) {
+    .large_screen {
+        display: none !important;
+    }
+}

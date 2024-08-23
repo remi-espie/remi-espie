@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+    nginx:
+        image: bitnami/nginx:latest
+        container_name: nginx
+        ports:
+            - '8080:80'
+        volumes:
+            - ./.output/public:/var/www/html/portfolio
+            - ./nginx.conf:/opt/bitnami/nginx/conf/server_blocks/my_server_block.conf

@@ -1,20 +1,17 @@
 import {
     AppBar,
     Box,
-    IconButton,
     SvgIcon,
     Toolbar,
     Typography,
-    useMediaQuery,
     useTheme,
 } from '@suid/material'
-import { createMemo, createSignal } from 'solid-js'
+import { createMemo } from 'solid-js'
 import { useLayoutContext } from '../LayoutContext.ts'
 import * as i18n from '@solid-primitives/i18n'
 import { dictionaries } from '../i18n/types.ts'
 import HeaderNav from '../component/HeaderNav.tsx'
-import MyDrawer from './Drawer.tsx'
-import MenuOutlined from '@suid/icons-material/MenuOutlined'
+import Reactivity from '../css/reactivity.module.css'
 
 function Header() {
     const theme = useTheme()
@@ -29,26 +26,23 @@ function Header() {
     // eslint-disable-next-line solid/reactivity
     const t = i18n.translator(dict)
 
-    const [open, setOpen] = createSignal(false)
-
-    const small_screen = useMediaQuery('(max-width:960px)')
+    // const [open, setOpen] = createSignal(false)
 
     return (
         <>
-            <MyDrawer open={open} setOpen={setOpen} />
+            {/*<MyDrawer open={open} setOpen={setOpen}/>*/}
             <AppBar position="fixed" enableColorOnDark>
                 <Toolbar>
-                    {small_screen() && (
-                        <IconButton
-                            color="inherit"
-                            aria-label="open drawer"
-                            onClick={() => setOpen(true)}
-                            edge="start"
-                            sx={{ mr: 2 }}
-                        >
-                            <MenuOutlined />
-                        </IconButton>
-                    )}
+                    {/*<IconButton*/}
+                    {/*    color="inherit"*/}
+                    {/*    aria-label="open drawer"*/}
+                    {/*    onClick={() => setOpen(true)}*/}
+                    {/*    edge="start"*/}
+                    {/*    sx={{ mr: 2 }}*/}
+                    {/*    class={Reactivity.small_screen}*/}
+                    {/*>*/}
+                    {/*    <MenuOutlined />*/}
+                    {/*</IconButton>*/}
                     <Box
                         sx={{
                             display: 'flex',
@@ -76,20 +70,17 @@ function Header() {
                             </Typography>
                         </Box>
                     </Box>
-                    {!small_screen() && (
-                        <Box
-                            sx={{
-                                display: 'flex',
-                                flexDirection: 'row',
-                                flexGrow: 1,
-                                justifyContent: 'flex-end',
-                            }}
-                        >
-                            <HeaderNav
-                                color={theme.palette.primary.contrastText}
-                            />
-                        </Box>
-                    )}
+                    <Box
+                        sx={{
+                            display: 'flex',
+                            flexDirection: 'row',
+                            flexGrow: 1,
+                            justifyContent: 'flex-end',
+                        }}
+                        class={Reactivity.large_screen}
+                    >
+                        <HeaderNav color={theme.palette.primary.contrastText} />
+                    </Box>
                 </Toolbar>
             </AppBar>
         </>

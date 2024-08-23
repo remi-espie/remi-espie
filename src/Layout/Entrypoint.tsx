@@ -56,7 +56,7 @@ function Entrypoint() {
                                 onFinish={() => setDescText(true)}
                             />
                         ) : (
-                            ' '
+                            <noscript>{t('entrypoint_hello')}</noscript>
                         )}
                     </Typography>
                     <Typography variant="h5" sx={{ mt: 2, mb: 4 }}>
@@ -78,7 +78,10 @@ function Entrypoint() {
                                 )}
                             </Box>
                         ) : (
-                            ' '
+                            <noscript>
+                                {t('entrypoint_description')}
+                                <span class={TypeStyle.cursor}>_</span>
+                            </noscript>
                         )}
                     </Typography>
                     <Button
