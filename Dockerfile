@@ -1,15 +1,19 @@
 FROM node:lts-alpine AS build
 
+USER 1001
+
 WORKDIR /app
 
-COPY yarn.lock package.json ./
+COPY yarn.lock package.json ssr.config.ts tsconfig.json ./
 RUN yarn install
 
-COPY . .
-RUN yarn build
+COPY src public ./
+RUN yarn build:ssr
 
-FROM bitnami/nginx:latest AS prod
+FROM bitnami/node:latest AS prod
 
-COPY --from=build /app/dist /var/www/html/portfolio
+USER 1001
 
-COPY --from=build /app/nginx.conf /opt/bitnami/nginx/conf/server_blocks/my_server_block.conf
+COPY --from=build /app/.output /app/portfolio
+
+RUN node /app/portfolio/server/index.mjs
