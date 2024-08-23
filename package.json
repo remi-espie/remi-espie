@@ -5,8 +5,12 @@
     "type": "module",
     "scripts": {
         "dev": "vinxi dev",
-        "build": "vinxi build",
-        "start": "vinxi start"
+        "build:spa": "vinxi build --config=spa.config.ts",
+        "build:ssr": "vinxi build --config=ssr.config.ts",
+        "build": "npm run build:ssr",
+        "start:spa": "npx serve .output/public",
+        "start:ssr": "vinxi start",
+        "start": "npm run start:ssr"
     },
     "dependencies": {
         "@solid-primitives/i18n": "^2.1.1",

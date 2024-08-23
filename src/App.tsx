@@ -5,7 +5,7 @@ import {
     ThemeProvider,
 } from '@suid/material'
 import Header from './Layout/Header.tsx'
-import { createEffect, createMemo } from 'solid-js'
+import { createMemo } from 'solid-js'
 import { baseTheme, themeDark, themeLight } from './theme.ts'
 import LayoutContext, { createLayoutMutable } from './LayoutContext.ts'
 import './global.css'
