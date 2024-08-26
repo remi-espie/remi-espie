@@ -1098,6 +1098,11 @@
     "@types/babel__generator" "^7.6.8"
     "@types/babel__traverse" "^7.20.5"
 
+"@thisbeyond/solid-select@^0.15.0":
+  version "0.15.0"
+  resolved "https://registry.yarnpkg.com/@thisbeyond/solid-select/-/solid-select-0.15.0.tgz#3b1aeca206cfa5984b27c3bdb9f4aa7b9e7903cf"
+  integrity sha512-L3QnA5vm09JWNqLR4QqEIi7cgfs9/1sJbFjyEnPskjKpxEvb4G+Iy5cyd1qhZ2vAIZ9vaLd3udts3kefayPsMg==
+
 "@types/babel__core@^7.20.4":
   version "7.20.5"
   resolved "https://registry.yarnpkg.com/@types/babel__core/-/babel__core-7.20.5.tgz#3df15f27ba85319caa07ba08d0721889bb39c017"
