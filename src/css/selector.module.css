@@ -1,0 +1,7 @@
+.select > * {
+    width: 400px;
+    max-width: 80vw;
+    margin: 0 auto;
+    color: var(--text-color) !important;
+    background-color: var(--bg-color) !important;
+}
