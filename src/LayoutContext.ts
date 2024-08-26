@@ -41,8 +41,8 @@ export function saveLanguage(value: Locale) {
 
 export function getSavedDarkMode() {
     const value = localStorage.getItem('darkMode')
-    if (value === 'true') return true
-    if (value === 'false') return false
+    // if value is not 'true', it is 'false' or null
+    return value === 'true'
 }
 
 export default LayoutContext
