@@ -6,25 +6,37 @@ import { isServer } from 'solid-js/web'
 import { Locale } from './i18n/types.ts'
 
 type Options = {
-    darkMode: boolean
+    darkMode: boolean | undefined
     language: Locale
 }
 
-function isSysThemeDark() {
-    return isServer
-        ? false
-        : window.matchMedia('(prefers-color-scheme: dark)').matches
+export function isSysThemeDark() {
+    return window.matchMedia('(prefers-color-scheme: dark)').matches
 }
 
-export const defaultOptions: Options = {
+export const defaultOptionsSrv: Options = {
+    darkMode: undefined,
+    language: 'en',
+}
+
+export const defaultOptionsClient: Options = {
     darkMode: isServer ? false : (getSavedDarkMode() ?? isSysThemeDark()),
-    language: isServer ? 'fr' : navigator.language === 'fr' ? 'fr' : 'en',
+    language: isServer
+        ? 'en'
+        : (getSavedLanguage() ?? navigator.language === 'fr')
+          ? 'fr'
+          : 'en',
 }
 
-const LayoutContext = createContext(defaultOptions)
+const LayoutContext = isServer
+    ? createContext(defaultOptionsSrv)
+    : createContext(defaultOptionsClient)
 
 export function createLayoutMutable(input: DeepPartial<Options> = {}) {
-    return createMutable(merge({}, defaultOptions, input)) as Options
+    return createMutable(merge({}, defaultOptionsSrv, input)) as Options
+}
+export function createLayoutMutableClient(input: DeepPartial<Options> = {}) {
+    return createMutable(merge({}, defaultOptionsClient, input)) as Options
 }
 
 export function useLayoutContext() {
@@ -37,6 +49,12 @@ export function saveDarkMode(value: boolean) {
 
 export function saveLanguage(value: Locale) {
     localStorage.setItem('language', value)
+}
+
+export function getSavedLanguage() {
+    const locale = localStorage.getItem('language')
+    if (locale === null) return null
+    return locale === 'fr' ? 'fr' : 'en'
 }
 
 export function getSavedDarkMode() {

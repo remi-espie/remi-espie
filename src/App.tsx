@@ -5,9 +5,14 @@ import {
     ThemeProvider,
 } from '@suid/material'
 import Header from './Layout/Header.tsx'
-import { createMemo } from 'solid-js'
+import { createMemo, onMount } from 'solid-js'
 import { baseTheme, themeDark, themeLight } from './theme.ts'
-import LayoutContext, { createLayoutMutable } from './LayoutContext.ts'
+import LayoutContext, {
+    createLayoutMutable,
+    getSavedDarkMode,
+    getSavedLanguage,
+    isSysThemeDark,
+} from './LayoutContext.ts'
 import './global.css'
 import * as i18n from '@solid-primitives/i18n'
 import { dictionaries } from './i18n/types.ts'
@@ -21,6 +26,17 @@ import { Link, Meta, MetaProvider, Title } from '@solidjs/Meta'
 
 function App() {
     const context = createLayoutMutable()
+
+    onMount(() => {
+        if (context.darkMode === undefined) {
+            context.darkMode = getSavedDarkMode() ?? isSysThemeDark()
+        }
+        if (getSavedLanguage() === null) {
+            context.language = navigator.language === 'fr' ? 'fr' : 'en'
+        } else {
+            context.language = getSavedLanguage() ?? 'en'
+        }
+    })
 
     const palette = createMemo(() => {
         return createPalette({
