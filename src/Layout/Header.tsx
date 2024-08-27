@@ -12,7 +12,6 @@ import * as i18n from '@solid-primitives/i18n'
 import { dictionaries } from '../i18n/types.ts'
 import HeaderNav from '../component/HeaderNav.tsx'
 import Reactivity from '../css/reactivity.module.css'
-import MyDrawer from '~/Layout/Drawer.tsx'
 
 function Header() {
     const theme = useTheme()
@@ -27,11 +26,23 @@ function Header() {
     // eslint-disable-next-line solid/reactivity
     const t = i18n.translator(dict)
 
+    // const [open, setOpen] = createSignal(false)
+
     return (
         <>
+            {/*<MyDrawer open={open} setOpen={setOpen}/>*/}
             <AppBar position="fixed" enableColorOnDark>
                 <Toolbar>
-                    <MyDrawer />
+                    {/*<IconButton*/}
+                    {/*    color="inherit"*/}
+                    {/*    aria-label="open drawer"*/}
+                    {/*    onClick={() => setOpen(true)}*/}
+                    {/*    edge="start"*/}
+                    {/*    sx={{ mr: 2 }}*/}
+                    {/*    class={Reactivity.small_screen}*/}
+                    {/*>*/}
+                    {/*    <MenuOutlined />*/}
+                    {/*</IconButton>*/}
                     <Box
                         sx={{
                             display: 'flex',
