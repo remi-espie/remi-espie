@@ -87,6 +87,7 @@ function NavIcons() {
                 aria-controls={open() ? 'account-menu' : undefined}
                 aria-haspopup="true"
                 aria-expanded={open() ? 'true' : undefined}
+                sx={{ width: 'min-content', alignSelf: 'center' }}
             >
                 <TranslateOutlined />
             </IconButton>
