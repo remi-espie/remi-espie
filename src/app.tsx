@@ -22,7 +22,7 @@ import About from './Layout/About.tsx'
 import Experiences from './Layout/Experiences.tsx'
 import Projects from './Layout/Projects.tsx'
 import Hobbies from './Layout/Hobbies.tsx'
-import { Link, Meta, MetaProvider, Title } from '@solidjs/Meta'
+import { Link, Meta, MetaProvider, Title } from '@solidjs/meta'
 
 function App() {
     const context = createLayoutMutable()
