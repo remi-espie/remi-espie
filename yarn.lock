@@ -1074,10 +1074,15 @@
     clsx "^2.1.0"
     csstype "^3.1.3"
 
-"@suid/types@0.6.0", "@suid/types@^0.6.0":
+"@suid/types@0.6.0":
   version "0.6.0"
   resolved "https://registry.yarnpkg.com/@suid/types/-/types-0.6.0.tgz#48d84bf079d60140ef1a20cbfa8e16536481f6a0"
   integrity sha512-W9RtmxQe0ZLvAwtoQtKb96SGNGNIWTskhxkXu5FeH5IPyvU5PpEWFLsyg3rmzLVAUHF1WsQwXBv/EZwwAjFkGQ==
+
+"@suid/types@^0.7.0":
+  version "0.7.0"
+  resolved "https://registry.yarnpkg.com/@suid/types/-/types-0.7.0.tgz#10af0d9f31ee410de5460361b05ea087355373eb"
+  integrity sha512-6I4FcyHteyDptJsO4MvVO3VO1geR3OoSOTz/ocMBT/4Yl7CAhGB25gIDMS+14G6gFdPHJY4KrVkJRnKnt0kESw==
 
 "@suid/utils@0.9.0":
   version "0.9.0"
