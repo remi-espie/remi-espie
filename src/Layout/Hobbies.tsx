@@ -25,7 +25,7 @@ function CustomCardMedia(props: { img: string, alt: string }) {
     } else {
         // @vite-ignore
         // eslint-disable-next-line solid/reactivity
-        import(`../assets/${props.img}.png`).then((img) => {
+        import(`../assets/${props.img}.jpg`).then((img) => {
             setImage(img.default)
         })
     }
