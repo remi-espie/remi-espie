@@ -10,7 +10,7 @@ export const fr_dict = {
     lang_en: 'Anglais',
     lang_fr: 'Français',
     footer: 'Fait avec ❤️ par Rémi Espié | © Rémi Espié - 2024',
-    attribution: 'Les images utilisés sont libres de droit ou sous license CC 2.0 ou 3.0. Pour plus de détails, voir :',
+    attribution: 'Les images utilisés sont libres de droit ou sous license CC. Pour plus de détails, voir :',
     entrypoint_hello: 'Bonjour, je suis Rémi 👋',
     entrypoint_description:
         'Développeur Fullstack et apprenti ingénieur DevOps',

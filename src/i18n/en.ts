@@ -10,7 +10,7 @@ export const en_dict = {
     lang_en: 'English',
     lang_fr: 'French',
     footer: 'Made with ❤️ by Rémi Espié | © Rémi Espié - 2024',
-    attribution: 'The images used are free of use or under the CC 2.0 or 3.0 license. For more details, see:',
+    attribution: 'The images used are free of use or under the CC license. For more details, see:',
     entrypoint_hello: "Hello, I'm Rémi 👋",
     entrypoint_description:
         'Fullstack Developer and apprentice DevOps engineer ',
