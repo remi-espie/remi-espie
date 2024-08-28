@@ -68,7 +68,7 @@ function Projects() {
                         to={'https://github.com/remi-espie'}
                         text={'https://github.com/remi-espie'}
                         target={'_blank'}
-                        color={theme.palette.primary.main}
+                        color={theme.palette.primary.light}
                     />
                 </Typography>
 
