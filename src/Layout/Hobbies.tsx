@@ -10,10 +10,37 @@ import {
 } from '@suid/material'
 import ShapeStyle from '../css/shape.module.css'
 import { useLayoutContext } from '~/LayoutContext.ts'
-import { createMemo, For } from 'solid-js'
+import { createMemo, createSignal, For } from 'solid-js'
 import * as i18n from '@solid-primitives/i18n'
 import { dictionaries } from '~/i18n/types.ts'
 import Appear from '~/component/Appear'
+
+function CustomCardMedia(props: { img: string, alt: string }) {
+    const [image, setImage] = createSignal<string>('')
+
+    // eslint-disable-next-line solid/reactivity
+    if (props.img.startsWith('http')) {
+        // eslint-disable-next-line solid/reactivity
+        setImage(props.img)
+    } else {
+        // @vite-ignore
+        // eslint-disable-next-line solid/reactivity
+        import(`../assets/${props.img}.png`).then((img) => {
+            setImage(img.default)
+        })
+    }
+
+    return (
+        <CardMedia
+            component="img"
+            image={image()}
+            alt={props.alt}
+            sx={{
+                height: 200,
+            }}
+        />
+    )
+}
 
 function Hobbies() {
     const theme = useTheme()
@@ -60,11 +87,7 @@ function Hobbies() {
                                 title={hobby.title}
                                 sx={{ textAlign: 'center' }}
                             />
-                            <CardMedia
-                                sx={{ height: 200 }}
-                                image={hobby.image}
-                                title={hobby.title + ' - illustration'}
-                            />
+                            <CustomCardMedia img={hobby.image} alt={hobby.title + ' - illustration'}/>
                             <CardContent>
                                 <Typography
                                     variant="body2"
