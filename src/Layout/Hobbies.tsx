@@ -1,13 +1,82 @@
-import Loremipsum from '../component/loremipsum.tsx'
-import { Box, SvgIcon, useTheme } from '@suid/material'
+import {
+    Box,
+    Card,
+    CardContent,
+    CardHeader,
+    CardMedia,
+    SvgIcon,
+    Typography,
+    useTheme,
+} from '@suid/material'
 import ShapeStyle from '../css/shape.module.css'
+import { useLayoutContext } from '~/LayoutContext.ts'
+import { createMemo, For } from 'solid-js'
+import * as i18n from '@solid-primitives/i18n'
+import { dictionaries } from '~/i18n/types.ts'
+import Appear from '~/component/Appear'
 
 function Hobbies() {
     const theme = useTheme()
+    const context = useLayoutContext()
+
+    const dict = createMemo(() => {
+        return i18n.flatten(dictionaries[context.language])
+    })
+
+    // Working thanks to context
+    // eslint-disable-next-line solid/reactivity
+    const t = i18n.translator(dict)
+
     return (
         <>
-            <Loremipsum color={theme.palette.secondary.contrastText} />
-            <Loremipsum color={theme.palette.secondary.contrastText} />
+            <Typography
+                variant="h4"
+                sx={{
+                    m: 'auto',
+                    width: 'fit-content',
+                    textAlign: 'center',
+                    mt: 4,
+                    mb: 8,
+                }}
+            >
+                {t('hobbies')}
+            </Typography>
+            <For each={t('HobbiesList')}>
+                {(hobby, index) => (
+                    <Appear>
+                        <Card
+                            sx={{
+                                width: 450,
+                                borderRadius: 3,
+                                m: 'auto',
+                                mt: index() !== 0 ? '-100px' : '0',
+                                transform:
+                                    index() % 2 === 0
+                                        ? 'translateX(-250px)'
+                                        : 'translateX(250px)',
+                            }}
+                        >
+                            <CardHeader
+                                title={hobby.title}
+                                sx={{ textAlign: 'center' }}
+                            />
+                            <CardMedia
+                                sx={{ height: 200 }}
+                                image={hobby.image}
+                                title={hobby.title + ' - illustration'}
+                            />
+                            <CardContent>
+                                <Typography
+                                    variant="body2"
+                                    textAlign={'justify'}
+                                >
+                                    {hobby.description}
+                                </Typography>
+                            </CardContent>
+                        </Card>
+                    </Appear>
+                )}
+            </For>
             <Box
                 class={`${ShapeStyle.shape} ${ShapeStyle.wave} ${ShapeStyle.bottom}`}
                 color={theme.palette.primary.main}

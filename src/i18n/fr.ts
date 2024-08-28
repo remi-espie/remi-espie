@@ -192,4 +192,36 @@ export const fr_dict = {
             technologies: ['SolidJS', 'TypeScript'],
         },
     ],
+    HobbiesList: [
+        {
+            title: 'Randonnée',
+            description:
+                "Quitter la ville et retrouver la nature est une activité que j'apprécie énormément. J'aime particulièrement arpenter les montagnes pour découvrir de nouveaux paysages.",
+            image: 'https://upload.wikimedia.org/wikipedia/commons/3/34/Pic-St-Loup--H%C3%A9rault-IMG_1877.jpg',
+        },
+        {
+            title: 'Jeux de rôles sur table',
+            description:
+                "Je joue avec des amis dans plusieurs jeux de rôles, de façon récurrente. C'est un excellent moyen de changer d'univers et de perspective. Que feras-je dans une telle situation ? Comment résoudre ce mystère ?",
+            image: 'https://cdn12.picryl.com/photo/2016/12/31/cube-play-role-playing-game-978315-1024.jpg',
+        },
+        {
+            title: 'Lecture',
+            description:
+                "Je lis depuis presque toujours, et j'ai toujours un livre en cours. Passionné par la Hard Science Fiction et la Fantasy, je lis aussi d'autres genres pour varier les plaisirs. En moindre mesure, je lis aussi de la BD et des mangas. J'ai pour ambition de remplir une pièce de livres que j'ai lus !",
+            image: 'https://cdn12.picryl.com/photo/2016/12/31/books-library-education-education-65cbf2-1024.jpg',
+        },
+        {
+            title: 'Jeux de société',
+            description:
+                "Redécouvert dans mes études supérieures, j'ai constaté toute la diversité des jeux de société. Toujours un bon moyen de passer un bon moment entre amis ou en famille, les jeux de société permettent aussi de facilement briser la glace et d'en apprendre plus sur les autres.",
+            image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/A_game_of_Settlers_of_Catan.jpg/800px-A_game_of_Settlers_of_Catan.jpg?20190314064614',
+        },
+        {
+            title: 'Jeux vidéo',
+            description:
+                "Grand amateur de RPG solo, je joue à presque tous les genres, et j'aime découvrir de petites perles indépendantes. J'ai moi même développé quelques jeux vidéo, notamment lors de Game Jams.",
+            image: 'https://nova-francia.espie.dev/img/screenshot/entre.jpg',
+        },
+    ],
 }
