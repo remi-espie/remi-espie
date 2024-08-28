@@ -70,17 +70,20 @@ function Hobbies() {
             </Typography>
             <For each={t('HobbiesList')}>
                 {(hobby, index) => (
+                    <Box sx={{
+                        width: 'min-content',
+                        m: 'auto',
+                        mt: index() !== 0 ? '-100px' : '0',
+                        transform:
+                            index() % 2 === 0
+                                ? 'translateX(-250px)'
+                                : 'translateX(250px)',
+                    }}>
                     <Appear>
                         <Card
                             sx={{
                                 width: 450,
                                 borderRadius: 3,
-                                m: 'auto',
-                                mt: index() !== 0 ? '-100px' : '0',
-                                transform:
-                                    index() % 2 === 0
-                                        ? 'translateX(-250px)'
-                                        : 'translateX(250px)',
                             }}
                         >
                             <CardHeader
@@ -98,6 +101,7 @@ function Hobbies() {
                             </CardContent>
                         </Card>
                     </Appear>
+                    </Box>
                 )}
             </For>
             <Box
