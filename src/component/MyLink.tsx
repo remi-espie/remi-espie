@@ -10,7 +10,7 @@ function MyLink(props: {
     color?: string
     sx?: SxProps<Theme>
     target?: string
-    variant?: TypographyProps["variant"]
+    variant?: TypographyProps['variant']
 }) {
     return (
         <Link

@@ -2,7 +2,7 @@ import { CardMedia } from '@suid/material'
 import { createSignal } from 'solid-js'
 
 // This component does not need any reactivity
-function MyCardMedia(props: { img: string, alt: string }) {
+function MyCardMedia(props: { img: string; alt: string }) {
     const [image, setImage] = createSignal<string>('')
 
     // eslint-disable-next-line solid/reactivity

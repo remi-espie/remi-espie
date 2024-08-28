@@ -1,21 +1,31 @@
 # About me background
 
 # Professional Experiences
+
 General Electric: Grid Solutions Montpellier: [Entrée du site de General Electric Grid Solutions Montpellier](https://lh3.googleusercontent.com/p/AF1QipNnbtUADkWph3sGd6Zx4esS3KNEjrcLsKURaGgA=s680-w680-h510) by GE Vernova, unknown license  
 ATS Sport: [ATS Sport](https://lh3.googleusercontent.com/p/AF1QipPOlBTShD2SeUyNX5ugqSRP7l3EY8hu1oQvj6jD=s680-w680-h510) by ATS Sport, unknown license
+
 # Education background
+
 Université de Montpellier: [Entrée du Site Triolet de l'Université de Montpellier](https://commons.wikimedia.org/wiki/File:20200618_141712_cor.jpg) by CommFDS under [CC 4.0](https://creativecommons.org/licenses/by/4.0/)
+
 # Personal Experience
+
 Code Game Jam 2020: [Code Game Jam 2020](https://codegamejam.extragames.fr/) by Antoine Chollet, unknown license  
 Nuit de l'Info 2023: [Nuit de l'Info](https://nuitdelinfo.com/) by unknown, unknown license
+
 # Projects
+
 ## Background
 
 ## Logo
-If not specified, made by myself and under [CC 4.0](https://creativecommons.org/licenses/by/4.0/).  
+
+If not specified, made by myself and under [CC 4.0](https://creativecommons.org/licenses/by/4.0/).
+
 # Hobbies
+
 Hiking illustration: [Pic Saint Loup - Hérault - France; le 10 janvier 2010, sous la neige](https://commons.wikimedia.org/wiki/File:Pic-St-Loup--H%C3%A9rault-IMG_1877.jpg) by Ophrys34 under [CC 3.0](https://creativecommons.org/licenses/by/3.0/)  
 TTRPG illustration: [A pile of dice sitting on top of a table. Cube play role playing game.](https://boudewijnhuijgens.getarchive.net/amp/media/cube-play-role-playing-game-978315) by Pixabay (?) under [CC 0 1.0](https://creativecommons.org/publicdomain/zero/1.0/deed.en)  
 Reading illustration: [A long narrow aisle filled with lots of books. Books library education, education.](https://picryl.com/media/books-library-education-education-65cbf2) by Pixabay (?) under [CC 0 1.0](https://creativecommons.org/publicdomain/zero/1.0/deed.en)  
 Board game illustration: [A game of Settlers of Catan.jpg](https://commons.wikimedia.org/wiki/File:A_game_of_Settlers_of_Catan) by [Yonghokim](https://commons.wikimedia.org/wiki/User:Yonghokim) under [CC 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.en)  
-Video game illustration: [Nova Francia - Entrée](https://nova-francia.espie.dev) by Rémi Espié under [CC 4.0](https://creativecommons.org/licenses/by/4.0/)  
+Video game illustration: [Nova Francia - Entrée](https://nova-francia.espie.dev) by Rémi Espié under [CC 4.0](https://creativecommons.org/licenses/by/4.0/)

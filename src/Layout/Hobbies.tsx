@@ -16,7 +16,7 @@ import { dictionaries } from '~/i18n/types.ts'
 import Appear from '~/component/Appear'
 import ReactiveCardStyle from '../css/reactive-card.module.css'
 
-function CustomCardMedia(props: { img: string, alt: string }) {
+function CustomCardMedia(props: { img: string; alt: string }) {
     const [image, setImage] = createSignal<string>('')
 
     // eslint-disable-next-line solid/reactivity
@@ -71,36 +71,41 @@ function Hobbies() {
             </Typography>
             <For each={t('HobbiesList')}>
                 {(hobby, index) => (
-                    <Box sx={{
-                        mt: index() !== 0 ? '-100px' : '0',
-                        transform:
-                            index() % 2 === 0
-                                ? 'translateX(-250px)'
-                                : 'translateX(250px)',
-                    }}
-                         class={ReactiveCardStyle.small_screen}>
-                    <Appear>
-                        <Card
-                            sx={{
-                                width: '100%',
-                                borderRadius: 3,
-                            }}
-                        >
-                            <CardHeader
-                                title={hobby.title}
-                                sx={{ textAlign: 'center' }}
-                            />
-                            <CustomCardMedia img={hobby.image} alt={hobby.title + ' - illustration'}/>
-                            <CardContent>
-                                <Typography
-                                    variant="body2"
-                                    textAlign={'justify'}
-                                >
-                                    {hobby.description}
-                                </Typography>
-                            </CardContent>
-                        </Card>
-                    </Appear>
+                    <Box
+                        sx={{
+                            mt: index() !== 0 ? '-100px' : '0',
+                            transform:
+                                index() % 2 === 0
+                                    ? 'translateX(-250px)'
+                                    : 'translateX(250px)',
+                        }}
+                        class={ReactiveCardStyle.small_screen}
+                    >
+                        <Appear>
+                            <Card
+                                sx={{
+                                    width: '100%',
+                                    borderRadius: 3,
+                                }}
+                            >
+                                <CardHeader
+                                    title={hobby.title}
+                                    sx={{ textAlign: 'center' }}
+                                />
+                                <CustomCardMedia
+                                    img={hobby.image}
+                                    alt={hobby.title + ' - illustration'}
+                                />
+                                <CardContent>
+                                    <Typography
+                                        variant="body2"
+                                        textAlign={'justify'}
+                                    >
+                                        {hobby.description}
+                                    </Typography>
+                                </CardContent>
+                            </Card>
+                        </Appear>
                     </Box>
                 )}
             </For>

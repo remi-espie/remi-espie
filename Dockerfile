@@ -9,7 +9,7 @@ COPY src ./src
 COPY public ./public
 RUN yarn build:ssr
 
-FROM bitnami/node:latest AS prod
+FROM node:lts-alpine AS prod
 
 USER 1001
 

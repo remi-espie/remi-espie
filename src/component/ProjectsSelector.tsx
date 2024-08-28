@@ -75,7 +75,10 @@ function GetCard(props: {
                                 </Typography>
                             </CardContent>
                         </Box>
-                        <MyCardMedia img={props.item.image} alt={props.item.title + ' - illustration'} />
+                        <MyCardMedia
+                            img={props.item.image}
+                            alt={props.item.title + ' - illustration'}
+                        />
                     </Box>
                     <Box sx={{ m: 1 }}>
                         <Box
