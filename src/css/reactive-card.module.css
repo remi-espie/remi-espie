@@ -1,0 +1,14 @@
+.small_screen {
+    transform: inherit;
+    margin: auto;
+    margin-top: inherit;
+    width: 450px;
+}
+
+@media (max-width: 768px) {
+    .small_screen {
+        transform: none !important;
+        margin-top: 25px !important;
+        width: 80% !important;
+    }
+}

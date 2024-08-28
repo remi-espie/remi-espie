@@ -14,6 +14,7 @@ import { createMemo, createSignal, For } from 'solid-js'
 import * as i18n from '@solid-primitives/i18n'
 import { dictionaries } from '~/i18n/types.ts'
 import Appear from '~/component/Appear'
+import ReactiveCardStyle from '../css/reactive-card.module.css'
 
 function CustomCardMedia(props: { img: string, alt: string }) {
     const [image, setImage] = createSignal<string>('')
@@ -71,18 +72,17 @@ function Hobbies() {
             <For each={t('HobbiesList')}>
                 {(hobby, index) => (
                     <Box sx={{
-                        width: 'min-content',
-                        m: 'auto',
                         mt: index() !== 0 ? '-100px' : '0',
                         transform:
                             index() % 2 === 0
                                 ? 'translateX(-250px)'
                                 : 'translateX(250px)',
-                    }}>
+                    }}
+                         class={ReactiveCardStyle.small_screen}>
                     <Appear>
                         <Card
                             sx={{
-                                width: 450,
+                                width: '100%',
                                 borderRadius: 3,
                             }}
                         >
