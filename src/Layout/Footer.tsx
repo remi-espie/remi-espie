@@ -33,7 +33,7 @@ function footer() {
                     <Typography variant="caption">
                         {t('attribution')}
                     </Typography>
-                    <MyLink to="/license.md" text={'license'} variant={"caption"} color={"white"} />
+                    <MyLink to="/license.md" text={'license.md'} variant={"caption"} color={"white"} />
                 </Box>
             </Box>
         </AppBar>
