@@ -5,13 +5,14 @@ import {
     ThemeProvider,
 } from '@suid/material'
 import Header from './Layout/Header.tsx'
-import { createMemo, onMount } from 'solid-js'
+import { createEffect, createMemo, onMount } from 'solid-js'
 import { baseTheme, themeDark, themeLight } from './theme.ts'
 import LayoutContext, {
     createLayoutMutable,
     getSavedDarkMode,
     getSavedLanguage,
     isSysThemeDark,
+    saveLanguage,
 } from './LayoutContext.ts'
 import './global.css'
 import * as i18n from '@solid-primitives/i18n'
@@ -23,9 +24,22 @@ import Experiences from './Layout/Experiences.tsx'
 import Projects from './Layout/Projects.tsx'
 import Hobbies from './Layout/Hobbies.tsx'
 import { Link, Meta, MetaProvider, Title } from '@solidjs/meta'
+import { Route, Router, useLocation, useNavigate } from '@solidjs/router'
 
-function App() {
+function MyApp() {
     const context = createLayoutMutable()
+    const location = useLocation()
+    const navigate = useNavigate()
+
+    createEffect(() => {
+        if (location.pathname === '/fr') {
+            context.language = 'fr'
+            saveLanguage('fr')
+        } else if (location.pathname === '/en') {
+            context.language = 'en'
+            saveLanguage('en')
+        }
+    })
 
     onMount(() => {
         if (context.darkMode === undefined) {
@@ -33,8 +47,12 @@ function App() {
         }
         if (getSavedLanguage() === null) {
             context.language = navigator.language === 'fr' ? 'fr' : 'en'
+            saveLanguage(context.language)
         } else {
             context.language = getSavedLanguage() ?? 'en'
+        }
+        if (location.pathname === '/') {
+            navigate(context.language, { replace: true })
         }
     })
 
@@ -126,6 +144,14 @@ function App() {
                 </ThemeProvider>
             </MetaProvider>
         </LayoutContext.Provider>
+    )
+}
+
+function App() {
+    return (
+        <Router root={MyApp}>
+            <Route path="/" component={MyApp} />
+        </Router>
     )
 }
 
