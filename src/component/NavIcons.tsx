@@ -17,8 +17,10 @@ import DarkModeOutlinedIcon from '@suid/icons-material/DarkModeOutlined'
 import TranslateOutlined from '@suid/icons-material/TranslateOutlined'
 import * as i18n from '@solid-primitives/i18n'
 import { dictionaries } from '../i18n/types.ts'
+import { useNavigate } from '@solidjs/router'
 
 function NavIcons() {
+    const navigate = useNavigate()
     const theme = useTheme()
 
     const context = useLayoutContext()
@@ -130,6 +132,7 @@ function NavIcons() {
                 <MenuItem
                     onClick={() => {
                         context.language = 'en'
+                        navigate(context.language)
                         saveLanguage('en')
                     }}
                 >
@@ -168,6 +171,7 @@ function NavIcons() {
                 <MenuItem
                     onClick={() => {
                         context.language = 'fr'
+                        navigate(context.language)
                         saveLanguage('fr')
                     }}
                 >
