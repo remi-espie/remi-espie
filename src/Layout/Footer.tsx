@@ -1,4 +1,4 @@
-import { AppBar, Box, Typography } from '@suid/material'
+import { AppBar, Box, Typography, useTheme } from '@suid/material'
 import { createMemo } from 'solid-js'
 import * as i18n from '@solid-primitives/i18n'
 import { dictionaries } from '../i18n/types.ts'
@@ -6,6 +6,7 @@ import { useLayoutContext } from '../LayoutContext.ts'
 import MyLink from '~/component/MyLink.tsx'
 
 function footer() {
+    const theme = useTheme()
     const context = useLayoutContext()
 
     const dict = createMemo(() => {
@@ -37,7 +38,7 @@ function footer() {
                         to="/license.md"
                         text={'license.md'}
                         variant={'caption'}
-                        color={'white'}
+                        color={theme.palette.secondary.contrastText}
                     />
                 </Box>
             </Box>
