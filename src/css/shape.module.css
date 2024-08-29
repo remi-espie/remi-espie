@@ -1,9 +1,9 @@
 .top {
-    top: -10px;
+    top: -2px;
 }
 
 .bottom {
-    bottom: -10px;
+    bottom: -2px;
     transform: rotate(180deg);
 }
 
