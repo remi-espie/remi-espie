@@ -52,7 +52,7 @@ function MyApp() {
             context.language = getSavedLanguage() ?? 'en'
         }
         if (location.pathname === '/') {
-            navigate(context.language, { replace: true })
+            navigate(context.language, { replace: true, scroll: false })
         }
     })
 
