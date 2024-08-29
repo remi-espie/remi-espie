@@ -86,7 +86,8 @@ function Hobbies() {
                                 sx={{
                                     width: '100%',
                                     borderRadius: 3,
-                                    backgroundColor: theme.palette.background.default,
+                                    backgroundColor:
+                                        theme.palette.background.default,
                                 }}
                             >
                                 <CardHeader

@@ -132,7 +132,7 @@ function NavIcons() {
                 <MenuItem
                     onClick={() => {
                         context.language = 'en'
-                        navigate(context.language, {scroll: false})
+                        navigate(context.language, { scroll: false })
                         saveLanguage('en')
                     }}
                 >
@@ -171,7 +171,7 @@ function NavIcons() {
                 <MenuItem
                     onClick={() => {
                         context.language = 'fr'
-                        navigate(context.language, {scroll: false})
+                        navigate(context.language, { scroll: false })
                         saveLanguage('fr')
                     }}
                 >
