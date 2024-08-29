@@ -19,7 +19,7 @@
         "@solidjs/meta": "^0.29.4",
         "@solidjs/router": "^0.14.3",
         "@solidjs/start": "^1.0.6",
-        "@suid/icons-material": "^0.7.0",
+        "@suid/icons-material": "^0.8.0",
         "@suid/material": "^0.16.0",
         "@thisbeyond/solid-select": "^0.15.0",
         "solid-js": "^1.8.21",
@@ -28,10 +28,10 @@
         "vinxi": "^0.4.1"
     },
     "devDependencies": {
-        "@suid/types": "^0.6.0",
-        "@suid/vite-plugin": "^0.2.0",
-        "@typescript-eslint/eslint-plugin": "^8.2.0",
-        "@typescript-eslint/parser": "^8.2.0",
+        "@suid/types": "^0.7.0",
+        "@suid/vite-plugin": "^0.3.0",
+        "@typescript-eslint/eslint-plugin": "^8.3.0",
+        "@typescript-eslint/parser": "^8.3.0",
         "eslint": "^8.56.0",
         "eslint-config-prettier": "^9.1.0",
         "eslint-plugin-jsx-a11y": "^6.9.0",
