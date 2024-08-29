@@ -5,12 +5,9 @@ services:
         image: ghcr.io/remi-espie/remi-espie:latest
         container_name: portfolio
         ports:
-            - '8080:80'
+            - '3000:3000'
 # replace files in data folder with your own
 #        volumes:
-#        - ./data/me.png:/var/www/html/portfolio/me.png
-#        - ./data/CV-REMI_ESPIE.pdf:/var/www/html/portfolio/CV-REMI_ESPIE.pdf
-#        - ./data/CV-REMI_ESPIE-English.pdf:/var/www/html/portfolio/CV-REMI_ESPIE-English.pdf
-#
-# If you need to replace your nginx configuration, uncomment the following line
-#        - ./data/nginx.conf:/opt/bitnami/nginx/conf/server_blocks/my_server_block.conf
+#        - ./data/me.png:/app/public/me.png
+#        - ./data/CV-REMI_ESPIE.pdf:/app/public/CV-REMI_ESPIE.pdf
+#        - ./data/CV-REMI_ESPIE-English.pdf:/app/public/CV-REMI_ESPIE-English.pdf
