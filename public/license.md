@@ -24,6 +24,14 @@ Nuit de l'Info 2023: [Nuit de l'Info](https://nuitdelinfo.com/) by unknown, unkn
 
 ## Logo
 
+Orka & Cloudlet logo: [Polytech DO](https://www.polytech.umontpellier.fr/formation/cycle-ingenieur/devops) by Polytech Montpellier, unknown license  
+Polynotes logo: Polynotes by Polytech Montpellier, unknown license  
+PaasTech logo: DO students, generated with AI and retouched, [CC 4.0](https://creativecommons.org/licenses/by/4.0/)  
+MobiDex logo: [Poké Ball icon](https://commons.wikimedia.org/wiki/File:Pok%C3%A9_Ball_icon.svg) by [Andreuvv](https://commons.wikimedia.org/wiki/User:Andreuvv) under public domain  
+Gophers Invaders logo: [gophers](https://github.com/ashleymcnamara/gophers) by Ashley McNamara under [CC 4.0](https://creativecommons.org/licenses/by/4.0/deed.en)  
+Croissant Dashboard logo: [Croissant Emoji](https://emojipedia.org/microsoft/windows-10-october-2018-update/croissant) by Microsoft under font licensing  
+Discord WebHook Planner logo: [Mozilla FxEmoji](https://github.com/mozilla/fxemoji) by Mozilla under [CC 4.0](https://creativecommons.org/licenses/by/4.0/deed.en)
+
 If not specified, made by myself and under [CC 4.0](https://creativecommons.org/licenses/by/4.0/).
 
 # Hobbies
