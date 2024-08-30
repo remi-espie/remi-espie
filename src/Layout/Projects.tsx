@@ -8,6 +8,7 @@ import { createMemo } from 'solid-js'
 import * as i18n from '@solid-primitives/i18n'
 import { dictionaries } from '../i18n/types.ts'
 import ProjectsSelector from '../component/ProjectsSelector.tsx'
+import Background from '../assets/macro-heat-sink.jpg'
 
 function Projects() {
     const theme = useTheme()
@@ -29,8 +30,7 @@ function Projects() {
     return (
         <Box
             sx={{
-                backgroundImage:
-                    'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://img.freepik.com/free-photo/closeup-computer-parts_144627-1086.jpg?t=st=1723033800~exp=1723037400~hmac=a0d3ab6006ab1ab2007aec4d2012fbfb5f306dc5a968dbe90ce58d2d5adc2e5d&w=1060)',
+                backgroundImage: 'url(' + Background + ')',
             }}
             class={BGStyle.bgimage}
             id={'projects'}

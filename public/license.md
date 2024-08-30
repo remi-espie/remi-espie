@@ -1,5 +1,7 @@
 # About me background
 
+[Computer Ram Components](https://negativespace.co/computer-ram-components/) by Charlie Belvin under [CC 0](https://creativecommons.org/publicdomain/zero/1.0/deed.en)
+
 # Professional Experiences
 
 General Electric: Grid Solutions Montpellier: [Entrée du site de General Electric Grid Solutions Montpellier](https://lh3.googleusercontent.com/p/AF1QipNnbtUADkWph3sGd6Zx4esS3KNEjrcLsKURaGgA=s680-w680-h510) by GE Vernova, unknown license  
@@ -17,6 +19,8 @@ Nuit de l'Info 2023: [Nuit de l'Info](https://nuitdelinfo.com/) by unknown, unkn
 # Projects
 
 ## Background
+
+[Heat Sink Motherboard](https://negativespace.co/heat-sink-motherboard/) by Lenharth Systems under [CC 0](https://creativecommons.org/publicdomain/zero/1.0/deed.en)
 
 ## Logo
 

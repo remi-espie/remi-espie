@@ -15,6 +15,7 @@ import { dictionaries } from '../i18n/types.ts'
 import EmojiText from '../component/EmojiText.tsx'
 import MyLink from '../component/MyLink.tsx'
 import Appear from '../component/Appear.tsx'
+import Background from '../assets/computer-ram.jpg'
 
 function About() {
     const theme = useTheme()
@@ -33,7 +34,9 @@ function About() {
         <Box
             sx={{
                 backgroundImage:
-                    'linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(https://img.freepik.com/free-photo/closeup-computer-parts_144627-1073.jpg?t=st=1723034207~exp=1723037807~hmac=4f5365eefa890be24bfdc56cc8008b3acce0ffc4be6670571bf1a9a4e6feeca7&w=1380)',
+                    'linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(' +
+                    Background +
+                    ')',
                 color: theme.palette.common.white,
             }}
             class={BGStyle.bgimage}
