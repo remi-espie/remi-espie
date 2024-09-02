@@ -25,6 +25,7 @@ import Projects from './Layout/Projects.tsx'
 import Hobbies from './Layout/Hobbies.tsx'
 import { Link, Meta, MetaProvider, Title } from '@solidjs/meta'
 import { Route, Router, useLocation, useNavigate } from '@solidjs/router'
+import License from '~/Layout/license.tsx'
 
 function MyApp() {
     const context = createLayoutMutable()
@@ -149,8 +150,10 @@ function MyApp() {
 
 function App() {
     return (
-        <Router root={MyApp}>
+        <Router>
             <Route path="/" component={MyApp} />
+            <Route path="/:language" component={MyApp} />
+            <Route path="/license" component={License} />
         </Router>
     )
 }

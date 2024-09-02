@@ -35,9 +35,8 @@ function footer() {
                         {t('attribution')}
                     </Typography>
                     <MyLink
-                        to="/license.md"
-                        text={'license.md'}
-                        target="_parent"
+                        to="/license"
+                        text={'license'}
                         variant={'caption'}
                         color={theme.palette.secondary.contrastText}
                     />

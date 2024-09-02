@@ -1,3 +1,7 @@
+import { SolidMarkdown } from 'solid-markdown'
+import { Box, CssBaseline } from '@suid/material'
+
+const markdown = `
 # About me background
 
 [Computer Ram Components](https://negativespace.co/computer-ram-components/) by Charlie Belvin under [CC 0](https://creativecommons.org/publicdomain/zero/1.0/deed.en)
@@ -41,3 +45,16 @@ TTRPG illustration: [A pile of dice sitting on top of a table. Cube play role pl
 Reading illustration: [A long narrow aisle filled with lots of books. Books library education, education.](https://picryl.com/media/books-library-education-education-65cbf2) by Pixabay (?) under [CC 0 1.0](https://creativecommons.org/publicdomain/zero/1.0/deed.en)  
 Board game illustration: [A game of Settlers of Catan.jpg](https://commons.wikimedia.org/wiki/File:A_game_of_Settlers_of_Catan) by [Yonghokim](https://commons.wikimedia.org/wiki/User:Yonghokim) under [CC 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.en)  
 Video game illustration: [Nova Francia - Entrée](https://nova-francia.espie.dev) by Rémi Espié under [CC 4.0](https://creativecommons.org/licenses/by/4.0/)
+`
+
+export default function License() {
+
+    return (
+        <Box sx={{
+            m: 1,
+        }}>
+            <CssBaseline />
+            <SolidMarkdown children={markdown} />
+        </Box>
+    )
+}

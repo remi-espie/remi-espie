@@ -7,5 +7,6 @@ export default defineConfig({
         build: {
             target: 'esnext',
         },
+        assetsInclude: ['**/*.jpg', '**/*.png', '**/*.md'],
     },
 })
