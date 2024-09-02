@@ -48,11 +48,12 @@ Video game illustration: [Nova Francia - Entrée](https://nova-francia.espie.dev
 `
 
 export default function License() {
-
     return (
-        <Box sx={{
-            m: 1,
-        }}>
+        <Box
+            sx={{
+                m: 1,
+            }}
+        >
             <CssBaseline />
             <SolidMarkdown children={markdown} />
         </Box>
