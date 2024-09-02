@@ -3,11 +3,11 @@ FROM node:lts-alpine AS build
 WORKDIR /app
 
 COPY yarn.lock package.json ssr.config.ts tsconfig.json ./
-RUN yarn install
+RUN npm install
 
 COPY src ./src
 COPY public ./public
-RUN yarn build:ssr
+RUN npm run build:ssr
 
 FROM node:lts-alpine AS prod
 
