@@ -37,6 +37,7 @@ function footer() {
                     <MyLink
                         to="/license.md"
                         text={'license.md'}
+                        target="_parent"
                         variant={'caption'}
                         color={theme.palette.secondary.contrastText}
                     />
