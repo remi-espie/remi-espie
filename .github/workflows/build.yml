@@ -17,12 +17,12 @@ jobs:
               uses: actions/setup-node@v3
               with:
                   node-version: 18.x
-                  cache: 'yarn'
+                  cache: 'npm'
             - name: Install packages
-              run: yarn
+              run: npm
             - name: Run ESLint check
-              run: yarn eslint .
+              run: npx eslint .
             - name: Run Prettier check
-              run: yarn prettier . --check
+              run: npx prettier . --check
             - name: Build project
-              run: yarn build:spa
+              run: npm run build:spa
