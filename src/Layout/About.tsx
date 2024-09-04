@@ -66,6 +66,7 @@ function About() {
                         <MyLink
                             to={t('CVurl').toString()}
                             text={t('CVtext').toString()}
+                            target={'_blank'}
                             color={theme.palette.primary.light}
                             sx={{ fontWeight: 'bold' }}
                         />
