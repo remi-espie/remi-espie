@@ -2,7 +2,7 @@ FROM node:lts-alpine AS build
 
 WORKDIR /app
 
-COPY yarn.lock package.json ssr.config.ts tsconfig.json ./
+COPY package-lock.json package.json ssr.config.ts tsconfig.json ./
 RUN npm install
 
 COPY src ./src
