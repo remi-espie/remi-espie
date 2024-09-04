@@ -24,13 +24,13 @@ import Experiences from './Layout/Experiences.tsx'
 import Projects from './Layout/Projects.tsx'
 import Hobbies from './Layout/Hobbies.tsx'
 import { Link, Meta, MetaProvider, Title } from '@solidjs/meta'
-import { Route, Router, useLocation, useNavigate } from '@solidjs/router'
+import { Route, Router, useLocation } from '@solidjs/router'
 import License from '~/Layout/license.tsx'
 
 function MyApp() {
     const context = createLayoutMutable()
     const location = useLocation()
-    const navigate = useNavigate()
+    // const navigate = useNavigate()
 
     createEffect(() => {
         if (location.pathname === '/fr') {
@@ -52,9 +52,9 @@ function MyApp() {
         } else {
             context.language = getSavedLanguage() ?? 'en'
         }
-        if (location.pathname === '/') {
-            navigate(context.language, { replace: true, scroll: false })
-        }
+        // if (location.pathname === '/') {
+        //     navigate(context.language, { replace: true, scroll: false })
+        // }
     })
 
     const palette = createMemo(() => {
