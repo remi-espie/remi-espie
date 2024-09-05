@@ -25,7 +25,7 @@ import Projects from './Layout/Projects.tsx'
 import Hobbies from './Layout/Hobbies.tsx'
 import { Link, Meta, MetaProvider, Title } from '@solidjs/meta'
 import { Route, Router, useLocation } from '@solidjs/router'
-import License from '~/Layout/license.tsx'
+import License from '~/Layout/License.tsx'
 
 function MyApp() {
     const context = createLayoutMutable()
