@@ -45,7 +45,7 @@ export const en_dict = {
     phone: 'Phone',
     mail: 'Mail',
     getCV: 'Get my CV as a PDF file',
-    CVurl: '/CV-ESPIE_REMI-English.pdf',
+    CVurl: '/CV-REMI_ESPIE-English.pdf',
     CVtext: 'here',
     professionalXP: 'Professional experiences',
     education: 'Education',
@@ -219,7 +219,8 @@ export const en_dict = {
         },
         {
             title: '3D printing',
-            description: "I acquired a 3D printer in 2022, and since then I have printed many objects. I design and print tools to help me in everyday life, or to allow me to repair devices that I would have otherwise had to throw away.",
+            description:
+                'I acquired a 3D printer in 2022, and since then I have printed many objects. I design and print tools to help me in everyday life, or to allow me to repair devices that I would have otherwise had to throw away.',
             image: '3dprinting',
         },
         {

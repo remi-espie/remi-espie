@@ -220,7 +220,7 @@ export const fr_dict = {
             image: 'boardgame',
         },
         {
-          title: "Impression 3D",
+            title: 'Impression 3D',
             description:
                 "J'ai acquis une imprimante 3D en 2022, et j'ai depuis imprimé de nombreux objets. Je design et imprime des outils pour m'aider dans la vie de tous les jours, ou me permettant de réparer des appareils que j'aurais dû jeter autrement.",
             image: '3dprinting',
