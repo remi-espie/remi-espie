@@ -220,6 +220,12 @@ export const fr_dict = {
             image: 'boardgame',
         },
         {
+          title: "Impression 3D",
+            description:
+                "J'ai acquis une imprimante 3D en 2022, et j'ai depuis imprimé de nombreux objets. Je design et imprime des outils pour m'aider dans la vie de tous les jours, ou me permettant de réparer des appareils que j'aurais dû jeter autrement.",
+            image: '3dprinting',
+        },
+        {
             title: 'Jeux vidéo',
             description:
                 "Grand amateur de RPG solo, je joue à presque tous les genres, et j'aime découvrir de petites perles indépendantes. J'ai moi même développé quelques jeux vidéo, notamment lors de Game Jams.",

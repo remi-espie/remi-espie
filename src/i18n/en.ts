@@ -218,6 +218,11 @@ export const en_dict = {
             image: 'boardgame',
         },
         {
+            title: '3D printing',
+            description: "I acquired a 3D printer in 2022, and since then I have printed many objects. I design and print tools to help me in everyday life, or to allow me to repair devices that I would have otherwise had to throw away.",
+            image: '3dprinting',
+        },
+        {
             title: 'Video games',
             description:
                 'A forever big fan of single-player RPGs, I play almost all genres and love discovering little indie gems. I have also developed a few video games myself, especially during Game Jams.',

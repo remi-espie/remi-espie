@@ -43,7 +43,8 @@ If not specified, made by myself and under [CC 4.0](https://creativecommons.org/
 Hiking illustration: [Pic Saint Loup - Hérault - France; le 10 janvier 2010, sous la neige](https://commons.wikimedia.org/wiki/File:Pic-St-Loup--H%C3%A9rault-IMG_1877.jpg) by Ophrys34 under [CC 3.0](https://creativecommons.org/licenses/by/3.0/)  
 TTRPG illustration: [A pile of dice sitting on top of a table. Cube play role playing game.](https://boudewijnhuijgens.getarchive.net/amp/media/cube-play-role-playing-game-978315) by Pixabay (?) under [CC 0 1.0](https://creativecommons.org/publicdomain/zero/1.0/deed.en)  
 Reading illustration: [A long narrow aisle filled with lots of books. Books library education, education.](https://picryl.com/media/books-library-education-education-65cbf2) by Pixabay (?) under [CC 0 1.0](https://creativecommons.org/publicdomain/zero/1.0/deed.en)  
-Board game illustration: [A game of Settlers of Catan.jpg](https://commons.wikimedia.org/wiki/File:A_game_of_Settlers_of_Catan) by [Yonghokim](https://commons.wikimedia.org/wiki/User:Yonghokim) under [CC 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.en)  
+Board game illustration: [A game of Settlers of Catan.jpg](https://commons.wikimedia.org/wiki/File:A_game_of_Settlers_of_Catan) by [Yonghokim](https://commons.wikimedia.org/wiki/User:Yonghokim) under [CC 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.en)
+3D printing illulstration [3D-принтер в работе.jpg](https://commons.wikimedia.org/wiki/File:3D-%D0%BF%D1%80%D0%B8%D0%BD%D1%82%D0%B5%D1%80_%D0%B2_%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B5.jpg) by Angelikagub under [CC 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.en)  
 Video game illustration: [Nova Francia - Entrée](https://nova-francia.espie.dev) by Rémi Espié under [CC 4.0](https://creativecommons.org/licenses/by/4.0/)
 `
 
