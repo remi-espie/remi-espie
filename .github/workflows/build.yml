@@ -19,7 +19,7 @@ jobs:
                   node-version: 18.x
                   cache: 'npm'
             - name: Install packages
-              run: npm
+              run: npm install
             - name: Run ESLint check
               run: npx eslint .
             - name: Run Prettier check
