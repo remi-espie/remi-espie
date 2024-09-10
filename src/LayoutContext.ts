@@ -35,9 +35,6 @@ const LayoutContext = isServer
 export function createLayoutMutable(input: DeepPartial<Options> = {}) {
     return createMutable(merge({}, defaultOptionsSrv, input)) as Options
 }
-export function createLayoutMutableClient(input: DeepPartial<Options> = {}) {
-    return createMutable(merge({}, defaultOptionsClient, input)) as Options
-}
 
 export function useLayoutContext() {
     return useContext(LayoutContext)
