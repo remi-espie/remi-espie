@@ -23,11 +23,7 @@ function Header() {
         return i18n.flatten(dictionaries[context.language])
     })
 
-    // Working thanks to context
-    // eslint-disable-next-line solid/reactivity
     const t = i18n.translator(dict)
-
-    // const [open, setOpen] = createSignal(false)
 
     return (
         <>

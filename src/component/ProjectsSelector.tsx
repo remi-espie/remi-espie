@@ -127,12 +127,8 @@ function ProjectsSelector(props: {
         url: string
     }[]
 }) {
-    // not needed
-    // eslint-disable-next-line solid/reactivity
     const [techList, setTechList] = createSignal<string[]>([...props.techs])
 
-    // not needed
-    // eslint-disable-next-line solid/reactivity
     const [projects, setProjects] = createSignal(props.projectsList)
 
     const [selectedTechs, setSelectedTechs] = createSignal<string[]>([])

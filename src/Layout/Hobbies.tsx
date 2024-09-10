@@ -19,13 +19,10 @@ import ReactiveCardStyle from '../css/reactive-card.module.css'
 function CustomCardMedia(props: { img: string; alt: string }) {
     const [image, setImage] = createSignal<string>('')
 
-    // eslint-disable-next-line solid/reactivity
     if (props.img.startsWith('http')) {
-        // eslint-disable-next-line solid/reactivity
         setImage(props.img)
     } else {
         // @vite-ignore
-        // eslint-disable-next-line solid/reactivity
         import(`../assets/${props.img}.jpg`).then((img) => {
             setImage(img.default)
         })
@@ -51,8 +48,6 @@ function Hobbies() {
         return i18n.flatten(dictionaries[context.language])
     })
 
-    // Working thanks to context
-    // eslint-disable-next-line solid/reactivity
     const t = i18n.translator(dict)
 
     return (
