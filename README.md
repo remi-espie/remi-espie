@@ -74,8 +74,8 @@ Made with [SolidJS](https://www.solidjs.com/) and styled with [SUID](https://sui
     docker run -p ghcr.io/remi-espie/portfolio:latest
     ```
 -   Or with my [docker-compose.yml](./docker-compose.yml),
--   Or clone this repo and run it locally with yarn:
+-   Or clone this repo and run it locally with [npm](https://www.npmjs.com/):
     ```sh
-    yarn install
-    yarn dev
+    npm install
+    npm run dev
     ```
