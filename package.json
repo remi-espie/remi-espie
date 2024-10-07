@@ -26,7 +26,7 @@
         "solid-markdown": "^2.0.13",
         "solid-motionone": "^1.0.2",
         "tsc": "^2.0.4",
-        "vinxi": "0.4.1"
+        "vinxi": "0.4.3"
     },
     "devDependencies": {
         "@suid/types": "^0.7.1",
