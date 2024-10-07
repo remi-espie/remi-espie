@@ -24,7 +24,7 @@
         "@thisbeyond/solid-select": "^0.15.0",
         "solid-js": "^1.9.1",
         "solid-markdown": "^2.0.13",
-        "solid-motionone": "^1.0.1",
+        "solid-motionone": "^1.0.2",
         "tsc": "^2.0.4",
         "vinxi": "0.4.1"
     },
