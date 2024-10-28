@@ -18,7 +18,7 @@
         "@solid-primitives/i18n": "^2.1.1",
         "@solidjs/meta": "^0.29.4",
         "@solidjs/router": "^0.14.8",
-        "@solidjs/start": "^1.0.8",
+        "@solidjs/start": "^1.0.9",
         "@suid/icons-material": "^0.8.1",
         "@suid/material": "^0.18.0",
         "@thisbeyond/solid-select": "^0.15.0",
