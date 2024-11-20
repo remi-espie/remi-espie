@@ -7,7 +7,7 @@ import {
     Typography,
     useTheme,
 } from '@suid/material'
-import { createSignal, For } from 'solid-js'
+import { createEffect, createSignal, For } from 'solid-js'
 import { Technologies } from '../i18n/technologies.ts'
 import MyLink from './MyLink.tsx'
 import MyCardMedia from './MyCardMedia.tsx'
@@ -132,6 +132,11 @@ function ProjectsSelector(props: {
     const [projects, setProjects] = createSignal(props.projectsList)
 
     const [selectedTechs, setSelectedTechs] = createSignal<string[]>([])
+
+    createEffect(() => {
+        setTechList([...props.techs])
+        setProjects(props.projectsList)
+    })
 
     function handleSelectChange(value: string[]) {
         setSelectedTechs(value)
