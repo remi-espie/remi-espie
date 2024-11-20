@@ -72,4 +72,8 @@ export const Technologies: Technology[] = [
         name: 'SolidJS',
         color: '#4983c3',
     },
+    {
+        name: 'WASM',
+        color: '#654FF0',
+    },
 ]

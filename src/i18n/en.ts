@@ -1,3 +1,6 @@
+import { project_perso_en } from '~/i18n/projects/perso/en.ts'
+import { project_pro_en } from '~/i18n/projects/pro/en.ts'
+
 export const en_dict = {
     title: 'Introduction Portfolio',
     author: 'Rémi Espié',
@@ -83,115 +86,9 @@ export const en_dict = {
         "La Nuit de l'Info is a national website development competition lasting one night. The site developed must fulfill a main objective, and can be supplemented with secondary objectives proposed by sponsoring companies, often offering a gift.",
     GitHubProjects: 'All the projects I have done are available on my GitHub:',
     AcademicProjects: 'Academic projects',
-    AcademicProjectsList: [
-        {
-            title: 'Orka',
-            description:
-                'A Kubernetes-like orchestrator, simplified and efficient',
-            url: 'https://github.com/dev-sys-do/orka',
-            technologies: ['Rust', 'Kubernetes', 'Docker'],
-            image: 'DO',
-        },
-        {
-            title: 'PaaSTech',
-            description:
-                'A Platform-as-a-Service (PaaS) to deploy and manage your applications in the cloud',
-            url: 'https://github.com/paastech-cloud',
-            technologies: ['Rust', 'Go', 'gRPC', 'Cloud'],
-            image: 'PaaSTech',
-        },
-        {
-            title: 'MobiDex',
-            description:
-                'An android application to visualize every Pokemons from the Pokédex',
-            url: 'https://github.com/remi-espie/mobidex',
-            technologies: ['Kotlin', 'Android'],
-            image: 'MobiDex',
-        },
-        {
-            title: 'Gophers Invaders',
-            description:
-                'A Space Invaders-like game, but with Gophers, playable in the terminal and developed in Go',
-            url: 'https://github.com/remi-espie/gophers_invader',
-            technologies: ['Go'],
-            image: 'GophersInvaders',
-        },
-        {
-            title: 'CloudLet',
-            description:
-                'A Function-as-a-Service (FaaS) using different languages',
-            url: 'https://github.com/virt-do/cloudlet',
-            technologies: ['Rust', 'Micro VM', 'FaaS', 'Cloud'],
-            image: 'DO',
-        },
-        {
-            title: 'Polynotes',
-            description:
-                'An online note editor inspired by Notion, developed in React and NestJs',
-            url: 'https://github.com/remi-espie/polynotes',
-            technologies: ['React', 'NestJs', 'TypeScript', 'Docker'],
-            image: 'Polynotes',
-        },
-        {
-            title: 'Croissant Dashboard',
-            description:
-                'A "Chocoblast" monitoring dashboard, developed in Vue and NestJs',
-            url: 'https://github.com/remi-espie/croissant_dashboard',
-            technologies: ['Vue', 'NestJs', 'TypeScript', 'Docker'],
-            image: 'Croissant',
-        },
-        {
-            title: 'Python VU-Meter',
-            description:
-                'A VU-Meter in Python, to visualize the sound level of your microphone. It is able to brighten up your LEDs according to the sound level',
-            url: 'https://github.com/remi-espie/vu-meter',
-            image: 'VU-Meter',
-            technologies: ['Python'],
-        },
-    ],
+    AcademicProjectsList: project_pro_en,
     PersonalProjects: 'Personal projects',
-    PersonalProjectsList: [
-        {
-            title: 'CalenGo',
-            description:
-                'An API exporting a custom calendar image for the given day',
-            url: 'https://github.com/remi-espie/CalenGo',
-            technologies: ['Go', 'Docker'],
-            image: 'https://calengo.espie.dev/calendar?size=250',
-        },
-        {
-            title: 'Gale-Shapley From CSV',
-            description:
-                'A Python script to apply the Gale-Shapley algorithm on a CSV file',
-            url: 'https://github.com/remi-espie/Python_Gale-Shapley_CSV',
-            image: 'gale-shapley',
-            technologies: ['Python'],
-        },
-        {
-            title: 'Bro-Signal',
-            description:
-                'An Android application to send a signal to a large group of people',
-            url: 'https://github.com/DevLab-umontp/Bro-Signal',
-            image: 'https://raw.githubusercontent.com/DevLab-umontp/Bro-Signal/master/brosignal.png',
-            technologies: ['Android'],
-        },
-        {
-            title: 'Discord WebHook Planner',
-            description:
-                'A Discord webhook to send a daily schedule based on a remote .ics file',
-            url: 'https://github.com/remi-espie/yet-another-discord-webhook-planner',
-            image: 'calendar',
-            technologies: ['Go'],
-        },
-        {
-            title: 'Portfolio',
-            description:
-                'The portfolio you are currently reading, developed in SolidJS',
-            url: 'https://github.com/remi-espie/remi-espie',
-            image: 'icon',
-            technologies: ['SolidJS', 'TypeScript'],
-        },
-    ],
+    PersonalProjectsList: project_perso_en,
     HobbiesList: [
         {
             title: 'Hiking',

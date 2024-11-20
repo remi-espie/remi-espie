@@ -1,3 +1,6 @@
+import { project_perso_fr } from '~/i18n/projects/perso/fr.ts'
+import { project_pro_fr } from '~/i18n/projects/pro/fr.ts'
+
 export const fr_dict = {
     title: 'Portfolio de présentation',
     author: 'Rémi Espié',
@@ -85,115 +88,9 @@ export const fr_dict = {
     GitHubProjects:
         "L'ensemble des projets que j'ai réalisé sont disponibles sur mon GitHub :",
     AcademicProjects: 'Projets académiques',
-    AcademicProjectsList: [
-        {
-            title: 'Orka',
-            description:
-                'Un orchestrateur type Kubernetes, simplifié et performant',
-            url: 'https://github.com/dev-sys-do/orka',
-            technologies: ['Rust', 'Kubernetes', 'Docker'],
-            image: 'DO',
-        },
-        {
-            title: 'PaaSTech',
-            description:
-                'Un Platform-as-a-Service (PaaS) pour déployer et manager vos applications dans le cloud',
-            url: 'https://github.com/paastech-cloud',
-            technologies: ['Rust', 'Go', 'gRPC', 'Cloud'],
-            image: 'PaaSTech',
-        },
-        {
-            title: 'MobiDex',
-            description:
-                'Une application Android permettant de visualiser tous les Pokémons du Pokédex',
-            url: 'https://github.com/remi-espie/mobidex',
-            technologies: ['Kotlin', 'Android'],
-            image: 'MobiDex',
-        },
-        {
-            title: 'Gophers Invaders',
-            description:
-                'Un jeu vidéo de type Space Invaders, jouable dans le terminal et développé en Go',
-            url: 'https://github.com/remi-espie/gophers_invader',
-            technologies: ['Go'],
-            image: 'GophersInvaders',
-        },
-        {
-            title: 'CloudLet',
-            description:
-                'Un service de Function-as-a-Service (FaaS) presque performant',
-            url: 'https://github.com/virt-do/cloudlet',
-            technologies: ['Rust', 'Micro VM', 'FaaS', 'Cloud'],
-            image: 'DO',
-        },
-        {
-            title: 'Polynotes',
-            description:
-                'Un éditeur de note en ligne inspiré de Notion, développé en React et NestJs',
-            url: 'https://github.com/remi-espie/polynotes',
-            technologies: ['React', 'NestJs', 'TypeScript', 'Docker'],
-            image: 'Polynotes',
-        },
-        {
-            title: 'Croissant Dashboard',
-            description:
-                'Un dashboard de monitoring de "Chocoblast", développé en Vue et NestJs',
-            url: 'https://github.com/remi-espie/croissant_dashboard',
-            technologies: ['Vue', 'NestJs', 'TypeScript', 'Docker'],
-            image: 'Croissant',
-        },
-        {
-            title: 'Python VU-Meter',
-            description:
-                'Un VU-Meter en Python pour afficher le niveau sonore, capable de faire briller des LEDs en fonction du niveau sonore',
-            url: 'https://github.com/remi-espie/vu-meter',
-            image: 'VU-Meter',
-            technologies: ['Python'],
-        },
-    ],
+    AcademicProjectsList: project_pro_fr,
     PersonalProjects: 'Projets personnels',
-    PersonalProjectsList: [
-        {
-            title: 'CalenGo',
-            description:
-                'Une API retournant une image de calendrier pour une date donnée',
-            url: 'https://github.com/remi-espie/CalenGo',
-            technologies: ['Go', 'Docker'],
-            image: 'https://calengo.espie.dev/calendar?size=250',
-        },
-        {
-            title: 'Gale-Shapley From CSV',
-            description:
-                "Une implémentation de l'algorithme de Gale-Shapley en Python, utilisant un fichier .csv comme base",
-            url: 'https://github.com/remi-espie/Python_Gale-Shapley_CSV',
-            image: 'gale-shapley',
-            technologies: ['Python'],
-        },
-        {
-            title: 'Bro-Signal',
-            description:
-                'Une application android permettant de rapidement contacter un groupe de personne',
-            url: 'https://github.com/DevLab-umontp/Bro-Signal',
-            image: 'brosignal',
-            technologies: ['Android'],
-        },
-        {
-            title: 'Discord WebHook Planner',
-            description:
-                "Un webhook pour Discord envoyant un emploi du temps journalier en fonction d'un fichier .ics distant",
-            url: 'https://github.com/remi-espie/yet-another-discord-webhook-planner',
-            image: 'calendar',
-            technologies: ['Go'],
-        },
-        {
-            title: 'Portfolio',
-            description:
-                'Le portfolio que vous êtes en train de lire, développé en SolidJS',
-            url: 'https://github.com/remi-espie/remi-espie',
-            image: 'icon',
-            technologies: ['SolidJS', 'TypeScript'],
-        },
-    ],
+    PersonalProjectsList: project_perso_fr,
     HobbiesList: [
         {
             title: 'Randonnée',
