@@ -2,7 +2,6 @@ import { CardMedia } from '@suid/material'
 import { createSignal } from 'solid-js'
 import { getImage } from '~/ImgImporter.ts'
 
-
 function MyCardMedia(props: { img: string; alt: string }) {
     const [image, setImage] = createSignal<string>('')
 
