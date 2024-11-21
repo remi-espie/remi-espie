@@ -1,8 +1,9 @@
 import { CardMedia } from '@suid/material'
 import { createSignal } from 'solid-js'
 import { getImage } from '~/ImgImporter.ts'
+import { SxProps } from '@suid/system'
 
-function MyCardMedia(props: { img: string; alt: string }) {
+function MyCardMedia(props: { img: string; alt: string; sx?: SxProps }) {
     const [image, setImage] = createSignal<string>('')
 
     if (props.img.startsWith('http')) {
@@ -16,10 +17,7 @@ function MyCardMedia(props: { img: string; alt: string }) {
             component="img"
             image={image()}
             alt={props.alt}
-            sx={{
-                objectFit: 'contain',
-                m: 1,
-            }}
+            sx={props.sx}
         />
     )
 }

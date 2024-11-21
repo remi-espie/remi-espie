@@ -78,6 +78,10 @@ function GetCard(props: {
                         <MyCardMedia
                             img={props.item.image}
                             alt={props.item.title + ' - illustration'}
+                            sx={{
+                                objectFit: 'contain',
+                                m: 1,
+                            }}
                         />
                     </Box>
                     <Box sx={{ m: 1 }}>

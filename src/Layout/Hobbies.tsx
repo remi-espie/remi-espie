@@ -3,40 +3,18 @@ import {
     Card,
     CardContent,
     CardHeader,
-    CardMedia,
     SvgIcon,
     Typography,
     useTheme,
 } from '@suid/material'
 import ShapeStyle from '../css/shape.module.css'
 import { useLayoutContext } from '~/LayoutContext.ts'
-import { createMemo, createSignal, For } from 'solid-js'
+import { createMemo, For } from 'solid-js'
 import * as i18n from '@solid-primitives/i18n'
 import { dictionaries } from '~/i18n/types.ts'
 import Appear from '~/component/Appear'
 import ReactiveCardStyle from '../css/reactive-card.module.css'
-import { getImage } from '~/ImgImporter.ts'
-
-function CustomCardMedia(props: { img: string; alt: string }) {
-    const [image, setImage] = createSignal<string>('')
-
-    if (props.img.startsWith('http')) {
-        setImage(props.img)
-    } else {
-        setImage(getImage(props.img))
-    }
-
-    return (
-        <CardMedia
-            component="img"
-            image={image()}
-            alt={props.alt}
-            sx={{
-                height: 200,
-            }}
-        />
-    )
-}
+import MyCardMedia from '~/component/MyCardMedia.tsx'
 
 function Hobbies() {
     const theme = useTheme()
@@ -87,9 +65,12 @@ function Hobbies() {
                                     title={hobby.title}
                                     sx={{ textAlign: 'center' }}
                                 />
-                                <CustomCardMedia
+                                <MyCardMedia
                                     img={hobby.image}
                                     alt={hobby.title + ' - illustration'}
+                                    sx={{
+                                        height: 200,
+                                    }}
                                 />
                                 <CardContent>
                                     <Typography
