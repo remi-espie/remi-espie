@@ -1,17 +1,15 @@
 import { CardMedia } from '@suid/material'
 import { createSignal } from 'solid-js'
+import { getImage } from '~/ImgImporter.ts'
 
-// This component does not need any reactivity
+
 function MyCardMedia(props: { img: string; alt: string }) {
     const [image, setImage] = createSignal<string>('')
 
     if (props.img.startsWith('http')) {
         setImage(props.img)
     } else {
-        // @vite-ignore
-        import(`../assets/${props.img}.png`).then((img) => {
-            setImage(img.default)
-        })
+        setImage(getImage(props.img))
     }
 
     return (

@@ -118,7 +118,7 @@ export const en_dict = {
             title: '3D printing',
             description:
                 'I acquired a 3D printer in 2022, and since then I have printed many objects. I design and print tools to help me in everyday life, or to allow me to repair devices that I would have otherwise had to throw away.',
-            image: '3dprinting',
+            image: 'printing',
         },
         {
             title: 'Video games',

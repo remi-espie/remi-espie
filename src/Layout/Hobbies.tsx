@@ -15,6 +15,7 @@ import * as i18n from '@solid-primitives/i18n'
 import { dictionaries } from '~/i18n/types.ts'
 import Appear from '~/component/Appear'
 import ReactiveCardStyle from '../css/reactive-card.module.css'
+import { getImage } from '~/ImgImporter.ts'
 
 function CustomCardMedia(props: { img: string; alt: string }) {
     const [image, setImage] = createSignal<string>('')
@@ -22,10 +23,7 @@ function CustomCardMedia(props: { img: string; alt: string }) {
     if (props.img.startsWith('http')) {
         setImage(props.img)
     } else {
-        // @vite-ignore
-        import(`../assets/${props.img}.jpg`).then((img) => {
-            setImage(img.default)
-        })
+        setImage(getImage(props.img))
     }
 
     return (

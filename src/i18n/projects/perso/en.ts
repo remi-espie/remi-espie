@@ -12,7 +12,7 @@ export const project_perso_en = [
         description:
             'A Python script to apply the Gale-Shapley algorithm on a CSV file',
         url: 'https://github.com/remi-espie/Python_Gale-Shapley_CSV',
-        image: 'gale-shapley',
+        image: 'gale_shapley',
         technologies: ['Python'],
     },
     {
