@@ -57,9 +57,7 @@ function MyApp() {
         return createPalette({
             // shenanigans to use dark mode by default
             mode: (context.darkMode ?? true) ? 'dark' : 'light',
-            ...((context.darkMode ?? true)
-                ? themeDark
-                : themeLight),
+            ...((context.darkMode ?? true) ? themeDark : themeLight),
         })
     })
 
