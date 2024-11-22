@@ -30,7 +30,6 @@ import License from '~/Layout/License.tsx'
 function MyApp() {
     const context = createLayoutMutable()
     const location = useLocation()
-    // const navigate = useNavigate()
 
     createEffect(() => {
         if (location.pathname === '/fr') {
@@ -52,15 +51,14 @@ function MyApp() {
         } else {
             context.language = getSavedLanguage() ?? 'en'
         }
-        // if (location.pathname === '/') {
-        //     navigate(context.language, { replace: true, scroll: false })
-        // }
     })
 
     const palette = createMemo(() => {
         return createPalette({
-            mode: context.darkMode ? 'dark' : 'light',
-            ...(context.darkMode ? themeDark : themeLight),
+            mode: (context.darkMode ?? true) ? 'dark' : 'light',
+            ...((context.darkMode ?? true)
+                ? themeDark
+                : themeLight),
         })
     })
 
