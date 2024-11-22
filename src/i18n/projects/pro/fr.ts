@@ -21,7 +21,7 @@ export const project_pro_fr = [
             'Une application Android permettant de visualiser tous les Pokémons du Pokédex',
         url: 'https://github.com/remi-espie/mobidex',
         technologies: ['Kotlin', 'Android'],
-        image: 'MobiDex',
+        image: 'mobidex',
     },
     {
         title: 'Gophers Invaders',
@@ -29,7 +29,7 @@ export const project_pro_fr = [
             'Un jeu vidéo de type Space Invaders, jouable dans le terminal et développé en Go',
         url: 'https://github.com/remi-espie/gophers_invader',
         technologies: ['Go'],
-        image: 'gophersinvaders',
+        image: 'gophers',
     },
     {
         title: 'CloudLet',
