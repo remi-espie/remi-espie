@@ -20,7 +20,7 @@ export const project_perso_en = [
         description:
             'An Android application to send a signal to a large group of people',
         url: 'https://github.com/DevLab-umontp/Bro-Signal',
-        image: 'https://raw.githubusercontent.com/DevLab-umontp/Bro-Signal/master/brosignal.png',
+        image: 'brosignal',
         technologies: ['Android'],
     },
     {
