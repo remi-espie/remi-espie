@@ -6,7 +6,7 @@ import * as i18n from '@solid-primitives/i18n'
 import { dictionaries } from '~/i18n/types.ts'
 import BgImage from '../../css/backgroundimage.module.css'
 import ShapeStyle from '../../css/shape.module.css'
-import UM from '../../assets/um.jpg'
+import UM from '../../assets/um.webp'
 import Appear from '../../component/Appear.tsx'
 
 function Education() {

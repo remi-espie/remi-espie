@@ -4,8 +4,8 @@ import ZoomStyle from '../../css/zoom-on-hover.module.css'
 import { useLayoutContext } from '~/LayoutContext.ts'
 import * as i18n from '@solid-primitives/i18n'
 import { dictionaries } from '~/i18n/types.ts'
-import GE from '../../assets/ge.jpg'
-import ATS from '../../assets/ats.jpg'
+import GE from '../../assets/ge.webp'
+import ATS from '../../assets/ats.webp'
 import Appear from '../../component/Appear.tsx'
 
 function ProfessionalExperience() {

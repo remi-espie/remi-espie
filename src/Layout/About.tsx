@@ -15,7 +15,7 @@ import { dictionaries } from '../i18n/types.ts'
 import EmojiText from '../component/EmojiText.tsx'
 import MyLink from '../component/MyLink.tsx'
 import Appear from '../component/Appear.tsx'
-import Background from '../assets/computer-ram.jpg'
+import Background from '../assets/computer-ram.webp'
 
 function About() {
     const theme = useTheme()

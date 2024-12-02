@@ -8,7 +8,7 @@ import { createMemo } from 'solid-js'
 import * as i18n from '@solid-primitives/i18n'
 import { dictionaries } from '../i18n/types.ts'
 import ProjectsSelector from '../component/ProjectsSelector.tsx'
-import Background from '../assets/macro-heat-sink.jpg'
+import Background from '../assets/macro-heat-sink.webp'
 
 function Projects() {
     const theme = useTheme()

@@ -4,8 +4,8 @@ import { useLayoutContext } from '~/LayoutContext.ts'
 import { createMemo } from 'solid-js'
 import * as i18n from '@solid-primitives/i18n'
 import { dictionaries } from '~/i18n/types.ts'
-import CGJ from '../../assets/cgj.jpg'
-import NDI from '../../assets/ndi.jpg'
+import CGJ from '../../assets/cgj.webp'
+import NDI from '../../assets/ndi.webp'
 import Appear from '../../component/Appear.tsx'
 
 function PersonalExperience() {
