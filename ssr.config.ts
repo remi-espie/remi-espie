@@ -6,7 +6,10 @@ export default defineConfig({
         plugins: [suidPlugin()],
         build: {
             target: 'esnext',
+            ssr: true,
+            ssrEmitAssets: true,
         },
         assetsInclude: ['**/*.jpg', '**/*.png', '**/*.md'],
     },
+    ssr: true,
 })
