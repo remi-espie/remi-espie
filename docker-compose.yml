@@ -8,6 +8,6 @@ services:
             - '3000:3000'
 # replace files in data folder with your own
 #        volumes:
-#        - ./data/me.png:/app/portfolio/public/me.png:ro
+#        - ./data/me.webp:/app/portfolio/public/me.webp:ro
 #        - ./data/CV-REMI_ESPIE.pdf:/app/portfolio/public/CV-REMI_ESPIE.pdf:ro
 #        - ./data/CV-REMI_ESPIE-English.pdf:/app/portfolio/public/CV-REMI_ESPIE-English.pdf:ro

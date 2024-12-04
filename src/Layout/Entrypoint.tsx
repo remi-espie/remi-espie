@@ -110,7 +110,7 @@ function Entrypoint() {
                     }}
                 >
                     <img
-                        src={'/me.png'}
+                        src={'/me.webp'}
                         alt="Rémi Espié"
                         style={{
                             width: '60%',
