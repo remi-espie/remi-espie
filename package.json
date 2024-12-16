@@ -37,7 +37,7 @@
         "eslint-config-prettier": "^9.1.0",
         "eslint-plugin-jsx-a11y": "^6.10.2",
         "eslint-plugin-solid": "^0.14.4",
-        "prettier": "^3.3.3",
+        "prettier": "^3.4.2",
         "typescript": "^5.7.2",
         "vite": "^5.4.11",
         "vite-plugin-eslint": "^1.8.1",
