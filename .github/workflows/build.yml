@@ -25,4 +25,4 @@ jobs:
             - name: Run Prettier check
               run: npx prettier . --check
             - name: Build project
-              run: npm run build:spa
+              run: npm run build
