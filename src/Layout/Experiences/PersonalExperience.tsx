@@ -6,8 +6,8 @@ import * as i18n from '@solid-primitives/i18n'
 import { dictionaries } from '~/i18n/types.ts'
 import CGJ from '../../assets/cgj.webp'
 import NDI from '../../assets/ndi.webp'
-import hackathon from '../../assets/hackathon.jpg'
-import polycloud from '../../assets/polycloud.jpg'
+import hackathon from '../../assets/hackathon.webp'
+import polycloud from '../../assets/polycloud.webp'
 import Appear from '../../component/Appear.tsx'
 
 function PersonalExperience() {
