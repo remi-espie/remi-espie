@@ -26,7 +26,7 @@
         "solid-markdown": "^2.0.14",
         "solid-motionone": "^1.0.3",
         "tsc": "^2.0.4",
-        "vinxi": "0.4.3"
+        "vinxi": "https://gitpkg.vercel.app/remi-espie/vinxi/packages/vinxi?main"
     },
     "devDependencies": {
         "@suid/types": "^0.7.1",
@@ -39,11 +39,11 @@
         "eslint-plugin-solid": "^0.14.5",
         "prettier": "^3.3.3",
         "typescript": "^5.7.2",
-        "vite": "^5.4.11",
+        "vite": "^6.0.7",
         "vite-plugin-eslint": "^1.8.1",
         "vite-plugin-solid": "^2.11.0"
     },
     "engines": {
-        "node": ">=18"
+        "node": ">=20"
     }
 }
