@@ -6,10 +6,10 @@
     "scripts": {
         "dev:ssr": "vinxi dev --config=ssr.config.ts",
         "dev:spa": "vinxi dev --config=spa.config.ts",
-        "dev": "vinxi dev",
+        "dev": "npm run dev:ssr",
         "build:spa": "vinxi build --config=spa.config.ts",
         "build:ssr": "vinxi build --config=ssr.config.ts",
-        "build": "vinxi build",
+        "build": "npm run build:ssr",
         "start:spa": "npx serve .output/public",
         "start:ssr": "vinxi start",
         "start": "npm run start:ssr"
