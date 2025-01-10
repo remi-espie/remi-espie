@@ -81,6 +81,10 @@ export const fr_dict = {
         'Développement informatique et exploitation opérationnelle (DO)',
     ],
     personalXP: 'Expériences personnelles',
+    HackathonParagraph:
+        "J'ai participé à plusieurs hackathons, notamment le Hackathon Rust de Polytech Montpellier organisé avec l'ISEN. Grâce à ces hackathons, j'ai pu me former plus en profondeur sur la sécurisation des applications, particulièrement en Rust.",
+    PolycloudParagraph:
+        "Les étudiants de DO organisent pendant leur 4ème année la conférence Polycloud. Trouver des sponsors, des intervenants du monde professionnel, et l'organisation générale de l'évènement ont été les principales tâches à effectuer pour accueillir plus de 100 personnes et faire de cette itération la meilleure possible !",
     JamsParagraph:
         "J'ai participé à plusieurs \"Game Jams\", des compétitions de développement de jeu vidéo dans un temps limité. J'ai pû travailler sur plusieurs moteurs de jeu vidéo, notamment Unity en C#. Travailler dans un temps limité avec des impératifs complexe m'a obligé à prendre des décisions rapidement et faire des choix critique pour atteindre un but rapidement.",
     NDIparagraph:

@@ -80,6 +80,10 @@ export const en_dict = {
     ingeTitle: 'Engineering degree',
     ingeText: ['Speciality: DevOps'],
     personalXP: 'Personal experiences',
+    HackathonParagraph:
+        'I participated in several hackathons, including the Rust Hackathon at Polytech Montpellier organized with ISEN. Thanks to these hackathons, I was able to deepen my knowledge of application security, particularly in Rust.',
+    PolycloudParagraph:
+        'During their 4th year, DO students organize the Polycloud conference. Finding sponsors, professional speakers, and the overall event organization were the main tasks to complete and accommodate over 100 people and make this iteration the best possible!',
     JamsParagraph:
         'I participated in several "Game Jams", video game development competitions limited in time. I was able to work on several video game engines, notably Unity in C#. Working in a limited time with complex requirements forced me to make decisions quickly and make critical choices to achieve a goal quickly.',
     NDIparagraph:
