@@ -1,14 +1,15 @@
 import BGStyle from '../css/backgroundimage.module.css'
-import { Box, SvgIcon, Typography, useTheme } from '@suid/material'
+import { Box, Grid, SvgIcon, Typography, useTheme } from '@suid/material'
 import ShapeStyle from '../css/shape.module.css'
 import Appear from '../component/Appear.tsx'
 import MyLink from '../component/MyLink.tsx'
 import { useLayoutContext } from '../LayoutContext.ts'
-import { createMemo } from 'solid-js'
+import { createMemo, For } from 'solid-js'
 import * as i18n from '@solid-primitives/i18n'
 import { dictionaries } from '../i18n/types.ts'
 import ProjectsSelector from '../component/ProjectsSelector.tsx'
 import Background from '../assets/macro-heat-sink.webp'
+import GitHubCard from '~/component/GitHubCard.tsx'
 
 function Projects() {
     const theme = useTheme()
@@ -108,6 +109,31 @@ function Projects() {
                     projectsList={t('PersonalProjectsList')}
                 />
             </Appear>
+
+            <Appear>
+                <Typography
+                    variant="h4"
+                    sx={{
+                        textAlign: 'center',
+                        mt: 4,
+                        mb: 4,
+                        textShadow:
+                            '-1px -1px 0 #000,0 -1px 0 #000,1px -1px 0 #000,1px 0 0 #000,1px 1px 0 #000,0 1px 0 #000,-1px 1px 0 #000,-1px 0 0 #000;',
+                    }}
+                >
+                    {t('GitHubPRs')}
+                </Typography>
+                <Grid
+                    container
+                    spacing={2}
+                    sx={{ width: '80vw', m: 'auto', mb: 32 }}
+                >
+                    <For each={t('GitHubPRsList')}>
+                        {(pr: string) => <GitHubCard link={pr} />}
+                    </For>
+                </Grid>
+            </Appear>
+
             <Box
                 class={`${ShapeStyle.shape} ${ShapeStyle.wave} ${ShapeStyle.bottom}`}
                 color={theme.palette.background.default}
