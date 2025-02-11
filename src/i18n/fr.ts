@@ -12,7 +12,7 @@ export const fr_dict = {
     language: 'Langue',
     lang_en: 'Anglais',
     lang_fr: 'Français',
-    footer: 'Fait avec ❤️ par Rémi Espié | © Rémi Espié - 2024',
+    footer: 'Fait avec ❤️ par Rémi Espié | © Rémi Espié - 2025',
     attribution:
         'Les images utilisés sont libres de droit ou sous license CC. Pour plus de détails, voir :',
     entrypoint_hello: 'Bonjour, je suis Rémi 👋',
