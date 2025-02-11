@@ -5,37 +5,24 @@ import {
     CardContent,
     Grid,
     SvgIcon,
-    Typography, useTheme,
+    Typography,
+    useTheme,
 } from '@suid/material'
 import { Octokit } from 'octokit'
-import { Suspense } from 'solid-js'
-import { createAsync } from '@solidjs/router'
-import {
-    ProxyAgent,
-    RequestInfo,
-    RequestInit,
-    fetch as undiciFetch,
-} from 'undici'
+import { createSignal, onMount, Suspense } from 'solid-js'
 import { Motion } from 'solid-motionone'
 import MyLink from '~/component/MyLink.tsx'
+import { GetResponseDataTypeFromEndpointMethod } from '@octokit/types'
 
 const theme = useTheme()
 
-const myFetch = (url: RequestInfo, opts: RequestInit | undefined) => {
-    return undiciFetch(url, {
-        ...opts,
-        dispatcher: new ProxyAgent({
-            uri: process.env.HTTPS_PROXY ?? "",
-            keepAliveTimeout: 10,
-            keepAliveMaxTimeout: 10,
-        }),
-    })
-}
+const octokit = new Octokit({})
+
+type PRresponse = GetResponseDataTypeFromEndpointMethod<
+    typeof octokit.rest.pulls.get
+>
 
 const fetchPR = async (link: string) => {
-    const octokit = new Octokit({
-        request: { fetch: myFetch }
-    })
     const repo = link.split('/')[4]
     const owner = link.split('/')[3]
     const prNumber = parseInt(link.split('/')[6])
@@ -49,7 +36,13 @@ const fetchPR = async (link: string) => {
 }
 
 function GitHubCard(props: { link: string }) {
-    const prData = createAsync(() => fetchPR(props.link))
+    const [prData, setPrData] = createSignal<PRresponse>()
+
+    onMount(() => {
+        fetchPR(props.link).then((data) => {
+            setPrData(data)
+        })
+    })
 
     return (
         <Grid item xs={6}>
@@ -83,93 +76,97 @@ function GitHubCard(props: { link: string }) {
                                         flexDirection: 'row',
                                     }}
                                 >
-                                <Box
-                                    sx={{
-                                        width: '50px',
-                                        height: '50px',
-                                        alignSelf: 'center',
-                                        mr: 2,
-                                    }}
-                                >
-                                    {prData()?.merged ? (
-                                        <SvgIcon
-                                            sx={{
-                                                width: '100%',
-                                                height: '100%',
-                                            }}
-                                        >
-                                            <path
-                                                fill={'blueviolet'}
-                                                fill-rule="evenodd"
-                                                d="M5.75 21a1.75 1.75 0 110-3.5 1.75 1.75 0 010 3.5zM2.5 19.25a3.25 3.25 0 106.5 0 3.25 3.25 0 00-6.5 0zM5.75 6.5a1.75 1.75 0 110-3.5 1.75 1.75 0 010 3.5zM2.5 4.75a3.25 3.25 0 106.5 0 3.25 3.25 0 00-6.5 0zM18.25 15a1.75 1.75 0 110-3.5 1.75 1.75 0 010 3.5zM15 13.25a3.25 3.25 0 106.5 0 3.25 3.25 0 00-6.5 0z"
-                                            />
-                                            <path
-                                                fill={'blueviolet'}
-                                                fill-rule="evenodd"
-                                                d="M6.5 7.25c0 2.9 2.35 5.25 5.25 5.25h4.5V14h-4.5A6.75 6.75 0 015 7.25h1.5z"
-                                            />
-                                            <path
-                                                fill={'blueviolet'}
-                                                fill-rule="evenodd"
-                                                d="M5.75 16.75A.75.75 0 006.5 16V8A.75.75 0 005 8v8c0 .414.336.75.75.75z"
-                                            />
-                                        </SvgIcon>
-                                    ) : prData()?.state == 'open' ? (
-                                        <SvgIcon
-                                            sx={{
-                                                width: '100%',
-                                                height: '100%',
-                                            }}
-                                        >
-                                            <path
-                                                fill={'green'}
-                                                fill-rule="evenodd"
-                                                d="M4.75 3a1.75 1.75 0 100 3.5 1.75 1.75 0 000-3.5zM1.5 4.75a3.25 3.25 0 116.5 0 3.25 3.25 0 01-6.5 0zM4.75 17.5a1.75 1.75 0 100 3.5 1.75 1.75 0 000-3.5zM1.5 19.25a3.25 3.25 0 116.5 0 3.25 3.25 0 01-6.5 0zm17.75-1.75a1.75 1.75 0 100 3.5 1.75 1.75 0 000-3.5zM16 19.25a3.25 3.25 0 116.5 0 3.25 3.25 0 01-6.5 0z"
-                                            />
-                                            <path
-                                                fill={'green'}
-                                                fill-rule="evenodd"
-                                                d="M4.75 7.25A.75.75 0 015.5 8v8A.75.75 0 014 16V8a.75.75 0 01.75-.75zm8.655-5.53a.75.75 0 010 1.06L12.185 4h4.065A3.75 3.75 0 0120 7.75v8.75a.75.75 0 01-1.5 0V7.75a2.25 2.25 0 00-2.25-2.25h-4.064l1.22 1.22a.75.75 0 01-1.061 1.06l-2.5-2.5a.75.75 0 010-1.06l2.5-2.5a.75.75 0 011.06 0z"
-                                            />
-                                        </SvgIcon>
-                                    ) : (
-                                        <SvgIcon
-                                            sx={{
-                                                width: '100%',
-                                                height: '100%',
-                                            }}
-                                        >
-                                            <path
-                                                fill={'red'}
-                                                d="M22.266 2.711a.75.75 0 10-1.061-1.06l-1.983 1.983-1.984-1.983a.75.75 0 10-1.06 1.06l1.983 1.983-1.983 1.984a.75.75 0 001.06 1.06l1.984-1.983 1.983 1.983a.75.75 0 001.06-1.06l-1.983-1.984 1.984-1.983z"
-                                            />
-                                            <path
-                                                fill={'red'}
-                                                fill-rule="evenodd"
-                                                d="M4.75 1.5a3.25 3.25 0 00-.745 6.414A.758.758 0 004 8v8a.81.81 0 00.005.086A3.251 3.251 0 004.75 22.5a3.25 3.25 0 00.745-6.414A.758.758 0 005.5 16V8a.758.758 0 00-.005-.086A3.251 3.251 0 004.75 1.5zM3 4.75a1.75 1.75 0 113.5 0 1.75 1.75 0 01-3.5 0zm0 14.5a1.75 1.75 0 113.5 0 1.75 1.75 0 01-3.5 0zm13 0a3.251 3.251 0 012.5-3.163V9.625a.75.75 0 011.5 0v6.462a3.251 3.251 0 01-.75 6.413A3.25 3.25 0 0116 19.25zm3.25-1.75a1.75 1.75 0 100 3.5 1.75 1.75 0 000-3.5z"
-                                            />
-                                        </SvgIcon>
-                                    )}
-                                </Box>
-                                <Box
-                                    sx={{
-                                        display: 'flex',
-                                        flexDirection: 'column',
-                                    }}
-                                >
-                                    <MyLink
-                                        to={prData()?.base.repo.html_url ?? ''}
-                                        text={
-                                            prData()?.base.repo.full_name ?? ''
-                                        }
-                                        color={theme.palette.primary.main}
-                                        variant={'h6'}
-                                        sx={{ m: 0 }}
-                                    />
-                                    <Typography variant="subtitle1">
-                                        {prData()?.base.repo.description}
-                                    </Typography>
-                                </Box>
+                                    <Box
+                                        sx={{
+                                            width: '50px',
+                                            height: '50px',
+                                            alignSelf: 'center',
+                                            mr: 2,
+                                        }}
+                                    >
+                                        {prData()?.merged ? (
+                                            <SvgIcon
+                                                sx={{
+                                                    width: '100%',
+                                                    height: '100%',
+                                                }}
+                                            >
+                                                <path
+                                                    fill={'blueviolet'}
+                                                    fill-rule="evenodd"
+                                                    d="M5.75 21a1.75 1.75 0 110-3.5 1.75 1.75 0 010 3.5zM2.5 19.25a3.25 3.25 0 106.5 0 3.25 3.25 0 00-6.5 0zM5.75 6.5a1.75 1.75 0 110-3.5 1.75 1.75 0 010 3.5zM2.5 4.75a3.25 3.25 0 106.5 0 3.25 3.25 0 00-6.5 0zM18.25 15a1.75 1.75 0 110-3.5 1.75 1.75 0 010 3.5zM15 13.25a3.25 3.25 0 106.5 0 3.25 3.25 0 00-6.5 0z"
+                                                />
+                                                <path
+                                                    fill={'blueviolet'}
+                                                    fill-rule="evenodd"
+                                                    d="M6.5 7.25c0 2.9 2.35 5.25 5.25 5.25h4.5V14h-4.5A6.75 6.75 0 015 7.25h1.5z"
+                                                />
+                                                <path
+                                                    fill={'blueviolet'}
+                                                    fill-rule="evenodd"
+                                                    d="M5.75 16.75A.75.75 0 006.5 16V8A.75.75 0 005 8v8c0 .414.336.75.75.75z"
+                                                />
+                                            </SvgIcon>
+                                        ) : prData()?.state == 'open' ? (
+                                            <SvgIcon
+                                                sx={{
+                                                    width: '100%',
+                                                    height: '100%',
+                                                }}
+                                            >
+                                                <path
+                                                    fill={'green'}
+                                                    fill-rule="evenodd"
+                                                    d="M4.75 3a1.75 1.75 0 100 3.5 1.75 1.75 0 000-3.5zM1.5 4.75a3.25 3.25 0 116.5 0 3.25 3.25 0 01-6.5 0zM4.75 17.5a1.75 1.75 0 100 3.5 1.75 1.75 0 000-3.5zM1.5 19.25a3.25 3.25 0 116.5 0 3.25 3.25 0 01-6.5 0zm17.75-1.75a1.75 1.75 0 100 3.5 1.75 1.75 0 000-3.5zM16 19.25a3.25 3.25 0 116.5 0 3.25 3.25 0 01-6.5 0z"
+                                                />
+                                                <path
+                                                    fill={'green'}
+                                                    fill-rule="evenodd"
+                                                    d="M4.75 7.25A.75.75 0 015.5 8v8A.75.75 0 014 16V8a.75.75 0 01.75-.75zm8.655-5.53a.75.75 0 010 1.06L12.185 4h4.065A3.75 3.75 0 0120 7.75v8.75a.75.75 0 01-1.5 0V7.75a2.25 2.25 0 00-2.25-2.25h-4.064l1.22 1.22a.75.75 0 01-1.061 1.06l-2.5-2.5a.75.75 0 010-1.06l2.5-2.5a.75.75 0 011.06 0z"
+                                                />
+                                            </SvgIcon>
+                                        ) : (
+                                            <SvgIcon
+                                                sx={{
+                                                    width: '100%',
+                                                    height: '100%',
+                                                }}
+                                            >
+                                                <path
+                                                    fill={'red'}
+                                                    d="M22.266 2.711a.75.75 0 10-1.061-1.06l-1.983 1.983-1.984-1.983a.75.75 0 10-1.06 1.06l1.983 1.983-1.983 1.984a.75.75 0 001.06 1.06l1.984-1.983 1.983 1.983a.75.75 0 001.06-1.06l-1.983-1.984 1.984-1.983z"
+                                                />
+                                                <path
+                                                    fill={'red'}
+                                                    fill-rule="evenodd"
+                                                    d="M4.75 1.5a3.25 3.25 0 00-.745 6.414A.758.758 0 004 8v8a.81.81 0 00.005.086A3.251 3.251 0 004.75 22.5a3.25 3.25 0 00.745-6.414A.758.758 0 005.5 16V8a.758.758 0 00-.005-.086A3.251 3.251 0 004.75 1.5zM3 4.75a1.75 1.75 0 113.5 0 1.75 1.75 0 01-3.5 0zm0 14.5a1.75 1.75 0 113.5 0 1.75 1.75 0 01-3.5 0zm13 0a3.251 3.251 0 012.5-3.163V9.625a.75.75 0 011.5 0v6.462a3.251 3.251 0 01-.75 6.413A3.25 3.25 0 0116 19.25zm3.25-1.75a1.75 1.75 0 100 3.5 1.75 1.75 0 000-3.5z"
+                                                />
+                                            </SvgIcon>
+                                        )}
+                                    </Box>
+                                    <Box
+                                        sx={{
+                                            display: 'flex',
+                                            flexDirection: 'column',
+                                        }}
+                                    >
+                                        <MyLink
+                                            to={
+                                                prData()?.base.repo.html_url ??
+                                                ''
+                                            }
+                                            text={
+                                                prData()?.base.repo.full_name ??
+                                                ''
+                                            }
+                                            color={theme.palette.primary.main}
+                                            variant={'h6'}
+                                            sx={{ m: 0 }}
+                                        />
+                                        <Typography variant="subtitle1">
+                                            {prData()?.base.repo.description}
+                                        </Typography>
+                                    </Box>
                                 </Box>
                                 <Box
                                     sx={{
@@ -241,12 +238,14 @@ function GitHubCard(props: { link: string }) {
                                 </Box>
                             </Box>
                         </CardContent>
-                        <hr/>
-                        <CardActions sx={{
-                            display: 'flex',
-                            flexDirection: 'column',
-                            alignItems: 'flex-start',
-                        }}>
+                        <hr />
+                        <CardActions
+                            sx={{
+                                display: 'flex',
+                                flexDirection: 'column',
+                                alignItems: 'flex-start',
+                            }}
+                        >
                             <Typography variant="h6">
                                 <MyLink
                                     to={prData()?.html_url ?? ''}
@@ -257,7 +256,11 @@ function GitHubCard(props: { link: string }) {
                                 {prData()?.title}
                             </Typography>
                             <Typography variant="subtitle1">
-                                {prData()?.merged ? 'Was merged on ' + prData()?.merged_at : prData()?.state == "closed" ? 'Was closed on ' + prData()?.closed_at : 'Is open since ' + prData()?.created_at}
+                                {prData()?.merged
+                                    ? 'Was merged on ' + prData()?.merged_at
+                                    : prData()?.state == 'closed'
+                                      ? 'Was closed on ' + prData()?.closed_at
+                                      : 'Is open since ' + prData()?.created_at}
                             </Typography>
                         </CardActions>
                     </Card>
