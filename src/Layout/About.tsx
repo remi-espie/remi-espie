@@ -58,6 +58,8 @@ function About() {
                             margin: 'auto',
                             mb: 4,
                             textAlign: 'center',
+                            textShadow:
+                                '-1px -1px 0 #000,0 -1px 0 #000,1px -1px 0 #000,1px 0 0 #000,1px 1px 0 #000,0 1px 0 #000,-1px 1px 0 #000,-1px 0 0 #000;',
                         }}
                     >
                         {t('getCV')}{' '}
@@ -77,6 +79,8 @@ function About() {
                             m: 'auto',
                             width: 'max-content',
                             mb: 4,
+                            textShadow:
+                                '-1px -1px 0 #000,0 -1px 0 #000,1px -1px 0 #000,1px 0 0 #000,1px 1px 0 #000,0 1px 0 #000,-1px 1px 0 #000,-1px 0 0 #000;',
                         }}
                     >
                         {t('about')}
@@ -96,13 +100,24 @@ function About() {
             <Appear>
                 <Typography
                     variant="h4"
-                    sx={{ width: 'max-content', margin: 'auto', mb: 4 }}
+                    sx={{
+                        width: 'max-content',
+                        margin: 'auto',
+                        mb: 4,
+                        textShadow:
+                            '-1px -1px 0 #000,0 -1px 0 #000,1px -1px 0 #000,1px 0 0 #000,1px 1px 0 #000,0 1px 0 #000,-1px 1px 0 #000,-1px 0 0 #000;',
+                    }}
                 >
                     {t('contactMe')}
                 </Typography>
                 <Grid
                     container
-                    sx={{ width: '80vw', mb: 4 }}
+                    sx={{
+                        width: '80vw',
+                        mb: 4,
+                        textShadow:
+                            '-1px -1px 0 #000,0 -1px 0 #000,1px -1px 0 #000,1px 0 0 #000,1px 1px 0 #000,0 1px 0 #000,-1px 1px 0 #000,-1px 0 0 #000;',
+                    }}
                     margin="auto"
                     alignItems="center"
                     justifyContent="center"

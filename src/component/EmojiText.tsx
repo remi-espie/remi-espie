@@ -1,4 +1,4 @@
-import { Box } from '@suid/material'
+import { Box, Typography } from '@suid/material'
 import { For } from 'solid-js'
 
 function EmojiText(props: { emoji: string; text: string[] }) {
@@ -11,16 +11,18 @@ function EmojiText(props: { emoji: string; text: string[] }) {
                 lineHeight: '1.25',
             }}
         >
-            <Box sx={{ mr: '1.5em' }}>{props.emoji}</Box>
-            <Box
+            <Typography sx={{ mr: '1.5em' }}>{props.emoji}</Typography>
+            <Typography
                 sx={{
                     display: 'flex',
                     flexDirection: 'column',
                     maxWidth: '80vw',
+                    textShadow:
+                        '-1px -1px 0 #000,0 -1px 0 #000,1px -1px 0 #000,1px 0 0 #000,1px 1px 0 #000,0 1px 0 #000,-1px 1px 0 #000,-1px 0 0 #000;',
                 }}
             >
                 <For each={props.text}>{(text) => <span>{text}</span>}</For>
-            </Box>
+            </Typography>
         </Box>
     )
 }
