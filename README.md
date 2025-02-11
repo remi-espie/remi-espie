@@ -55,8 +55,9 @@
 ## :octocat: And love OpenSource !
 
 <div style='display: flex; gap:20px'>
-<img alt="GitHub Stats" src="https://github-readme-stats.vercel.app/api?username=remi-espie&amp;show_icons=true&amp;locale=en&amp;theme=tokyonight"/>
-<img alt="GitHub Streak" src="https://github-readme-streak-stats.herokuapp.com/?user=remi-espie&amp;theme=tokyonight"/>
+<img alt="GitHub Stats" src="https://github-readme-stats.vercel.app/api?username=remi-espie&amp;show_icons=true&amp;locale=en&amp;theme=transparent"/>
+<img alt="GitHub Streak" src="https://streak-stats.demolab.com/?user=remi-espie&amp;theme=transparent"/>
+<img alt="Top languages" src="https://github-readme-stats.vercel.app/api/top-langs/?username=remi-espie&layout=compact&theme=transparent"/>
 </div>
 
 ---
