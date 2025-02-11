@@ -1,5 +1,6 @@
 import { project_perso_fr } from '~/i18n/projects/perso/fr.ts'
 import { project_pro_fr } from '~/i18n/projects/pro/fr.ts'
+import { GHPRList } from '~/i18n/GHPRList.ts'
 
 export const fr_dict = {
     title: 'Portfolio de présentation',
@@ -95,6 +96,8 @@ export const fr_dict = {
     AcademicProjectsList: project_pro_fr,
     PersonalProjects: 'Projets personnels',
     PersonalProjectsList: project_perso_fr,
+    GitHubPRs: 'Contributions notables sur GitHub :',
+    GitHubPRsList: GHPRList,
     HobbiesList: [
         {
             title: 'Randonnée',
