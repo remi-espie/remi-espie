@@ -40,11 +40,11 @@ If not specified, made by myself and under [CC 4.0](https://creativecommons.org/
 
 ## GitHub contributions
 
-Open pull request: [git-pull-request](https://www.svgrepo.com/svg/347755/git-pull-request) by Octicons Interface Icons under MIT License
-Merged pull request: [git-merge](https://www.svgrepo.com/svg/347753/git-merge) by Octicons Interface Icons under MIT License
-Closed pull request: [git-pull-request-closed](https://www.svgrepo.com/svg/347754/git-pull-request-closed) by Octicons Interface Icons under MIT License
-Star: [star](https://www.svgrepo.com/svg/347852/star) by Octicons Interface Icons under MIT License
-Repo forked: [repo-forked](https://www.svgrepo.com/svg/347825/repo-forked) by Octicons Interface Icons under MIT License
+Open pull request: [git-pull-request](https://www.svgrepo.com/svg/347755/git-pull-request) by Octicons Interface Icons under MIT License  
+Merged pull request: [git-merge](https://www.svgrepo.com/svg/347753/git-merge) by Octicons Interface Icons under MIT License  
+Closed pull request: [git-pull-request-closed](https://www.svgrepo.com/svg/347754/git-pull-request-closed) by Octicons Interface Icons under MIT License  
+Star: [star](https://www.svgrepo.com/svg/347852/star) by Octicons Interface Icons under MIT License  
+Repo forked: [repo-forked](https://www.svgrepo.com/svg/347825/repo-forked) by Octicons Interface Icons under MIT License  
 
 # Hobbies
 
