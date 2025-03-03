@@ -27,7 +27,7 @@
         "solid-markdown": "^2.0.14",
         "solid-motionone": "^1.0.3",
         "tsc": "^2.0.4",
-        "undici": "^7.3.0",
+        "undici": "^7.4.0",
         "vinxi": "0.5.3"
     },
     "devDependencies": {
