@@ -27,7 +27,7 @@
         "solid-markdown": "^2.0.14",
         "solid-motionone": "^1.0.3",
         "tsc": "^2.0.4",
-        "undici": "^7.4.0",
+        "undici": "^7.5.0",
         "vinxi": "0.5.3"
     },
     "devDependencies": {
@@ -37,7 +37,7 @@
         "@typescript-eslint/eslint-plugin": "^8.26.1",
         "@typescript-eslint/parser": "^8.26.1",
         "eslint": "^9.22.0",
-        "eslint-config-prettier": "^10.0.2",
+        "eslint-config-prettier": "^10.1.1",
         "eslint-plugin-jsx-a11y": "^6.10.2",
         "eslint-plugin-solid": "^0.14.5",
         "prettier": "^3.5.3",
