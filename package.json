@@ -31,7 +31,7 @@
         "vinxi": "0.5.3"
     },
     "devDependencies": {
-        "@octokit/types": "^13.8.0",
+        "@octokit/types": "^13.10.0",
         "@suid/types": "^0.7.1",
         "@suid/vite-plugin": "^0.3.1",
         "@typescript-eslint/eslint-plugin": "^8.26.1",
