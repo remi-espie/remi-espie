@@ -44,7 +44,7 @@ export const project_perso_en = [
         description:
             'A basic Rust front-end and back-end to automatically renew a parking spot using PayByPhone',
         url: 'https://github.com/remi-espie/AutoRenewPayByPhone',
-        image: 'https://autopbf.espie.dev/favicon.ico',
+        image: 'https://raw.githubusercontent.com/remi-espie/AutoRenewPayByPhone/refs/heads/main/front/assets/favicon.ico',
         technologies: ['Rust', 'Docker', 'WASM'],
     },
 ]
