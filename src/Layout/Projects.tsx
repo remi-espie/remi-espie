@@ -126,6 +126,7 @@ function Projects() {
                 <Grid
                     container
                     spacing={2}
+                    columns={{ xs: 2, sm: 8, md: 12 }}
                     sx={{ width: '80vw', m: 'auto', mb: 32 }}
                 >
                     <For each={t('GitHubPRsList')}>
