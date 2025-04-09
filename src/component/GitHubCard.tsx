@@ -148,6 +148,7 @@ function GitHubCard(props: { link: string }) {
                                         sx={{
                                             display: 'flex',
                                             flexDirection: 'column',
+                                            width: '70%',
                                         }}
                                     >
                                         <MyLink

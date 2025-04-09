@@ -10,6 +10,7 @@
     scroll-behavior: smooth;
     overflow-x: hidden;
     font-size: 1.1rem;
+    hyphens: auto;
 }
 
 @media (max-width: 600px) {

@@ -77,8 +77,7 @@ function Projects() {
                     variant="h4"
                     sx={{
                         textAlign: 'center',
-                        mt: 4,
-                        mb: 4,
+                        m: 4,
                         textShadow:
                             '-1px -1px 0 #000,0 -1px 0 #000,1px -1px 0 #000,1px 0 0 #000,1px 1px 0 #000,0 1px 0 #000,-1px 1px 0 #000,-1px 0 0 #000;',
                     }}
@@ -96,8 +95,7 @@ function Projects() {
                     variant="h4"
                     sx={{
                         textAlign: 'center',
-                        mt: 4,
-                        mb: 4,
+                        m: 4,
                         textShadow:
                             '-1px -1px 0 #000,0 -1px 0 #000,1px -1px 0 #000,1px 0 0 #000,1px 1px 0 #000,0 1px 0 #000,-1px 1px 0 #000,-1px 0 0 #000;',
                     }}
@@ -115,8 +113,7 @@ function Projects() {
                     variant="h4"
                     sx={{
                         textAlign: 'center',
-                        mt: 4,
-                        mb: 4,
+                        m: 4,
                         textShadow:
                             '-1px -1px 0 #000,0 -1px 0 #000,1px -1px 0 #000,1px 0 0 #000,1px 1px 0 #000,0 1px 0 #000,-1px 1px 0 #000,-1px 0 0 #000;',
                     }}

@@ -40,7 +40,7 @@ export const project_perso_en = [
         technologies: ['SolidJS', 'TypeScript'],
     },
     {
-        title: 'AutoRenewPayByPhone',
+        title: 'Auto Renew PayByPhone',
         description:
             'A basic Rust front-end and back-end to automatically renew a parking spot using PayByPhone',
         url: 'https://github.com/remi-espie/AutoRenewPayByPhone',
