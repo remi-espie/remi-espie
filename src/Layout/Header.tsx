@@ -1,10 +1,4 @@
-import {
-    AppBar,
-    Box,
-    SvgIcon,
-    Toolbar,
-    useTheme,
-} from '@suid/material'
+import { AppBar, Box, SvgIcon, Toolbar, useTheme } from '@suid/material'
 import { createMemo } from 'solid-js'
 import { useLayoutContext } from '../LayoutContext.ts'
 import * as i18n from '@solid-primitives/i18n'

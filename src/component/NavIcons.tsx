@@ -1,10 +1,4 @@
-import {
-    IconButton,
-    Menu,
-    MenuItem,
-    SvgIcon,
-    useTheme,
-} from '@suid/material'
+import { IconButton, Menu, MenuItem, SvgIcon, useTheme } from '@suid/material'
 import {
     saveDarkMode,
     saveLanguage,
