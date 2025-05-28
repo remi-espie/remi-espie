@@ -3,7 +3,6 @@ import {
     Box,
     SvgIcon,
     Toolbar,
-    Typography,
     useTheme,
 } from '@suid/material'
 import { createMemo } from 'solid-js'

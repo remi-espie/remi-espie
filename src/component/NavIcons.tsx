@@ -3,7 +3,6 @@ import {
     Menu,
     MenuItem,
     SvgIcon,
-    Typography,
     useTheme,
 } from '@suid/material'
 import {
@@ -17,10 +16,9 @@ import DarkModeOutlinedIcon from '@suid/icons-material/DarkModeOutlined'
 import TranslateOutlined from '@suid/icons-material/TranslateOutlined'
 import * as i18n from '@solid-primitives/i18n'
 import { dictionaries } from '../i18n/types.ts'
-// import { useNavigate } from '@solidjs/router'
+import MyTypography from '~/component/MyTypography.tsx'
 
 function NavIcons() {
-    // const navigate = useNavigate()
     const theme = useTheme()
 
     const context = useLayoutContext()
@@ -130,7 +128,6 @@ function NavIcons() {
                 <MenuItem
                     onClick={() => {
                         context.language = 'en'
-                        // navigate(context.language, { scroll: false })
                         saveLanguage('en')
                     }}
                 >
@@ -169,7 +166,6 @@ function NavIcons() {
                 <MenuItem
                     onClick={() => {
                         context.language = 'fr'
-                        // navigate(context.language, { scroll: false })
                         saveLanguage('fr')
                     }}
                 >
