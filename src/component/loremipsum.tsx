@@ -4,7 +4,7 @@ import Appear from './Appear.tsx'
 function Loremipsum(props: { color: string }) {
     return (
         <Appear>
-            <Typography
+            <MyTypography
                 variant="body1"
                 sx={{ textAlign: 'center' }}
                 color={props.color}
@@ -45,7 +45,7 @@ function Loremipsum(props: { color: string }) {
                 fermentum, auctor nulla luctus, tincidunt sapien. Ut mauris
                 erat, posuere nec commodo in, laoreet non diam. Nulla in eros
                 sapien. Nulla facilisi.
-            </Typography>
+            </MyTypography>
         </Appear>
     )
 }

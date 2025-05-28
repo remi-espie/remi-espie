@@ -13,6 +13,7 @@ import { dictionaries } from '../i18n/types.ts'
 import HeaderNav from '../component/HeaderNav.tsx'
 import Reactivity from '../css/reactivity.module.css'
 import MyDrawer from '~/Layout/Drawer.tsx'
+import MyTypography from '~/component/MyTypography.tsx'
 
 function Header() {
     const theme = useTheme()
@@ -46,15 +47,15 @@ function Header() {
                             </g>
                         </SvgIcon>
                         <Box sx={{ display: 'flex', flexDirection: 'column' }}>
-                            <Typography
+                            <MyTypography
                                 variant="h6"
                                 sx={{ mt: 1, lineHeight: '1em' }}
                             >
                                 {t('title')}
-                            </Typography>
-                            <Typography variant="body1">
+                            </MyTypography>
+                            <MyTypography variant="body1">
                                 {t('author')}
-                            </Typography>
+                            </MyTypography>
                         </Box>
                     </Box>
                     <Box

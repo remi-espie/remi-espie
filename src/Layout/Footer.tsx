@@ -1,9 +1,10 @@
-import { AppBar, Box, Typography, useTheme } from '@suid/material'
+import { AppBar, Box, useTheme } from '@suid/material'
 import { createMemo } from 'solid-js'
 import * as i18n from '@solid-primitives/i18n'
 import { dictionaries } from '../i18n/types.ts'
 import { useLayoutContext } from '../LayoutContext.ts'
 import MyLink from '~/component/MyLink.tsx'
+import MyTypography from '~/component/MyTypography.tsx'
 
 function footer() {
     const theme = useTheme()
@@ -27,11 +28,11 @@ function footer() {
             enableColorOnDark
         >
             <Box sx={{ m: 1, display: 'flex', flexDirection: 'column' }}>
-                <Typography variant="caption">{t('footer')}</Typography>
+                <MyTypography variant="caption">{t('footer')}</MyTypography>
                 <Box>
-                    <Typography variant="caption">
+                    <MyTypography variant="caption">
                         {t('attribution')}
-                    </Typography>
+                    </MyTypography>
                     <MyLink
                         to="/license"
                         text={'license'}

@@ -6,6 +6,7 @@ import * as i18n from '@solid-primitives/i18n'
 import { dictionaries } from '../i18n/types.ts'
 import TypeStyle from '../css/typewriter.module.css'
 import Typer from '../component/Typer.tsx'
+import MyTypography from '~/component/MyTypography.tsx'
 
 function Entrypoint() {
     const context = useLayoutContext()
@@ -45,7 +46,7 @@ function Entrypoint() {
                         justifyContent: 'center',
                     }}
                 >
-                    <Typography variant="h4">
+                    <MyTypography variant="h4">
                         {helloText() ? (
                             <Typer
                                 fulltext={t('entrypoint_hello')}
@@ -56,8 +57,8 @@ function Entrypoint() {
                         ) : (
                             <noscript>{t('entrypoint_hello')}</noscript>
                         )}
-                    </Typography>
-                    <Typography variant="h5" sx={{ mt: 2, mb: 4 }}>
+                    </MyTypography>
+                    <MyTypography variant="h5" sx={{ mt: 2, mb: 4 }}>
                         {descText() ? (
                             <Box sx={{ display: 'flex', flexDirection: 'row' }}>
                                 <Typer
@@ -81,7 +82,7 @@ function Entrypoint() {
                                 <span class={TypeStyle.cursor}>_</span>
                             </noscript>
                         )}
-                    </Typography>
+                    </MyTypography>
                     <Button
                         href="#about"
                         variant="contained"
@@ -93,9 +94,9 @@ function Entrypoint() {
                         }}
                         endIcon={<SubdirectoryArrowRight />}
                     >
-                        <Typography variant="h6">
+                        <MyTypography variant="h6">
                             {t('entrypoint_button')}
-                        </Typography>
+                        </MyTypography>
                     </Button>
                 </Box>
             </Grid>

@@ -1,4 +1,4 @@
-import { Box, Grid, Typography, useTheme } from '@suid/material'
+import { Box, Grid, useTheme } from '@suid/material'
 import ZoomStyle from '../../css/zoom-on-hover.module.css'
 import { useLayoutContext } from '~/LayoutContext.ts'
 import { createMemo } from 'solid-js'
@@ -9,6 +9,7 @@ import NDI from '../../assets/ndi.webp'
 import hackathon from '../../assets/hackathon.webp'
 import polycloud from '../../assets/polycloud.webp'
 import Appear from '../../component/Appear.tsx'
+import MyTypography from '~/component/MyTypography.tsx'
 
 function PersonalExperience() {
     const theme = useTheme()
@@ -23,7 +24,7 @@ function PersonalExperience() {
     return (
         <Box sx={{ textAlign: 'justify' }}>
             <Appear>
-                <Typography
+                <MyTypography
                     variant="h4"
                     id={'personalXP'}
                     sx={{
@@ -35,7 +36,7 @@ function PersonalExperience() {
                     }}
                 >
                     {t('personalXP')}
-                </Typography>
+                </MyTypography>
                 <Grid
                     container
                     rowSpacing={2}
@@ -50,18 +51,18 @@ function PersonalExperience() {
                             alignContent: 'center',
                         }}
                     >
-                        <Typography
+                        <MyTypography
                             variant={'h6'}
                             color={theme.palette.primary.main}
                         >
                             Hackathon Rust
-                        </Typography>
-                        <Typography variant={'subtitle1'} sx={{ mb: 4 }}>
+                        </MyTypography>
+                        <MyTypography variant={'subtitle1'} sx={{ mb: 4 }}>
                             2024
-                        </Typography>
-                        <Typography variant={'body1'}>
+                        </MyTypography>
+                        <MyTypography variant={'body1'}>
                             {t('HackathonParagraph')}
-                        </Typography>
+                        </MyTypography>
                     </Grid>
                     <Grid item xs={6} sx={{ width: 'inherit' }}>
                         <Box class={ZoomStyle.zoomContainer}>
@@ -105,18 +106,18 @@ function PersonalExperience() {
                             alignContent: 'center',
                         }}
                     >
-                        <Typography
+                        <MyTypography
                             variant={'h6'}
                             color={theme.palette.primary.main}
                         >
                             Polycloud
-                        </Typography>
-                        <Typography variant={'subtitle1'} sx={{ mb: 4 }}>
+                        </MyTypography>
+                        <MyTypography variant={'subtitle1'} sx={{ mb: 4 }}>
                             2024
-                        </Typography>
-                        <Typography variant={'body1'}>
+                        </MyTypography>
+                        <MyTypography variant={'body1'}>
                             {t('PolycloudParagraph')}
-                        </Typography>
+                        </MyTypography>
                     </Grid>
                 </Grid>
             </Appear>
@@ -136,18 +137,18 @@ function PersonalExperience() {
                             alignContent: 'center',
                         }}
                     >
-                        <Typography
+                        <MyTypography
                             variant={'h6'}
                             color={theme.palette.primary.main}
                         >
                             Game Jams
-                        </Typography>
-                        <Typography variant={'subtitle1'} sx={{ mb: 4 }}>
+                        </MyTypography>
+                        <MyTypography variant={'subtitle1'} sx={{ mb: 4 }}>
                             2020, 2021 & 2022
-                        </Typography>
-                        <Typography variant={'body1'}>
+                        </MyTypography>
+                        <MyTypography variant={'body1'}>
                             {t('JamsParagraph')}
-                        </Typography>
+                        </MyTypography>
                     </Grid>
                     <Grid item xs={6} sx={{ width: 'inherit' }}>
                         <Box class={ZoomStyle.zoomContainer}>
@@ -188,18 +189,18 @@ function PersonalExperience() {
                             alignContent: 'center',
                         }}
                     >
-                        <Typography
+                        <MyTypography
                             variant={'h6'}
                             color={theme.palette.primary.main}
                         >
                             Nuits de l'Info
-                        </Typography>
-                        <Typography variant={'subtitle1'} sx={{ mb: 4 }}>
+                        </MyTypography>
+                        <MyTypography variant={'subtitle1'} sx={{ mb: 4 }}>
                             2019, 2020 & 2023
-                        </Typography>
-                        <Typography variant={'body1'}>
+                        </MyTypography>
+                        <MyTypography variant={'body1'}>
                             {t('NDIparagraph')}
-                        </Typography>
+                        </MyTypography>
                     </Grid>
                 </Grid>
             </Appear>

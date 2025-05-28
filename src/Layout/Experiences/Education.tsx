@@ -1,4 +1,4 @@
-import { Box, SvgIcon, Typography, useTheme } from '@suid/material'
+import { Box, SvgIcon, useTheme } from '@suid/material'
 import TimelineStyle from '../../css/timeline.module.css'
 import { useLayoutContext } from '~/LayoutContext.ts'
 import { createMemo, For } from 'solid-js'
@@ -8,6 +8,7 @@ import BgImage from '../../css/backgroundimage.module.css'
 import ShapeStyle from '../../css/shape.module.css'
 import UM from '../../assets/um.webp'
 import Appear from '../../component/Appear.tsx'
+import MyTypography from '~/component/MyTypography.tsx'
 
 function Education() {
     const theme = useTheme()
@@ -21,7 +22,7 @@ function Education() {
 
     return (
         <>
-            <Typography
+            <MyTypography
                 variant="h4"
                 id={'education'}
                 sx={{
@@ -33,7 +34,7 @@ function Education() {
                 }}
             >
                 {t('education')}
-            </Typography>
+            </MyTypography>
             <Box
                 class={`${TimelineStyle.timeline} ${BgImage.bgimage}`}
                 style={{
@@ -51,74 +52,74 @@ function Education() {
                 <ul style={{ 'padding-bottom': '64px' }}>
                     <li>
                         <Appear margin={'-150px'}>
-                            <Typography variant={'h5'}>2025</Typography>
-                            <Typography variant={'h6'}>
+                            <MyTypography variant={'h5'}>2025</MyTypography>
+                            <MyTypography variant={'h6'}>
                                 {t('ingeTitle')}
-                            </Typography>
+                            </MyTypography>
                             <For each={t('ingeText')}>
                                 {(item) => (
-                                    <Typography variant={'body1'}>
+                                    <MyTypography variant={'body1'}>
                                         {item}
-                                    </Typography>
+                                    </MyTypography>
                                 )}
                             </For>
-                            <Typography variant={'subtitle2'}>
+                            <MyTypography variant={'subtitle2'}>
                                 Polytech - Montpellier, France 🇫🇷
-                            </Typography>
+                            </MyTypography>
                         </Appear>
                     </li>
                     <li>
                         <Appear margin={'-150px'}>
-                            <Typography variant={'h5'}>2022</Typography>
-                            <Typography variant={'h6'}>
+                            <MyTypography variant={'h5'}>2022</MyTypography>
+                            <MyTypography variant={'h6'}>
                                 {t('duetiTitle')}
-                            </Typography>
+                            </MyTypography>
                             <For each={t('duetiText')}>
                                 {(item) => (
-                                    <Typography variant={'body1'}>
+                                    <MyTypography variant={'body1'}>
                                         {item}
-                                    </Typography>
+                                    </MyTypography>
                                 )}
                             </For>
-                            <Typography variant={'subtitle2'}>
+                            <MyTypography variant={'subtitle2'}>
                                 UQAC - Chicoutimi, Québec, Canada 🇨🇦
-                            </Typography>
+                            </MyTypography>
                         </Appear>
                     </li>
                     <li>
                         <Appear margin={'-150px'}>
-                            <Typography variant={'h5'}>2021</Typography>
-                            <Typography variant={'h6'}>
+                            <MyTypography variant={'h5'}>2021</MyTypography>
+                            <MyTypography variant={'h6'}>
                                 {t('dutTitle')}
-                            </Typography>
+                            </MyTypography>
                             <For each={t('dutText')}>
                                 {(item) => (
-                                    <Typography variant={'body1'}>
+                                    <MyTypography variant={'body1'}>
                                         {item}
-                                    </Typography>
+                                    </MyTypography>
                                 )}
                             </For>
-                            <Typography variant={'subtitle2'}>
+                            <MyTypography variant={'subtitle2'}>
                                 IUT Montpellier-Sète - Montpellier, France 🇫🇷
-                            </Typography>
+                            </MyTypography>
                         </Appear>
                     </li>
                     <li>
                         <Appear margin={'-150px'}>
-                            <Typography variant={'h5'}>2018</Typography>
-                            <Typography variant={'h6'}>
+                            <MyTypography variant={'h5'}>2018</MyTypography>
+                            <MyTypography variant={'h6'}>
                                 {t('bacTitle')}
-                            </Typography>
+                            </MyTypography>
                             <For each={t('bacText')}>
                                 {(item) => (
-                                    <Typography variant={'body1'}>
+                                    <MyTypography variant={'body1'}>
                                         {item}
-                                    </Typography>
+                                    </MyTypography>
                                 )}
                             </For>
-                            <Typography variant={'subtitle2'}>
+                            <MyTypography variant={'subtitle2'}>
                                 Lycée Henry Fabre - Carpentras, France 🇫🇷
-                            </Typography>
+                            </MyTypography>
                         </Appear>
                     </li>
                 </ul>

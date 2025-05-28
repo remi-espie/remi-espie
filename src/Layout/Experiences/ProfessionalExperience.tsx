@@ -1,4 +1,4 @@
-import { Box, Grid, Typography, useTheme } from '@suid/material'
+import { Box, Grid, useTheme } from '@suid/material'
 import { createMemo, For } from 'solid-js'
 import ZoomStyle from '../../css/zoom-on-hover.module.css'
 import { useLayoutContext } from '~/LayoutContext.ts'
@@ -7,6 +7,7 @@ import { dictionaries } from '~/i18n/types.ts'
 import GE from '../../assets/ge.webp'
 import ATS from '../../assets/ats.webp'
 import Appear from '../../component/Appear.tsx'
+import MyTypography from '~/component/MyTypography.tsx'
 
 function ProfessionalExperience() {
     const theme = useTheme()
@@ -21,7 +22,7 @@ function ProfessionalExperience() {
     return (
         <Box sx={{ textAlign: 'justify' }}>
             <Appear>
-                <Typography
+                <MyTypography
                     variant="h4"
                     id={'professionalXP'}
                     sx={{
@@ -33,7 +34,7 @@ function ProfessionalExperience() {
                     }}
                 >
                     {t('professionalXP')}
-                </Typography>
+                </MyTypography>
                 <Grid
                     container
                     rowSpacing={2}
@@ -48,23 +49,23 @@ function ProfessionalExperience() {
                             alignContent: 'center',
                         }}
                     >
-                        <Typography
+                        <MyTypography
                             variant={'h6'}
                             color={theme.palette.primary.main}
                         >
                             GE: Grid Solutions
-                        </Typography>
-                        <Typography variant={'subtitle1'} sx={{ mb: 4 }}>
+                        </MyTypography>
+                        <MyTypography variant={'subtitle1'} sx={{ mb: 4 }}>
                             🇫🇷 Montpellier - 2022-2025
-                        </Typography>
-                        <Typography variant={'body1'}>
+                        </MyTypography>
+                        <MyTypography variant={'body1'}>
                             {t('GEparagraph')}
                             <ul>
                                 <For each={t('GElist')}>
                                     {(item) => <li>{item}</li>}
                                 </For>
                             </ul>
-                        </Typography>
+                        </MyTypography>
                     </Grid>
                     <Grid item xs={6} sx={{ width: 'inherit' }}>
                         <Box class={ZoomStyle.zoomContainer}>
@@ -105,23 +106,23 @@ function ProfessionalExperience() {
                             alignContent: 'center',
                         }}
                     >
-                        <Typography
+                        <MyTypography
                             variant={'h6'}
                             color={theme.palette.primary.main}
                         >
                             ATS Sport
-                        </Typography>
-                        <Typography variant={'subtitle1'} sx={{ mb: 4 }}>
+                        </MyTypography>
+                        <MyTypography variant={'subtitle1'} sx={{ mb: 4 }}>
                             🇫🇷 Pignan - 2021
-                        </Typography>
-                        <Typography variant={'body1'}>
+                        </MyTypography>
+                        <MyTypography variant={'body1'}>
                             {t('ATSparagraph')}
                             <ul>
                                 <For each={t('ATSlist')}>
                                     {(item) => <li>{item}</li>}
                                 </For>
                             </ul>
-                        </Typography>
+                        </MyTypography>
                     </Grid>
                 </Grid>
             </Appear>

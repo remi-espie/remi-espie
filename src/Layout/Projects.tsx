@@ -1,5 +1,5 @@
 import BGStyle from '../css/backgroundimage.module.css'
-import { Box, Grid, SvgIcon, Typography, useTheme } from '@suid/material'
+import { Box, Grid, SvgIcon, useTheme } from '@suid/material'
 import ShapeStyle from '../css/shape.module.css'
 import Appear from '../component/Appear.tsx'
 import MyLink from '../component/MyLink.tsx'
@@ -10,6 +10,7 @@ import { dictionaries } from '../i18n/types.ts'
 import ProjectsSelector from '../component/ProjectsSelector.tsx'
 import Background from '../assets/macro-heat-sink.webp'
 import GitHubCard from '~/component/GitHubCard.tsx'
+import MyTypography from '~/component/MyTypography.tsx'
 
 function Projects() {
     const theme = useTheme()
@@ -52,7 +53,7 @@ function Projects() {
                 </SvgIcon>
             </Box>
             <Appear>
-                <Typography
+                <MyTypography
                     variant="h5"
                     sx={{
                         textAlign: 'center',
@@ -71,9 +72,9 @@ function Projects() {
                         target={'_blank'}
                         color={theme.palette.primary.light}
                     />
-                </Typography>
+                </MyTypography>
 
-                <Typography
+                <MyTypography
                     variant="h4"
                     id={'academicProjects'}
                     sx={{
@@ -84,7 +85,7 @@ function Projects() {
                     }}
                 >
                     {t('AcademicProjects')}
-                </Typography>
+                </MyTypography>
                 <ProjectsSelector
                     techs={techs}
                     projectsList={t('AcademicProjectsList')}
@@ -92,7 +93,7 @@ function Projects() {
             </Appear>
 
             <Appear>
-                <Typography
+                <MyTypography
                     variant="h4"
                     id={'personalProjects'}
                     sx={{
@@ -103,7 +104,7 @@ function Projects() {
                     }}
                 >
                     {t('PersonalProjects')}
-                </Typography>
+                </MyTypography>
                 <ProjectsSelector
                     techs={techs}
                     projectsList={t('PersonalProjectsList')}
@@ -111,7 +112,7 @@ function Projects() {
             </Appear>
 
             <Appear>
-                <Typography
+                <MyTypography
                     variant="h4"
                     id={'githubPRs'}
                     sx={{
@@ -122,7 +123,7 @@ function Projects() {
                     }}
                 >
                     {t('GitHubPRs')}
-                </Typography>
+                </MyTypography>
                 <Grid
                     container
                     spacing={2}

@@ -164,7 +164,7 @@ function NavIcons() {
                             stroke-width="2"
                         />
                     </SvgIcon>
-                    <Typography variant="body1">{t('lang_en')}</Typography>
+                    <MyTypography variant="body1">{t('lang_en')}</MyTypography>
                 </MenuItem>
                 <MenuItem
                     onClick={() => {
@@ -185,7 +185,7 @@ function NavIcons() {
                         <rect width="600" height="600" fill="#fff" />
                         <rect width="300" height="600" fill="#002395" />
                     </SvgIcon>
-                    <Typography variant="body1">{t('lang_fr')}</Typography>
+                    <MyTypography variant="body1">{t('lang_fr')}</MyTypography>
                 </MenuItem>
             </Menu>
         </>

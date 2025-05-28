@@ -4,7 +4,6 @@ import {
     CardContent,
     CardHeader,
     SvgIcon,
-    Typography,
     useTheme,
 } from '@suid/material'
 import ShapeStyle from '../css/shape.module.css'
@@ -15,6 +14,7 @@ import { dictionaries } from '~/i18n/types.ts'
 import Appear from '~/component/Appear'
 import ReactiveCardStyle from '../css/reactive-card.module.css'
 import MyCardMedia from '~/component/MyCardMedia.tsx'
+import MyTypography from '~/component/MyTypography.tsx'
 
 function Hobbies() {
     const theme = useTheme()
@@ -28,7 +28,7 @@ function Hobbies() {
 
     return (
         <>
-            <Typography
+            <MyTypography
                 variant="h4"
                 sx={{
                     m: 'auto',
@@ -39,7 +39,7 @@ function Hobbies() {
                 }}
             >
                 {t('hobbies')}
-            </Typography>
+            </MyTypography>
             <For each={t('HobbiesList')}>
                 {(hobby, index) => (
                     <Box
@@ -73,12 +73,12 @@ function Hobbies() {
                                     }}
                                 />
                                 <CardContent>
-                                    <Typography
+                                    <MyTypography
                                         variant="body2"
                                         textAlign={'justify'}
                                     >
                                         {hobby.description}
-                                    </Typography>
+                                    </MyTypography>
                                 </CardContent>
                             </Card>
                         </Appear>
