@@ -75,6 +75,7 @@ function Projects() {
 
                 <Typography
                     variant="h4"
+                    id={'academicProjects'}
                     sx={{
                         textAlign: 'center',
                         m: 4,
@@ -93,6 +94,7 @@ function Projects() {
             <Appear>
                 <Typography
                     variant="h4"
+                    id={'personalProjects'}
                     sx={{
                         textAlign: 'center',
                         m: 4,
@@ -111,6 +113,7 @@ function Projects() {
             <Appear>
                 <Typography
                     variant="h4"
+                    id={'githubPRs'}
                     sx={{
                         textAlign: 'center',
                         m: 4,

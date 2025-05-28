@@ -23,6 +23,7 @@ function ProfessionalExperience() {
             <Appear>
                 <Typography
                     variant="h4"
+                    id={'professionalXP'}
                     sx={{
                         m: 'auto',
                         width: 'fit-content',

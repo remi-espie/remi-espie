@@ -23,6 +23,7 @@ function Education() {
         <>
             <Typography
                 variant="h4"
+                id={'education'}
                 sx={{
                     m: 'auto',
                     width: 'fit-content',

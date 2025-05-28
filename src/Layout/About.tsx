@@ -75,6 +75,7 @@ function About() {
 
                     <Typography
                         variant="h4"
+                        id={"aboutme"}
                         sx={{
                             m: 'auto',
                             width: 'max-content',
@@ -100,6 +101,7 @@ function About() {
             <Appear>
                 <Typography
                     variant="h4"
+                    id={"contact"}
                     sx={{
                         width: 'max-content',
                         margin: 'auto',

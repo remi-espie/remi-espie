@@ -25,6 +25,7 @@ function PersonalExperience() {
             <Appear>
                 <Typography
                     variant="h4"
+                    id={'personalXP'}
                     sx={{
                         m: 'auto',
                         width: 'fit-content',
