@@ -27,26 +27,16 @@
         "solid-markdown": "^2.0.14",
         "solid-motionone": "^1.0.4",
         "tsc": "^2.0.4",
-<<<<<<< HEAD
-        "undici": "^7.14.0",
-=======
         "undici": "^7.15.0",
->>>>>>> 29a307b (chore(deps): upgrade)
         "vinxi": "^0.5.8"
     },
     "devDependencies": {
         "@octokit/types": "^14.1.0",
         "@suid/types": "^0.8.0",
         "@suid/vite-plugin": "^0.4.1",
-<<<<<<< HEAD
-        "@typescript-eslint/eslint-plugin": "^8.40.0",
-        "@typescript-eslint/parser": "^8.40.0",
-        "eslint": "^9.33.0",
-=======
         "@typescript-eslint/eslint-plugin": "^8.41.0",
         "@typescript-eslint/parser": "^8.41.0",
         "eslint": "^9.34.0",
->>>>>>> 29a307b (chore(deps): upgrade)
         "eslint-config-prettier": "^10.1.8",
         "eslint-plugin-jsx-a11y": "^6.10.2",
         "eslint-plugin-solid": "^0.14.5",
