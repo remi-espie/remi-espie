@@ -27,27 +27,27 @@
         "solid-markdown": "^2.0.14",
         "solid-motionone": "^1.0.4",
         "tsc": "^2.0.4",
-        "undici": "^7.15.0",
+        "undici": "^7.16.0",
         "vinxi": "^0.5.8"
     },
     "devDependencies": {
         "@octokit/types": "^14.1.0",
         "@suid/types": "^0.8.0",
         "@suid/vite-plugin": "^0.4.1",
-        "@typescript-eslint/eslint-plugin": "^8.41.0",
-        "@typescript-eslint/parser": "^8.41.0",
-        "eslint": "^9.34.0",
+        "@typescript-eslint/eslint-plugin": "^8.43.0",
+        "@typescript-eslint/parser": "^8.43.0",
+        "eslint": "^9.35.0",
         "eslint-config-prettier": "^10.1.8",
         "eslint-plugin-jsx-a11y": "^6.10.2",
         "eslint-plugin-solid": "^0.14.5",
         "prettier": "^3.6.2",
         "typescript": "^5.9.2",
-        "vite": "^6.3.5",
+        "vite": "^6.3.6",
         "vite-plugin-eslint": "^1.8.1",
         "vite-plugin-solid": "^2.11.8"
     },
     "overrides": {
-        "vite": "^6.3.5",
+        "vite": "^6.3.6",
         "esbuild": "^0.25.1"
     },
     "engines": {
