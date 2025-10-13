@@ -35,7 +35,7 @@
         "@suid/types": "^0.8.0",
         "@suid/vite-plugin": "^0.4.1",
         "@typescript-eslint/eslint-plugin": "^8.46.0",
-        "@typescript-eslint/parser": "^8.46.0",
+        "@typescript-eslint/parser": "^8.46.1",
         "eslint": "^9.37.0",
         "eslint-config-prettier": "^10.1.8",
         "eslint-plugin-jsx-a11y": "^6.10.2",
