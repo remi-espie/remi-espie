@@ -18,7 +18,7 @@ export const fr_dict = {
         'Les images utilisés sont libres de droit ou sous license CC. Pour plus de détails, voir :',
     entrypoint_hello: 'Bonjour, je suis Rémi 👋',
     entrypoint_description:
-        'Développeur Fullstack et apprenti ingénieur DevOps',
+        'Ingénieur DevOps et développeur à mes heures perdues',
     entrypoint_button: 'Commençons !',
     birthText: ['Né le 1er Février 2000, France', '24 ans'],
     residencyText: [
