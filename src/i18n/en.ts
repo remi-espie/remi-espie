@@ -17,8 +17,7 @@ export const en_dict = {
     attribution:
         'The images used are free of use or under the CC license. For more details, see:',
     entrypoint_hello: "Hello, I'm Rémi 👋",
-    entrypoint_description:
-        'DevOps engineer and developer on my free time',
+    entrypoint_description: 'DevOps engineer and developer on my free time',
     entrypoint_button: "Let's get started!",
     birthText: ['Born on February 1st, 2000, France', '24 years old'],
     residencyText: [
