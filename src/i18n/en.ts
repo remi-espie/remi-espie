@@ -19,7 +19,7 @@ export const en_dict = {
     entrypoint_hello: "Hello, I'm Rémi 👋",
     entrypoint_description: 'DevOps engineer and developer on my free time',
     entrypoint_button: "Let's get started!",
-    birthText: ['Born on February 1st, 2000, France', '24 years old'],
+    birthText: ['Born on February 1st, 2000, France', '25 years old'],
     residencyText: [
         'Lives in Montpellier, 34000, France',
         'Available for geographical mobility',

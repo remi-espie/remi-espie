@@ -20,7 +20,7 @@ export const fr_dict = {
     entrypoint_description:
         'Ingénieur DevOps et développeur à mes heures perdues',
     entrypoint_button: 'Commençons !',
-    birthText: ['Né le 1er Février 2000, France', '24 ans'],
+    birthText: ['Né le 1er Février 2000, France', '25 ans'],
     residencyText: [
         'Réside à Montpellier, 34000, France',
         'Disponible à la mobilité géographique',
