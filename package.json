@@ -28,15 +28,15 @@
         "solid-motionone": "^1.0.4",
         "tsc": "^2.0.4",
         "undici": "^7.16.0",
-        "vinxi": "^0.5.8"
+        "vinxi": "^0.5.9"
     },
     "devDependencies": {
         "@octokit/types": "^16.0.0",
         "@suid/types": "^0.8.0",
         "@suid/vite-plugin": "^0.4.1",
-        "@typescript-eslint/eslint-plugin": "^8.49.0",
-        "@typescript-eslint/parser": "^8.49.0",
-        "eslint": "^9.39.1",
+        "@typescript-eslint/eslint-plugin": "^8.50.0",
+        "@typescript-eslint/parser": "^8.50.0",
+        "eslint": "^9.39.2",
         "eslint-config-prettier": "^10.1.8",
         "eslint-plugin-jsx-a11y": "^6.10.2",
         "eslint-plugin-solid": "^0.14.5",
