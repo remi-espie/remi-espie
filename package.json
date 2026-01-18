@@ -48,7 +48,8 @@
     },
     "overrides": {
         "vite": "^6.4.1",
-        "esbuild": "^0.25.1"
+        "esbuild": "^0.25.1",
+        "h3": ">=1.15.5"
     },
     "engines": {
         "node": ">=20"
