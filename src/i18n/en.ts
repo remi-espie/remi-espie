@@ -25,7 +25,9 @@ export const en_dict = {
         'Available for geographical mobility',
         'to study, live and work',
     ],
-    workingText: ['DevSecOps engineer at Naval Group, formerly at GE Vernova: Grid Solutions'],
+    workingText: [
+        'DevSecOps engineer at Naval Group, formerly at GE Vernova: Grid Solutions',
+    ],
     diplomaText: [
         "Graduated from a 'Diplôme d'ingénieur' in DevOps at Polytech Montpellier",
     ],

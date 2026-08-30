@@ -26,10 +26,10 @@ export const fr_dict = {
         'Disponible à la mobilité géographique',
         'pour étudier, vivre et travailler',
     ],
-    workingText: ['Ingénieur DevSecOps chez Naval Group, anciennement chez GE Vernova: Grid Solutions'],
-    diplomaText: [
-        "Diplôme d'ingénieur DevOps à Polytech Montpellier",
+    workingText: [
+        'Ingénieur DevSecOps chez Naval Group, anciennement chez GE Vernova: Grid Solutions',
     ],
+    diplomaText: ["Diplôme d'ingénieur DevOps à Polytech Montpellier"],
     studyText: [
         "Diplomé d'un DUETI réalisé à l'UQAC",
         'en informatique avec majeure en conception de jeu vidéo',
