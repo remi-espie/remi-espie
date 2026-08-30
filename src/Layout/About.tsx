@@ -83,9 +83,9 @@ function About() {
                     <Box sx={{ width: 'max-content', margin: 'auto', mb: 4 }}>
                         <EmojiText emoji={'🥖'} text={t('birthText')} />
                         <EmojiText emoji={'🏠'} text={t('residencyText')} />
-                        <EmojiText emoji={'📚'} text={t('studyText')} />
                         <EmojiText emoji={'💼'} text={t('workingText')} />
                         <EmojiText emoji={'🎓'} text={t('diplomaText')} />
+                        <EmojiText emoji={'📚'} text={t('studyText')} />
                         <EmojiText emoji={'🌎'} text={t('langText')} />
                         <EmojiText emoji={'🚗'} text={t('carText')} />
                     </Box>
