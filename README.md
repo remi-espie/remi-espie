@@ -1,6 +1,6 @@
 # :man_technologist: Hi, I’m @remi-espie
 
-:mailbox: Contact me by mail at [remi.espie@etu.umontpellier.fr](mailto:remi.espie@etu.umontpellier.fr)
+:mailbox: Contact me by mail at [remi@espie.dev](mailto:remi@espie.dev)
 
 ## :fr: French computer scientist
 
