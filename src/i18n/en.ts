@@ -26,11 +26,11 @@ export const en_dict = {
         'to study, live and work',
     ],
     workingText: [
-        'DevSecOps engineer at Naval Group,', 
+        'DevSecOps engineer at Naval Group,',
         'formerly at GE Vernova: Grid Solutions',
     ],
     diplomaText: [
-        "Graduated from a 'Diplôme d'ingénieur'", 
+        "Graduated from a 'Diplôme d'ingénieur'",
         'in DevOps at Polytech Montpellier',
     ],
     studyText: [
