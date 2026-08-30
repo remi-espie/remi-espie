@@ -18,17 +18,19 @@ export const fr_dict = {
         'Les images utilisés sont libres de droit ou sous license CC. Pour plus de détails, voir :',
     entrypoint_hello: 'Bonjour, je suis Rémi 👋',
     entrypoint_description:
-        'Ingénieur DevOps et développeur à mes heures perdues',
+        'Ingénieur DevSecOps et développeur à mes heures perdues',
     entrypoint_button: 'Commençons !',
-    birthText: ['Né le 1er Février 2000, France', '25 ans'],
+    birthText: ['Né le 1er Février 2000, France', '26 ans'],
     residencyText: [
-        'Réside à Montpellier, 34000, France',
+        'Réside à Toulon, 83000, France',
         'Disponible à la mobilité géographique',
-        'pour étudier, vivre ou travailler',
+        'pour étudier, vivre et travailler',
     ],
-    studyText: ['Etudiant à Polytech Montpellier en filière DevOps'],
-    workingText: ['En alternance chez GE Vernova: Grid Solutions'],
+    workingText: ['Ingénieur DevSecOps chez Naval Group, anciennement chez GE Vernova: Grid Solutions'],
     diplomaText: [
+        "Diplôme d'ingénieur DevOps à Polytech Montpellier",
+    ],
+    studyText: [
         "Diplomé d'un DUETI réalisé à l'UQAC",
         'en informatique avec majeure en conception de jeu vidéo',
         "Et diplomé d'un DUT informatique",
@@ -43,7 +45,7 @@ export const fr_dict = {
     carText: [
         'Permis de conduire B',
         'Permis de conduire international',
-        'Détenteur de son véhicule',
+        'Détenteur de mon véhicule',
     ],
     contactMe: 'Me contacter',
     phone: 'Téléphone',

@@ -17,17 +17,19 @@ export const en_dict = {
     attribution:
         'The images used are free of use or under the CC license. For more details, see:',
     entrypoint_hello: "Hello, I'm Rémi 👋",
-    entrypoint_description: 'DevOps engineer and developer on my free time',
+    entrypoint_description: 'DevSecOps engineer and developer on my free time',
     entrypoint_button: "Let's get started!",
-    birthText: ['Born on February 1st, 2000, France', '25 years old'],
+    birthText: ['Born on February 1st, 2000, France', '26 years old'],
     residencyText: [
-        'Lives in Montpellier, 34000, France',
+        'Lives in Toulon, 83000, France',
         'Available for geographical mobility',
-        'to study, live or work',
+        'to study, live and work',
     ],
-    studyText: ['Student at Polytech Montpellier in DevOps'],
-    workingText: ['In apprenticeship at GE Vernova: Grid Solutions'],
+    workingText: ['DevSecOps engineer at Naval Group, formerly at GE Vernova: Grid Solutions'],
     diplomaText: [
+        "Graduated from a 'Diplôme d'ingénieur' in DevOps at Polytech Montpellier",
+    ],
+    studyText: [
         "Graduated from a 'DUETI' diploma at UQAC",
         'in computer science with a major in video game design',
         'And graduated from a TUD in computer science',
