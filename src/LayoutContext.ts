@@ -22,9 +22,7 @@ export const defaultOptionsClient: Options = {
     darkMode: isServer ? false : (getSavedDarkMode() ?? isSysThemeDark()),
     language: isServer
         ? 'en'
-        : (getSavedLanguage() ?? navigator.language === 'fr')
-          ? 'fr'
-          : 'en',
+        : (getSavedLanguage() ?? (navigator.language === 'fr' ? 'fr' : 'en')),
 }
 
 const LayoutContext = isServer

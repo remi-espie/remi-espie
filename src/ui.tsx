@@ -6,6 +6,8 @@ import {
     Show,
     splitProps,
     useContext,
+    onCleanup,
+    onMount,
 } from 'solid-js'
 import { Dynamic } from 'solid-js/web'
 
@@ -297,6 +299,7 @@ export function Link(
         'color',
         'underline',
         'variant',
+        'ref',
     ])
     return (
         <a
@@ -327,6 +330,7 @@ export function Button(
         'style',
         'endIcon',
         'variant',
+        'ref',
     ])
     const currentStyle =
         typeof props.style === 'object' && props.style !== null
@@ -366,6 +370,7 @@ export function IconButton(
         'children',
         'style',
         'color',
+        'ref',
     ])
     return props.href ? (
         <a
@@ -499,9 +504,30 @@ export function Menu(
     }>
 ) {
     const isOpen = createMemo(() => props.open)
+    let menu!: HTMLDivElement
+
+    onMount(() => {
+        const handleKeyDown = (event: KeyboardEvent) => {
+            if (event.key === 'Escape' && isOpen()) {
+                props.onClose?.()
+            }
+        }
+        const handlePointerDown = (event: PointerEvent) => {
+            if (isOpen() && menu && !menu.contains(event.target as Node)) {
+                props.onClose?.()
+            }
+        }
+        document.addEventListener('keydown', handleKeyDown)
+        document.addEventListener('pointerdown', handlePointerDown)
+        onCleanup(() => {
+            document.removeEventListener('keydown', handleKeyDown)
+            document.removeEventListener('pointerdown', handlePointerDown)
+        })
+    })
+
     return (
         <Show when={isOpen()}>
-            <div class="ui-menu" role="menu">
+            <div ref={menu} class="ui-menu" role="menu">
                 {props.children}
             </div>
         </Show>

@@ -64,7 +64,7 @@
 
 # This repository contains my portfolio
 
-Made with [SolidJS](https://www.solidjs.com/) and styled with [SUID](https://suid.io).
+Made with [SolidJS](https://www.solidjs.com/) and SSR-safe custom UI primitives.
 
 ## How to use
 

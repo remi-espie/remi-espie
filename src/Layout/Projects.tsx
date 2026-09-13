@@ -22,9 +22,13 @@ function Projects() {
 
     const t = i18n.translator(dict)
 
-    const techs = new Set<string>()
-    dictionaries[context.language].AcademicProjectsList.map((project) =>
-        project.technologies.map((tech) => techs.add(tech))
+    const academicTechs = new Set<string>()
+    const personalTechs = new Set<string>()
+    dictionaries[context.language].AcademicProjectsList.forEach((project) =>
+        project.technologies.forEach((tech) => academicTechs.add(tech))
+    )
+    dictionaries[context.language].PersonalProjectsList.forEach((project) =>
+        project.technologies.forEach((tech) => personalTechs.add(tech))
     )
 
     return (
@@ -87,7 +91,7 @@ function Projects() {
                     {t('AcademicProjects')}
                 </MyTypography>
                 <ProjectsSelector
-                    techs={techs}
+                    techs={academicTechs}
                     projectsList={t('AcademicProjectsList')}
                 />
             </Appear>
@@ -106,7 +110,7 @@ function Projects() {
                     {t('PersonalProjects')}
                 </MyTypography>
                 <ProjectsSelector
-                    techs={techs}
+                    techs={personalTechs}
                     projectsList={t('PersonalProjectsList')}
                 />
             </Appear>

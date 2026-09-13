@@ -82,7 +82,10 @@ function NavIcons() {
             <IconButton
                 color="inherit"
                 title={t('language')}
-                onClick={(event) => setAnchorEl(event.currentTarget)}
+                onClick={(event) => {
+                    event.stopPropagation()
+                    setAnchorEl(event.currentTarget)
+                }}
                 aria-controls={open() ? 'account-menu' : undefined}
                 aria-haspopup="true"
                 aria-expanded={open() ? 'true' : undefined}
