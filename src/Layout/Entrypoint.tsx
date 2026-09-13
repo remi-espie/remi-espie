@@ -1,7 +1,7 @@
 import { Box, Button, Grid, Typography } from '~/ui.tsx'
 import { SubdirectoryArrowRight } from '~/ui.tsx'
 import { useLayoutContext } from '../LayoutContext.ts'
-import { createEffect, createMemo, createSignal } from 'solid-js'
+import { createEffect, createMemo, createSignal, on } from 'solid-js'
 import * as i18n from '@solid-primitives/i18n'
 import { dictionaries } from '../i18n/types.ts'
 import TypeStyle from '../css/typewriter.module.css'
@@ -17,12 +17,13 @@ function Entrypoint() {
 
     const dict = createMemo(() => i18n.flatten(dictionaries[context.language]))
 
-    createEffect(() => {
-        context.language
+    createEffect(
+        on(() => context.language, () => {
         setHelloText(true)
         setDescText(false)
         setCursor(false)
-    })
+        })
+    )
 
     const t = i18n.translator(dict)
 

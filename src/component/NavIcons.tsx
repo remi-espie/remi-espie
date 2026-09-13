@@ -12,15 +12,12 @@ import {
     MenuItem,
     SvgIcon,
     TranslateOutlined,
-    useTheme,
 } from '~/ui.tsx'
 import * as i18n from '@solid-primitives/i18n'
 import { dictionaries } from '../i18n/types.ts'
 import MyTypography from '~/component/MyTypography.tsx'
 
 function NavIcons() {
-    const theme = useTheme()
-
     const context = useLayoutContext()
 
     const dict = createMemo(() => {
