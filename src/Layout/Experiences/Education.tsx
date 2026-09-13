@@ -1,4 +1,4 @@
-import { Box, SvgIcon, useTheme } from '@suid/material'
+import { Box, SvgIcon, useTheme } from '~/ui.tsx'
 import TimelineStyle from '../../css/timeline.module.css'
 import { useLayoutContext } from '~/LayoutContext.ts'
 import { createMemo, For } from 'solid-js'
@@ -38,8 +38,8 @@ function Education() {
             <Box
                 class={`${TimelineStyle.timeline} ${BgImage.bgimage}`}
                 style={{
-                    '--primary': theme.palette.primary.main,
-                    '--contrast': theme.palette.background.default,
+                    '--primary': 'var(--color-primary)',
+                    '--contrast': 'var(--color-background)',
                 }}
                 sx={{
                     color: theme.palette.common.white,
@@ -125,7 +125,7 @@ function Education() {
                 </ul>
                 <Box
                     class={`${ShapeStyle.shape} ${ShapeStyle.wave} ${ShapeStyle.bottom}`}
-                    color={theme.palette.background.default}
+                    color="var(--color-background)"
                 >
                     <SvgIcon viewBox="0 0 1500 120" preserveAspectRatio="none">
                         <path

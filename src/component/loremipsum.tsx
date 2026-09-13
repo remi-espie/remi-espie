@@ -1,4 +1,4 @@
-import { Typography } from '@suid/material'
+import { Typography } from '~/ui.tsx'
 import Appear from './Appear.tsx'
 
 function Loremipsum(props: { color: string }) {

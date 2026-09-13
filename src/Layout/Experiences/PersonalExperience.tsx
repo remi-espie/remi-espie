@@ -1,4 +1,4 @@
-import { Box, Grid, useTheme } from '@suid/material'
+import { Box, Grid, useTheme } from '~/ui.tsx'
 import ZoomStyle from '../../css/zoom-on-hover.module.css'
 import { useLayoutContext } from '~/LayoutContext.ts'
 import { createMemo } from 'solid-js'
@@ -40,7 +40,7 @@ function PersonalExperience() {
                 <Grid
                     container
                     rowSpacing={2}
-                    columnSpacing={4}
+                    columnSpacing={8}
                     sx={{ width: '80vw', m: 'auto', mb: 32 }}
                     columns={{ xs: 2, sm: 8, md: 12 }}
                 >
@@ -64,7 +64,7 @@ function PersonalExperience() {
                             {t('HackathonParagraph')}
                         </MyTypography>
                     </Grid>
-                    <Grid item xs={6} sx={{ width: 'inherit' }}>
+                    <Grid item xs={6}>
                         <Box class={ZoomStyle.zoomContainer}>
                             <img
                                 src={hackathon}
@@ -84,11 +84,11 @@ function PersonalExperience() {
                 <Grid
                     container
                     rowSpacing={2}
-                    columnSpacing={4}
+                    columnSpacing={8}
                     sx={{ width: '80vw', m: 'auto', mb: 32 }}
                     columns={{ xs: 2, sm: 8, md: 12 }}
                 >
-                    <Grid item xs={6} sx={{ width: 'inherit' }}>
+                    <Grid item xs={6}>
                         <Box class={ZoomStyle.zoomContainer}>
                             <img
                                 src={polycloud}
@@ -126,7 +126,7 @@ function PersonalExperience() {
                 <Grid
                     container
                     rowSpacing={2}
-                    columnSpacing={4}
+                    columnSpacing={8}
                     sx={{ width: '80vw', m: 'auto', mb: 32 }}
                     columns={{ xs: 2, sm: 8, md: 12 }}
                 >
@@ -150,7 +150,7 @@ function PersonalExperience() {
                             {t('JamsParagraph')}
                         </MyTypography>
                     </Grid>
-                    <Grid item xs={6} sx={{ width: 'inherit' }}>
+                    <Grid item xs={6}>
                         <Box class={ZoomStyle.zoomContainer}>
                             <img
                                 src={CGJ}
@@ -167,11 +167,11 @@ function PersonalExperience() {
                 <Grid
                     container
                     rowSpacing={2}
-                    columnSpacing={4}
+                    columnSpacing={8}
                     sx={{ width: '80vw', m: 'auto', mb: 32 }}
                     columns={{ xs: 2, sm: 8, md: 12 }}
                 >
-                    <Grid item xs={6} sx={{ width: 'inherit' }}>
+                    <Grid item xs={6}>
                         <Box class={ZoomStyle.zoomContainer}>
                             <img
                                 src={NDI}

@@ -1,5 +1,5 @@
 import BGStyle from '../css/backgroundimage.module.css'
-import { Box, Grid, SvgIcon, useTheme } from '@suid/material'
+import { Box, Grid, SvgIcon, useTheme } from '~/ui.tsx'
 import ShapeStyle from '../css/shape.module.css'
 import Appear from '../component/Appear.tsx'
 import MyLink from '../component/MyLink.tsx'

@@ -6,58 +6,60 @@ import {
     Grid,
     SvgIcon,
     useTheme,
-} from '@suid/material'
-import { Octokit } from 'octokit'
+} from '~/ui.tsx'
 import { createSignal, onMount, Suspense } from 'solid-js'
-import { Motion } from 'solid-motionone'
 import MyLink from '~/component/MyLink.tsx'
-import { GetResponseDataTypeFromEndpointMethod } from '@octokit/types'
 import MyTypography from './MyTypography'
 
-const theme = useTheme()
-
-const octokit = new Octokit({})
-
-type PRresponse = GetResponseDataTypeFromEndpointMethod<
-    typeof octokit.rest.pulls.get
->
+type PRresponse = {
+    merged: boolean
+    state: string
+    html_url: string
+    number: number
+    title: string
+    merged_at: string | null
+    closed_at: string | null
+    created_at: string
+    base: {
+        repo: {
+            html_url: string
+            full_name: string
+            description: string | null
+            forks_count: number
+            stargazers_count: number
+        }
+    }
+}
 
 const fetchPR = async (link: string) => {
     const repo = link.split('/')[4]
     const owner = link.split('/')[3]
     const prNumber = parseInt(link.split('/')[6])
 
-    const { data } = await octokit.rest.pulls.get({
-        owner: owner,
-        repo: repo,
-        pull_number: prNumber,
-    })
-    return data
+    const response = await fetch(
+        `https://api.github.com/repos/${owner}/${repo}/pulls/${prNumber}`
+    )
+    if (!response.ok) {
+        throw new Error(`GitHub API returned ${response.status}`)
+    }
+    return (await response.json()) as PRresponse
 }
 
 function GitHubCard(props: { link: string }) {
+    const theme = useTheme()
     const [prData, setPrData] = createSignal<PRresponse>()
 
     onMount(() => {
-        fetchPR(props.link).then((data) => {
-            setPrData(data)
-        })
+        fetchPR(props.link)
+            .then(setPrData)
+            .catch((error: unknown) => {
+                console.error('Unable to load GitHub pull request', error)
+            })
     })
 
     return (
         <Grid item xs={6}>
-            <Motion
-                initial={{ opacity: 1, scale: 1 }}
-                animate={{ opacity: 0, scale: 0.6 }}
-                transition={{ duration: 0.5 }}
-                inView={{ opacity: 1, scale: 1 }}
-                inViewOptions={{
-                    once: true,
-                }}
-                style={{
-                    height: '100%',
-                }}
-            >
+            <div class="appear appear-visible" style={{ height: '100%' }}>
                 <Suspense
                     fallback={<Card sx={{ m: 2, p: 2 }}>Loading...</Card>}
                 >
@@ -266,7 +268,7 @@ function GitHubCard(props: { link: string }) {
                         </CardActions>
                     </Card>
                 </Suspense>
-            </Motion>
+            </div>
         </Grid>
     )
 }

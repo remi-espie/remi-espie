@@ -1,5 +1,5 @@
 import { SolidMarkdown } from 'solid-markdown'
-import { Box, CssBaseline } from '@suid/material'
+import { Box, CssBaseline } from '~/ui.tsx'
 
 const markdown = `
 # About me background

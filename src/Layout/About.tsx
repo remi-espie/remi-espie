@@ -1,5 +1,5 @@
 import BGStyle from '../css/backgroundimage.module.css'
-import { Box, Grid, IconButton, SvgIcon, useTheme } from '@suid/material'
+import { Box, Grid, IconButton, SvgIcon, useTheme } from '~/ui.tsx'
 import ShapeStyle from '../css/shape.module.css'
 import { useLayoutContext } from '../LayoutContext.ts'
 import { createMemo } from 'solid-js'
@@ -111,10 +111,10 @@ function About() {
                     sx={{
                         width: '80vw',
                         mb: 4,
+                        margin: '0 auto',
                         textShadow:
                             '-1px -1px 0 #000,0 -1px 0 #000,1px -1px 0 #000,1px 0 0 #000,1px 1px 0 #000,0 1px 0 #000,-1px 1px 0 #000,-1px 0 0 #000;',
                     }}
-                    margin="auto"
                     alignItems="center"
                     justifyContent="center"
                     spacing={2}

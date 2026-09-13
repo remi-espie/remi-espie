@@ -1,4 +1,4 @@
-import { Box, Typography } from '@suid/material'
+import { Box, Typography } from '~/ui.tsx'
 import { For } from 'solid-js'
 
 function EmojiText(props: { emoji: string; text: string[] }) {

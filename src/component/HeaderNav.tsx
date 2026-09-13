@@ -1,5 +1,5 @@
 import MyLink from './MyLink.tsx'
-import { Box } from '@suid/material'
+import { Box } from '~/ui.tsx'
 import { useLayoutContext } from '../LayoutContext.ts'
 import { createMemo } from 'solid-js'
 import * as i18n from '@solid-primitives/i18n'
@@ -27,7 +27,7 @@ function HeaderNav(props: { color: string }) {
                     letterSpacing: '-0.1px',
                 }}
             />
-            |
+            <span class="ui-separator">|</span>
             <MyLink
                 to="#experiences"
                 text={t('experiences')}
@@ -38,7 +38,7 @@ function HeaderNav(props: { color: string }) {
                     letterSpacing: '-0.1px',
                 }}
             />
-            |
+            <span class="ui-separator">|</span>
             <MyLink
                 to="#projects"
                 text={t('projects')}
@@ -49,7 +49,7 @@ function HeaderNav(props: { color: string }) {
                     letterSpacing: '-0.1px',
                 }}
             />
-            |
+            <span class="ui-separator">|</span>
             <MyLink
                 to="#hobbies"
                 text={t('hobbies')}

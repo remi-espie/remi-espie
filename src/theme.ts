@@ -1,4 +1,19 @@
-import { cyan, teal } from '@suid/material/colors'
+const cyan = {
+    300: '#4dd0e1',
+    400: '#26c6da',
+    500: '#0097a7',
+    700: '#0097a7',
+    800: '#00838f',
+    900: '#006064',
+}
+const teal = {
+    300: '#4db6ac',
+    500: '#009688',
+    600: '#00897b',
+    700: '#00796b',
+    800: '#00695c',
+    900: '#004d40',
+}
 
 export const baseTheme = {
     typography: {
@@ -24,6 +39,7 @@ export const themeLight = {
     },
     background: {
         default: '#f0f0f0',
+        paper: '#dedede',
     },
     common: {
         white: '#f0f0f0',
@@ -46,6 +62,7 @@ export const themeDark = {
     },
     background: {
         default: '#1d1d1d',
+        paper: '#292929',
     },
     common: {
         white: '#f0f0f0',

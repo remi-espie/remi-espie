@@ -1,4 +1,3 @@
-import { Motion } from 'solid-motionone'
 import { createSignal, JSX, onMount } from 'solid-js'
 
 function Appear(props: {
@@ -6,46 +5,37 @@ function Appear(props: {
     margin?: string
     children: JSX.Element
 }) {
-    const [startCoordinate, setStartCoordinate] = createSignal({
-        x: 0,
-        y: 50,
-    })
+    let element!: HTMLDivElement
+    const [visible, setVisible] = createSignal(false)
+    const [javascriptReady, setJavascriptReady] = createSignal(false)
 
     onMount(() => {
-        switch (props.direction) {
-            case 'bottom':
-                setStartCoordinate({ x: 0, y: 50 })
-                break
-            case 'top':
-                setStartCoordinate({ x: 0, y: -50 })
-                break
-            case 'left':
-                setStartCoordinate({ x: -50, y: 0 })
-                break
-            case 'right':
-                setStartCoordinate({ x: 50, y: 0 })
-                break
-            case 'none':
-                setStartCoordinate({ x: 0, y: 0 })
-                break
-            default:
-                break
+        setJavascriptReady(true)
+        if (!('IntersectionObserver' in window)) {
+            setVisible(true)
+            return
         }
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    setVisible(true)
+                    observer.disconnect()
+                }
+            },
+            { rootMargin: props.margin ?? '-50px' }
+        )
+        observer.observe(element)
     })
 
     return (
-        <Motion
-            initial={{ opacity: 1, x: 0, y: 0 }}
-            animate={{ opacity: 0, ...startCoordinate() }}
-            transition={{ duration: 1 }}
-            inView={{ opacity: 1, x: 0, y: 0 }}
-            inViewOptions={{
-                once: true,
-                margin: props.margin ? props.margin : '-50px',
-            }}
+        <div
+            ref={element}
+            class={`appear appear-${props.direction ?? 'bottom'} ${
+                javascriptReady() ? 'appear-js' : ''
+            } ${visible() ? 'appear-visible' : ''}`}
         >
             {props.children}
-        </Motion>
+        </div>
     )
 }
 

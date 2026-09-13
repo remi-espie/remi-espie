@@ -1,4 +1,4 @@
-import { AppBar, Box, useTheme } from '@suid/material'
+import { AppBar, Box, useTheme } from '~/ui.tsx'
 import { createMemo } from 'solid-js'
 import * as i18n from '@solid-primitives/i18n'
 import { dictionaries } from '../i18n/types.ts'

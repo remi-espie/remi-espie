@@ -1,4 +1,4 @@
-import { Box, Grid, useTheme } from '@suid/material'
+import { Box, Grid, useTheme } from '~/ui.tsx'
 import { createMemo, For } from 'solid-js'
 import ZoomStyle from '../../css/zoom-on-hover.module.css'
 import { useLayoutContext } from '~/LayoutContext.ts'
@@ -38,7 +38,7 @@ function ProfessionalExperience() {
                 <Grid
                     container
                     rowSpacing={2}
-                    columnSpacing={4}
+                    columnSpacing={8}
                     sx={{ width: '80vw', m: 'auto', mb: 32 }}
                     columns={{ xs: 2, sm: 8, md: 12 }}
                 >
@@ -67,7 +67,7 @@ function ProfessionalExperience() {
                             </ul>
                         </MyTypography>
                     </Grid>
-                    <Grid item xs={6} sx={{ width: 'inherit' }}>
+                    <Grid item xs={6}>
                         <Box class={ZoomStyle.zoomContainer}>
                             <img
                                 src={GE}
@@ -84,11 +84,11 @@ function ProfessionalExperience() {
                 <Grid
                     container
                     rowSpacing={2}
-                    columnSpacing={4}
+                    columnSpacing={8}
                     sx={{ width: '80vw', m: 'auto', mb: 32 }}
                     columns={{ xs: 2, sm: 8, md: 12 }}
                 >
-                    <Grid item xs={6} sx={{ width: 'inherit' }}>
+                    <Grid item xs={6}>
                         <Box class={ZoomStyle.zoomContainer}>
                             <img
                                 src={ATS}

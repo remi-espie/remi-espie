@@ -1,6 +1,12 @@
-import { Box, IconButton, SvgIcon, useTheme } from '@suid/material'
+import {
+    Box,
+    IconButton,
+    MenuOpenOutlined,
+    MenuOutlined,
+    SvgIcon,
+    useTheme,
+} from '~/ui.tsx'
 import { createSignal } from 'solid-js'
-import { MenuOpenOutlined, MenuOutlined } from '@suid/icons-material'
 import Reactivity from '../css/reactivity.module.css'
 import DrawerNav from '~/component/DrawerNav.tsx'
 import DrawerStyle from '../css/drawer.module.css'

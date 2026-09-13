@@ -1,11 +1,4 @@
-import {
-    Box,
-    Card,
-    CardContent,
-    CardHeader,
-    SvgIcon,
-    useTheme,
-} from '@suid/material'
+import { Box, Card, CardContent, CardHeader, SvgIcon, useTheme } from '~/ui.tsx'
 import ShapeStyle from '../css/shape.module.css'
 import { useLayoutContext } from '~/LayoutContext.ts'
 import { createMemo, For } from 'solid-js'
@@ -58,7 +51,7 @@ function Hobbies() {
                                     width: '100%',
                                     borderRadius: 3,
                                     backgroundColor:
-                                        theme.palette.background.default,
+                                        theme.palette.background.paper,
                                 }}
                             >
                                 <CardHeader

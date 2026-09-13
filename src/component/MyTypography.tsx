@@ -1,8 +1,6 @@
-import SxProps from '@suid/system/sxProps'
-import { Box, Typography } from '@suid/material'
+import { Box, Typography, type SxProps } from '~/ui.tsx'
 import { JSXElement } from 'solid-js'
-import LinkIcon from '@suid/icons-material/Link'
-import { Link } from '@suid/material'
+import { Link, LinkIcon } from '~/ui.tsx'
 
 function MyTypography(props: {
     variant?:

@@ -1,13 +1,19 @@
-import { IconButton, Menu, MenuItem, SvgIcon, useTheme } from '@suid/material'
 import {
     saveDarkMode,
     saveLanguage,
     useLayoutContext,
 } from '../LayoutContext.ts'
 import { createMemo, createSignal, Show } from 'solid-js'
-import LightModeOutlinedIcon from '@suid/icons-material/LightModeOutlined'
-import DarkModeOutlinedIcon from '@suid/icons-material/DarkModeOutlined'
-import TranslateOutlined from '@suid/icons-material/TranslateOutlined'
+import {
+    DarkModeOutlinedIcon,
+    IconButton,
+    LightModeOutlinedIcon,
+    Menu,
+    MenuItem,
+    SvgIcon,
+    TranslateOutlined,
+    useTheme,
+} from '~/ui.tsx'
 import * as i18n from '@solid-primitives/i18n'
 import { dictionaries } from '../i18n/types.ts'
 import MyTypography from '~/component/MyTypography.tsx'
@@ -59,13 +65,14 @@ function NavIcons() {
                 color="inherit"
                 title={t('darkMode')}
                 onClick={() => {
-                    context.darkMode = !context.darkMode
-                    saveDarkMode(context.darkMode)
+                    const darkMode = !context.darkMode
+                    context.darkMode = darkMode
+                    saveDarkMode(darkMode)
                 }}
                 sx={{ width: 'min-content', alignSelf: 'center' }}
             >
                 <Show
-                    when={theme.palette.mode === 'dark'}
+                    when={context.darkMode}
                     fallback={<LightModeOutlinedIcon />}
                 >
                     <DarkModeOutlinedIcon />
@@ -121,6 +128,7 @@ function NavIcons() {
             >
                 <MenuItem
                     onClick={() => {
+                        handleClose()
                         context.language = 'en'
                         saveLanguage('en')
                     }}
@@ -155,10 +163,13 @@ function NavIcons() {
                             stroke-width="2"
                         />
                     </SvgIcon>
-                    <MyTypography variant="body1">{t('lang_en')}</MyTypography>
+                    <MyTypography variant="body1" color="text.primary">
+                        {t('lang_en')}
+                    </MyTypography>
                 </MenuItem>
                 <MenuItem
                     onClick={() => {
+                        handleClose()
                         context.language = 'fr'
                         saveLanguage('fr')
                     }}
@@ -175,7 +186,9 @@ function NavIcons() {
                         <rect width="600" height="600" fill="#fff" />
                         <rect width="300" height="600" fill="#002395" />
                     </SvgIcon>
-                    <MyTypography variant="body1">{t('lang_fr')}</MyTypography>
+                    <MyTypography variant="body1" color="text.primary">
+                        {t('lang_fr')}
+                    </MyTypography>
                 </MenuItem>
             </Menu>
         </>

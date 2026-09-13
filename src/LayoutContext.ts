@@ -1,5 +1,3 @@
-import { DeepPartial } from '@suid/types'
-import merge from '@suid/utils/merge'
 import { createContext, useContext } from 'solid-js'
 import { createMutable } from 'solid-js/store'
 import { isServer } from 'solid-js/web'
@@ -9,6 +7,7 @@ type Options = {
     darkMode: boolean | undefined
     language: Locale
 }
+type DeepPartial<T> = { [K in keyof T]?: T[K] }
 
 export function isSysThemeDark() {
     return window.matchMedia('(prefers-color-scheme: dark)').matches
@@ -33,7 +32,7 @@ const LayoutContext = isServer
     : createContext(defaultOptionsClient)
 
 export function createLayoutMutable(input: DeepPartial<Options> = {}) {
-    return createMutable(merge({}, defaultOptionsSrv, input)) as Options
+    return createMutable({ ...defaultOptionsSrv, ...input }) as Options
 }
 
 export function useLayoutContext() {

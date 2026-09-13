@@ -1,5 +1,5 @@
-import { Box, Button, Grid, Typography } from '@suid/material'
-import SubdirectoryArrowRight from '@suid/icons-material/SubdirectoryArrowRight'
+import { Box, Button, Grid, Typography } from '~/ui.tsx'
+import { SubdirectoryArrowRight } from '~/ui.tsx'
 import { useLayoutContext } from '../LayoutContext.ts'
 import { createEffect, createMemo, createSignal } from 'solid-js'
 import * as i18n from '@solid-primitives/i18n'
@@ -15,17 +15,13 @@ function Entrypoint() {
     const [descText, setDescText] = createSignal(false)
     const [cursor, setCursor] = createSignal(false)
 
-    const dict = createMemo(() => {
-        setHelloText(false)
-        setDescText(false)
-        setCursor(false)
-        return i18n.flatten(dictionaries[context.language])
-    })
+    const dict = createMemo(() => i18n.flatten(dictionaries[context.language]))
 
     createEffect(() => {
-        if (!helloText()) {
-            setHelloText(true)
-        }
+        context.language
+        setHelloText(true)
+        setDescText(false)
+        setCursor(false)
     })
 
     const t = i18n.translator(dict)

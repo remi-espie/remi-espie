@@ -6,17 +6,12 @@ import {
     Grid,
     Typography,
     useTheme,
-} from '@suid/material'
-import { createEffect, createSignal, For } from 'solid-js'
+} from '~/ui.tsx'
+import { createEffect, createMemo, createSignal, For, Show } from 'solid-js'
 import { Technologies } from '../i18n/technologies.ts'
 import MyLink from './MyLink.tsx'
 import MyCardMedia from './MyCardMedia.tsx'
-import { Motion } from 'solid-motionone'
-import { Select } from '@thisbeyond/solid-select'
-import '@thisbeyond/solid-select/style.css'
 import SelectStyle from '../css/selector.module.css'
-
-const theme = useTheme()
 
 function GetCard(props: {
     item: {
@@ -27,20 +22,10 @@ function GetCard(props: {
         url: string
     }
 }) {
+    const theme = useTheme()
     return (
         <Grid item xs={4} sx={{ p: 2 }}>
-            <Motion
-                initial={{ opacity: 1, scale: 1 }}
-                animate={{ opacity: 0, scale: 0.6 }}
-                transition={{ duration: 0.5 }}
-                inView={{ opacity: 1, scale: 1 }}
-                inViewOptions={{
-                    once: true,
-                }}
-                style={{
-                    height: '100%',
-                }}
-            >
+            <div class="appear appear-visible" style={{ height: '100%' }}>
                 <Card
                     elevation={12}
                     sx={{
@@ -49,6 +34,7 @@ function GetCard(props: {
                         transition: 'background-color 0.33s',
                         height: '100%',
                         justifyContent: 'space-between',
+                        padding: '0.5em',
                     }}
                 >
                     <Box sx={{ display: 'flex' }}>
@@ -63,7 +49,11 @@ function GetCard(props: {
                                     flex: '1 0 auto',
                                 }}
                             >
-                                <Typography component="div" variant="h5">
+                                <Typography
+                                    component="div"
+                                    variant="h5"
+                                    sx={{ fontSize: '1.65rem' }}
+                                >
                                     {props.item.title}
                                 </Typography>
                                 <Typography
@@ -81,6 +71,8 @@ function GetCard(props: {
                             sx={{
                                 objectFit: 'contain',
                                 m: 1,
+                                maxWidth: '140px',
+                                maxHeight: '140px',
                             }}
                         />
                     </Box>
@@ -103,6 +95,7 @@ function GetCard(props: {
                                                     return t.name === tech
                                                 }
                                             )?.color,
+                                            margin: '2px',
                                         }}
                                     />
                                 )}
@@ -116,7 +109,7 @@ function GetCard(props: {
                         />
                     </Box>
                 </Card>
-            </Motion>
+            </div>
         </Grid>
     )
 }
@@ -136,6 +129,9 @@ function ProjectsSelector(props: {
     const [projects, setProjects] = createSignal(props.projectsList)
 
     const [selectedTechs, setSelectedTechs] = createSignal<string[]>([])
+    const [search, setSearch] = createSignal('')
+    const [focused, setFocused] = createSignal(false)
+    const [activeIndex, setActiveIndex] = createSignal(0)
 
     createEffect(() => {
         setTechList([...props.techs])
@@ -145,39 +141,146 @@ function ProjectsSelector(props: {
     function handleSelectChange(value: string[]) {
         setSelectedTechs(value)
 
-        setTechList(() => {
-            return [...props.techs].filter(
-                (tech) => !selectedTechs().includes(tech)
-            )
-        })
-
         setProjects(() => {
             return props.projectsList.filter((project) =>
-                selectedTechs().every((tech) =>
-                    project.technologies.includes(tech)
-                )
+                value.every((tech) => project.technologies.includes(tech))
             )
         })
+    }
+
+    const availableTechs = createMemo(() =>
+        techList().filter(
+            (tech) =>
+                !selectedTechs().includes(tech) &&
+                tech.toLowerCase().includes(search().toLowerCase())
+        )
+    )
+
+    function addTechnology(tech: string) {
+        handleSelectChange([...selectedTechs(), tech])
+        setSearch('')
+        setActiveIndex(0)
+    }
+
+    function handleSearchKeyDown(event: KeyboardEvent) {
+        const options = availableTechs()
+        if (event.key === 'ArrowDown' && options.length > 0) {
+            event.preventDefault()
+            setFocused(true)
+            setActiveIndex((index) => (index + 1) % options.length)
+        } else if (event.key === 'ArrowUp' && options.length > 0) {
+            event.preventDefault()
+            setActiveIndex((index) =>
+                index === 0 ? options.length - 1 : index - 1
+            )
+        } else if (event.key === 'Enter' && options[activeIndex()]) {
+            event.preventDefault()
+            addTechnology(options[activeIndex()])
+        } else if (event.key === 'Escape') {
+            setFocused(false)
+        }
     }
 
     return (
         <>
             <Box
                 style={{
-                    '--bg-color': theme.palette.common.white,
-                    '--text-color': theme.palette.common.black,
+                    '--bg-color': 'var(--color-surface)',
+                    '--text-color': 'var(--color-text)',
                 }}
                 class={SelectStyle.select}
             >
-                <Select
-                    multiple
-                    options={[...techList()]}
-                    onChange={handleSelectChange}
-                    placeholder={'Technologies...'}
-                />
+                <div class={SelectStyle.searchbox}>
+                    <div
+                        class={SelectStyle.input}
+                        classList={{
+                            [SelectStyle.focused]: focused(),
+                        }}
+                    >
+                        <For each={selectedTechs()}>
+                            {(tech) => (
+                                <span class={SelectStyle.chip}>
+                                    {tech}
+                                    <button
+                                        type="button"
+                                        onClick={() =>
+                                            handleSelectChange(
+                                                selectedTechs().filter(
+                                                    (item) => item !== tech
+                                                )
+                                            )
+                                        }
+                                        aria-label={`Remove ${tech}`}
+                                    >
+                                        ×
+                                    </button>
+                                </span>
+                            )}
+                        </For>
+                        <input
+                            id="technology-search"
+                            type="text"
+                            role="combobox"
+                            value={search()}
+                            placeholder={
+                                selectedTechs().length === 0
+                                    ? 'Technologies'
+                                    : 'Add technology'
+                            }
+                            autocomplete="off"
+                            aria-autocomplete="list"
+                            aria-expanded={
+                                focused() && availableTechs().length > 0
+                            }
+                            aria-controls="technology-options"
+                            onFocus={() => setFocused(true)}
+                            onBlur={() =>
+                                setTimeout(() => setFocused(false), 100)
+                            }
+                            onInput={(event) => {
+                                setSearch(event.currentTarget.value)
+                                setActiveIndex(0)
+                            }}
+                            onKeyDown={handleSearchKeyDown}
+                        />
+                        <span class={SelectStyle.arrow} aria-hidden="true">
+                            ▾
+                        </span>
+                    </div>
+                    <Show when={focused() && availableTechs().length > 0}>
+                        <div
+                            class={SelectStyle.options}
+                            id="technology-options"
+                            role="listbox"
+                        >
+                            <For each={availableTechs()}>
+                                {(tech, index) => (
+                                    <button
+                                        type="button"
+                                        role="option"
+                                        aria-selected={
+                                            index() === activeIndex()
+                                        }
+                                        classList={{
+                                            [SelectStyle.active]:
+                                                index() === activeIndex(),
+                                        }}
+                                        onMouseDown={(event) =>
+                                            event.preventDefault()
+                                        }
+                                        onClick={() => addTechnology(tech)}
+                                    >
+                                        {tech}
+                                    </button>
+                                )}
+                            </For>
+                        </div>
+                    </Show>
+                </div>
             </Box>
             <Grid
                 container
+                rowSpacing={2}
                 sx={{ width: '80vw', m: 'auto', mb: 32 }}
                 columns={{ xs: 2, sm: 8, md: 12 }}
             >

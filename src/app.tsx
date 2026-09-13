@@ -3,7 +3,7 @@ import {
     createTheme,
     CssBaseline,
     ThemeProvider,
-} from '@suid/material'
+} from '~/ui.tsx'
 import Header from './Layout/Header.tsx'
 import { createEffect, createMemo, onMount } from 'solid-js'
 import { baseTheme, themeDark, themeLight } from './theme.ts'
@@ -14,7 +14,7 @@ import LayoutContext, {
     isSysThemeDark,
     saveLanguage,
 } from './LayoutContext.ts'
-import './global.css'
+import './css/global.css'
 import * as i18n from '@solid-primitives/i18n'
 import { dictionaries } from './i18n/types.ts'
 import Footer from './Layout/Footer.tsx'
@@ -61,10 +61,12 @@ function MyApp() {
         })
     })
 
-    const theme = createTheme({
-        palette,
-        ...baseTheme,
-    })
+    const theme = createMemo(() =>
+        createTheme({
+            palette: () => palette(),
+            ...baseTheme,
+        })
+    )
 
     const dict = createMemo(() => {
         return i18n.flatten(dictionaries[context.language])
@@ -77,8 +79,7 @@ function MyApp() {
             <MetaProvider>
                 <Title>{t('title') + ' | ' + t('author')}</Title>
                 <Meta charset="utf-8" />
-                <Meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-                <Meta http-equiv="Content-Language" content="en,fr" />
+                <Meta http-equiv="x-ua-compatible" content="IE=edge,chrome=1" />
                 <Meta
                     name="viewport"
                     content="width=device-width, initial-scale=1.0"
@@ -90,7 +91,7 @@ function MyApp() {
 
                 <Meta name="HandheldFriendly" content="true" />
 
-                <ThemeProvider theme={theme}>
+                <ThemeProvider theme={theme()}>
                     {context.language === 'fr' ? (
                         <>
                             <Meta

@@ -11,7 +11,6 @@
         "allowJs": false,
         "strict": true,
         "noEmit": true,
-        "types": ["vinxi/types/spa"],
         "isolatedModules": true,
         "paths": {
             "~/*": ["./src/*"]

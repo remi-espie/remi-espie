@@ -1,7 +1,105 @@
-.select > * {
+.select {
     width: 400px;
     max-width: 80vw;
     margin: 0 auto;
-    color: var(--text-color) !important;
-    background-color: var(--bg-color) !important;
+}
+
+.searchbox {
+    position: relative;
+}
+
+.input {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 3.2rem;
+    padding: 0.45rem 0.75rem;
+    border: 1px solid var(--color-primary);
+    border-radius: 0.5rem;
+    color: var(--text-color);
+    background: var(--bg-color);
+    transition:
+        border-color 0.2s,
+        box-shadow 0.2s;
+}
+
+.input.focused {
+    border-width: 2px;
+    box-shadow: 0 0 0 1px var(--color-primary);
+}
+
+.input > input {
+    min-width: 8rem;
+    flex: 1;
+    border: 0;
+    outline: 0;
+    padding: 0.35rem 0;
+    color: inherit;
+    background: transparent;
+    font: inherit;
+}
+
+.input > input::placeholder {
+    color: var(--color-text-muted);
+}
+
+.arrow {
+    color: var(--color-text-muted);
+    pointer-events: none;
+}
+
+.chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.2rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 999px;
+    color: var(--color-primary-contrast);
+    background: var(--color-primary);
+    font-size: 0.85em;
+}
+
+.chip button {
+    border: 0;
+    padding: 0;
+    color: inherit;
+    background: transparent;
+    font: inherit;
+    cursor: pointer;
+}
+
+.options {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    max-height: 12rem;
+    overflow-y: auto;
+    margin-top: 0.25rem;
+    padding: 0.35rem 0;
+    border: 1px solid var(--color-primary);
+    border-radius: 0.5rem;
+    background: var(--bg-color);
+    box-shadow: 0 4px 12px rgb(0 0 0 / 30%);
+}
+
+.options button {
+    display: block;
+    width: 100%;
+    border: 0;
+    padding: 0.5rem 0.75rem;
+    color: var(--text-color);
+    background: transparent;
+    font: inherit;
+    text-align: left;
+    cursor: pointer;
+}
+
+.options button:hover,
+.options button:focus-visible,
+.options button.active {
+    color: var(--color-primary-contrast);
+    background: var(--color-primary);
 }
