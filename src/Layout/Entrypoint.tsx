@@ -18,11 +18,14 @@ function Entrypoint() {
     const dict = createMemo(() => i18n.flatten(dictionaries[context.language]))
 
     createEffect(
-        on(() => context.language, () => {
-        setHelloText(true)
-        setDescText(false)
-        setCursor(false)
-        })
+        on(
+            () => context.language,
+            () => {
+                setHelloText(true)
+                setDescText(false)
+                setCursor(false)
+            }
+        )
     )
 
     const t = i18n.translator(dict)
